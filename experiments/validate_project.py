@@ -1375,9 +1375,9 @@ def main() -> int:
             and "Code and Data Availability" in ecmx_submission_text
             and "Code and Data Availability" in ecm_submission_text
             and "Code and Data Availability" in oajpe_submission_text
-            and "Zhaosiqiang/voltguard-voltage-risk-screening" in ecmx_submission_text
-            and "Zhaosiqiang/voltguard-voltage-risk-screening" in ecm_submission_text
-            and "Zhaosiqiang/voltguard-voltage-risk-screening" in oajpe_submission_text
+            and "Zhaosiqiang / voltguard-voltage-risk-screening" in ecmx_submission_text
+            and "Zhaosiqiang / voltguard-voltage-risk-screening" in ecm_submission_text
+            and "Zhaosiqiang / voltguard-voltage-risk-screening" in oajpe_submission_text
             and "v1.0.0-submission" in ecmx_submission_text
             and "v1.0.0-submission" in ecm_submission_text
             and "v1.0.0-submission" in oajpe_submission_text

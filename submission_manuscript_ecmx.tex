@@ -81,7 +81,7 @@
 \title{VoltGuard: Topology-Aware Voltage-Risk Screening with Conformal
 Calibration for Active Distribution Networks}
 \author{Siqiang Zhao (corresponding author), Fengxiang Zhang}
-\date{Generated 2026-07-03 03:25 UTC}
+\date{Generated 2026-07-03 04:58 UTC}
 
 \begin{document}
 \maketitle
@@ -1128,23 +1128,26 @@ should be used to decide when EV-conditioned calibration is worth
 retesting.
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3800}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3800}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2400}}@{}}
+\begin{longtable}[]{@{}rrl@{}}
 \toprule\noalign{}
 Scale & Min EV calib. & Status \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-1x & 33 & Fragmented; no recall gain observed and intervals are wider \\
-2x & 66 & Still below primary-family support; diagnostic use only \\
-4x & 132 & Candidate regime for retesting EV-conditioned intervals \\
-6x & 198 & Comparable weakest-family support to T/PV/L \\
-8x & 264 & Plausible regime if width and FAs begin to fall \\
+1x & 33 & Fragmented \\
+2x & 66 & Diagnostic only \\
+4x & 132 & Retest candidate \\
+6x & 198 & Support matched \\
+8x & 264 & Monitor width/FA \\
 \end{longtable}
 }
+
+The status labels mean, respectively, that the EV-keyed split is too
+sparse and wider than the primary split; remains below primary-family
+support; has enough support to justify retesting; reaches the
+weakest-family support of the topology+PV+loading key; or should be used
+only if width and false alarms begin to fall.
 
 \subsection{Per-Family Calibration
 Analysis}\label{per-family-calibration-analysis}
@@ -1603,15 +1606,13 @@ generator, configured evaluation pipeline, conformal calibration code,
 raw predictions, conformal scores, runtime tables, post-action AC audit
 outputs, DMS prototype logs, reviewer-requested baseline comparisons,
 and energy-management value metrics. File-level checksums and
-reproduction commands are recorded in
-\texttt{experiments/results/reproducibility\_manifest.json} and
-\texttt{experiments/results/reproducibility\_manifest.md}. The Python
-implementation, synthetic scenario-generation scripts, trained model
-artifacts, table-generation scripts, manuscript sources, and release
-PDFs are archived in the GitHub repository
-\texttt{Zhaosiqiang/voltguard-voltage-risk-screening}, release
-\texttt{v1.0.0-submission}, and on Zenodo with DOI
-\texttt{10.5281/zenodo.21149702}.
+reproduction commands are provided in two reproducibility manifest files
+stored under the project results directory. The Python implementation,
+synthetic scenario-generation scripts, trained model artifacts,
+table-generation scripts, manuscript sources, and release PDFs are
+archived in the GitHub project Zhaosiqiang /
+voltguard-voltage-risk-screening, release v1.0.0-submission, and on
+Zenodo with DOI 10.5281/zenodo.21149702.
 
 \section*{Declaration of Generative AI and AI-Assisted Technologies in
 the Writing

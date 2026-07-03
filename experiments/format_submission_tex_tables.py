@@ -59,6 +59,8 @@ def table_widths(aligns: list[str]) -> list[float]:
     text_cols = [idx for idx, align in enumerate(aligns) if align != "right"]
     if not text_cols:
         return [1.0 / ncols] * ncols
+    if ncols == 3 and text_cols == [2]:
+        return [0.12, 0.18, 0.70]
     if len(text_cols) == ncols:
         if ncols == 2:
             return [0.24, 0.76]

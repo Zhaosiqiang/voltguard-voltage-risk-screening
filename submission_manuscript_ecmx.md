@@ -5,7 +5,7 @@ documentclass: elsarticle
 classoption: preprint,12pt
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 03:25 UTC"
+date: "Generated 2026-07-03 04:58 UTC"
 geometry: margin=1in
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
@@ -733,11 +733,17 @@ worth retesting.
 
 | Scale | Min EV calib. | Status |
 |---:|---:|---|
-| 1x | 33 | Fragmented; no recall gain observed and intervals are wider |
-| 2x | 66 | Still below primary-family support; diagnostic use only |
-| 4x | 132 | Candidate regime for retesting EV-conditioned intervals |
-| 6x | 198 | Comparable weakest-family support to T/PV/L |
-| 8x | 264 | Plausible regime if width and FAs begin to fall |
+| 1x | 33 | Fragmented |
+| 2x | 66 | Diagnostic only |
+| 4x | 132 | Retest candidate |
+| 6x | 198 | Support matched |
+| 8x | 264 | Monitor width/FA |
+
+The status labels mean, respectively, that the EV-keyed split is too sparse and
+wider than the primary split; remains below primary-family support; has enough
+support to justify retesting; reaches the weakest-family support of the
+topology+PV+loading key; or should be used only if width and false alarms begin
+to fall.
 
 ## Per-Family Calibration Analysis
 
@@ -1021,7 +1027,7 @@ This research did not receive any specific grant from funding agencies in the pu
 
 # Code and Data Availability {.unnumbered}
 
-The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The local reproducibility package includes the scenario generator, configured evaluation pipeline, conformal calibration code, raw predictions, conformal scores, runtime tables, post-action AC audit outputs, DMS prototype logs, reviewer-requested baseline comparisons, and energy-management value metrics. File-level checksums and reproduction commands are recorded in `experiments/results/reproducibility_manifest.json` and `experiments/results/reproducibility_manifest.md`. The Python implementation, synthetic scenario-generation scripts, trained model artifacts, table-generation scripts, manuscript sources, and release PDFs are archived in the GitHub repository `Zhaosiqiang/voltguard-voltage-risk-screening`, release `v1.0.0-submission`, and on Zenodo with DOI `10.5281/zenodo.21149702`.
+The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The local reproducibility package includes the scenario generator, configured evaluation pipeline, conformal calibration code, raw predictions, conformal scores, runtime tables, post-action AC audit outputs, DMS prototype logs, reviewer-requested baseline comparisons, and energy-management value metrics. File-level checksums and reproduction commands are provided in two reproducibility manifest files stored under the project results directory. The Python implementation, synthetic scenario-generation scripts, trained model artifacts, table-generation scripts, manuscript sources, and release PDFs are archived in the GitHub project Zhaosiqiang / voltguard-voltage-risk-screening, release v1.0.0-submission, and on Zenodo with DOI 10.5281/zenodo.21149702.
 
 # Declaration of Generative AI and AI-Assisted Technologies in the Writing Process {.unnumbered}
 

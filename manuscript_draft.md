@@ -715,11 +715,17 @@ worth retesting.
 
 | Calibration scale relative to current EV-conditioned split | Approx. minimum EV-family calibration samples | Expected EV-conditioning status |
 |---:|---:|---|
-| 1x | 33 | Fragmented; no recall gain observed and intervals are wider |
-| 2x | 66 | Still below primary-family support; diagnostic use only |
-| 4x | 132 | Candidate regime for retesting EV-conditioned intervals |
-| 6x | 198 | Comparable weakest-family support to topology+PV+loading |
-| 8x | 264 | Plausible regime if width and false alarms begin to fall |
+| 1x | 33 | Fragmented |
+| 2x | 66 | Diagnostic only |
+| 4x | 132 | Retest candidate |
+| 6x | 198 | Support matched |
+| 8x | 264 | Monitor width/FA |
+
+The status labels mean, respectively, that the EV-keyed split is too sparse and
+wider than the primary split; remains below primary-family support; has enough
+support to justify retesting; reaches the weakest-family support of the
+topology+PV+loading key; or should be used only if width and false alarms begin
+to fall.
 
 ### 6.9 Per-Family Calibration Analysis
 
