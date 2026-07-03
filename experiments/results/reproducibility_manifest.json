@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-03T02:10:42Z",
+  "generated_utc": "2026-07-03T02:12:23Z",
   "target_route": "Energy Conversion and Management: X",
   "claim_boundary": "VoltGuard is a calibrated screening layer, not an AC feasibility certificate or OPF/MPC replacement.",
   "configuration": {
@@ -301,8 +301,8 @@
     },
     {
       "path": "experiments/validate_project.py",
-      "bytes": 108305,
-      "sha256": "e6dae8c8aea2cc9c61404233f486edb1f34deb74b38af3566edb3219396c3d58"
+      "bytes": 108461,
+      "sha256": "e898a8fe99529c990a481aa0c2b4365dc6466195ed1575095f6ba0d252f5b5f0"
     },
     {
       "path": "experiments/ieee69_feeder.py",
@@ -880,13 +880,13 @@
     },
     {
       "path": "submission_manuscript_ecmx.tex",
-      "bytes": 91343,
-      "sha256": "16e5894c783a06e7132a93d3d420ca95b74d66c05c9b93d6f8f8030335bca69c"
+      "bytes": 91419,
+      "sha256": "e6fd08dbca1db1cff0a8972cde076d9db4ac4075f05bd1e4aeebde9f8c92d80a"
     },
     {
       "path": "submission_build/submission_manuscript_ecmx.pdf",
-      "bytes": 1124666,
-      "sha256": "40825f781e67172387ad26b4e4f64b54a4d4a7d73893b738baa8289546480175"
+      "bytes": 1125561,
+      "sha256": "203a078a519009ed07be36db16c8b8c1877497b9362906bc8435d6e186778382"
     },
     {
       "path": "submission_manuscript_ecm.md",
@@ -895,13 +895,13 @@
     },
     {
       "path": "submission_manuscript_ecm.tex",
-      "bytes": 39774,
-      "sha256": "6784daecb0a26e10fa5777f6e358915db3f7a22b4da9a123b652a9e67944f79f"
+      "bytes": 39850,
+      "sha256": "2d6c4cbb421242aa250021aab1fbf5ae0f2d5c3fea2454f5cc7242eeb396b48d"
     },
     {
       "path": "submission_build/submission_manuscript_ecm.pdf",
-      "bytes": 972643,
-      "sha256": "ec90e906313f219498c6b6426e993371e0d920f8c7328e06b51e79528a238515"
+      "bytes": 972862,
+      "sha256": "c4ec8e2b21e9384508b2853adf38a03ddc57fbb8c6e29142f907cffdeabae4df"
     },
     {
       "path": "submission_manuscript_oajpe.md",
@@ -910,13 +910,13 @@
     },
     {
       "path": "submission_manuscript_oajpe.tex",
-      "bytes": 22221,
-      "sha256": "2a029470d0e8ae53b7b346fd90b6120a858b948d3411dc9aff00d91f2d054241"
+      "bytes": 22297,
+      "sha256": "2f3431991acc2567eaa656b8445a9ccb13b36276bc310b6528210514d33880c8"
     },
     {
       "path": "submission_build/submission_manuscript_oajpe.pdf",
-      "bytes": 968930,
-      "sha256": "145f06ccdec33c425bac11347a447952a628b9b2f8c4087b12ebf26074434fe6"
+      "bytes": 972540,
+      "sha256": "de351d5d5b9ff376437c4a1214e5c68bdcc56798ece20c9b3ee2dacdfbc4d53b"
     },
     {
       "path": "submission_compile_report.md",

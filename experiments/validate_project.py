@@ -84,6 +84,7 @@ REQUIRED_FILES = [
     "experiments/evaluate_baseline_design_rationale.py",
     "GITHUB_ZENODO_RELEASE_CHECKLIST.md",
     "CITATION.cff",
+    ".zenodo.json",
     "experiments/generate_submission_figures.py",
     "experiments/results/scenario_summary.csv",
     "experiments/results/bus_voltage_labels.csv",
@@ -1378,8 +1379,10 @@ def main() -> int:
             and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in oajpe_submission_text
             and (ROOT / "GITHUB_ZENODO_RELEASE_CHECKLIST.md").exists()
             and (ROOT / "CITATION.cff").exists()
+            and (ROOT / ".zenodo.json").exists()
             and "voltguard-voltage-risk-screening" in (ROOT / "GITHUB_ZENODO_RELEASE_CHECKLIST.md").read_text(encoding="utf-8")
             and "Siqiang" in (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+            and "Zhao, Siqiang" in (ROOT / ".zenodo.json").read_text(encoding="utf-8")
             and "Professional Review Action Matrix" in professional_review_action_text
         ),
         "ancillaries_energy_management_framing": (

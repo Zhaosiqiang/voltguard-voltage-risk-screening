@@ -1,0 +1,31 @@
+{
+  "title": "VoltGuard: Topology-Aware Voltage-Risk Screening with Conformal Calibration for Active Distribution Networks",
+  "upload_type": "software",
+  "description": "Reproducible VoltGuard paper package with topology-aware voltage-risk screening, conformal calibration, DMS prototype artifacts, LinDistFlow baseline comparisons, manuscript sources, and submission PDFs.",
+  "creators": [
+    {
+      "name": "Zhao, Siqiang",
+      "affiliation": "Sichuan University-Pittsburgh Institute, Chengdu, China"
+    },
+    {
+      "name": "Zhang, Fengxiang",
+      "affiliation": "Southwest Jiaotong University, Chengdu, China"
+    }
+  ],
+  "keywords": [
+    "voltage-risk screening",
+    "active distribution networks",
+    "conformal prediction",
+    "LinDistFlow",
+    "topology-aware residual learning",
+    "distribution management systems"
+  ],
+  "license": "other-open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

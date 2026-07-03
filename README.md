@@ -112,6 +112,7 @@ supplementary stress test.
 - `GITHUB_ZENODO_RELEASE_CHECKLIST.md` - repository and DOI-release preparation
   checklist for the manuscript package.
 - `CITATION.cff` - citation metadata stub for the planned public release.
+- `.zenodo.json` - Zenodo metadata for DOI minting after repository integration.
 
 ## Recommended High-Impact Target
 
