@@ -1,0 +1,11 @@
+{
+  "seed": 7,
+  "rows": 4,
+  "methods": [
+    "Flat 1.0 p.u. + global quantile",
+    "Historical bus envelope",
+    "Linear sensitivity regression + global quantile",
+    "LinDistFlow + global quantile"
+  ],
+  "lin_dist_flow_width": 0.004738587941649286
+}

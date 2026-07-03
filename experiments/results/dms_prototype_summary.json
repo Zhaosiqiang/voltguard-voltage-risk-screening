@@ -1,0 +1,14 @@
+{
+  "simulated_cycles": 1008,
+  "simulated_days": 7,
+  "release_records": 136,
+  "watch_records": 26,
+  "corrective_audit_records": 846,
+  "released_violating_records": 0,
+  "audited_violating_records": 779,
+  "operator_override_records": 18,
+  "stale_telemetry_records": 277,
+  "unseen_topology_records": 24,
+  "out_of_envelope_records": 43,
+  "residual_alarm_records": 30
+}

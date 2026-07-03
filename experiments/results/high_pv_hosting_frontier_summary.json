@@ -1,0 +1,23 @@
+{
+  "raw_rows": 1620,
+  "metric_rows": 24,
+  "scenarios": 270,
+  "initial_overvoltage_scenarios": 132,
+  "curtailment_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "primary_population": "initial_overvoltage_only",
+  "primary_pv_curtail": 0.5,
+  "primary_accepted_pv_mw": 392.39470249999994,
+  "primary_curtailed_pv_mw": 392.39470249999994,
+  "primary_overvoltage_scenarios": 43,
+  "primary_overvoltage_buses": 552,
+  "primary_overvoltage_scenario_reduction_ratio": 0.6742424242424242,
+  "primary_overvoltage_bus_reduction_ratio": 0.7559681697612732,
+  "primary_max_voltage": 1.1296981844587306
+}

@@ -1,0 +1,3 @@
+feeder,scenarios,pre_overvoltage_scenarios,post_overvoltage_scenarios,pre_overvoltage_buses,post_overvoltage_buses,max_pre_voltage,max_post_voltage,mean_selected_pv_curtail,accepted_pv_mw,curtailed_pv_mw
+33,135,70,22,1084,222,1.245517735950434,1.1373445019822421,0.19703703703703704,405.287925,171.465825
+69,135,62,21,1178,330,1.1650348084609516,1.0924095417335096,0.16814814814814813,444.9977839999999,145.27824099999998

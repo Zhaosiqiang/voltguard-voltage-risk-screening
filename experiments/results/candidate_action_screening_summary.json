@@ -1,0 +1,14 @@
+{
+  "rows": 14,
+  "test_scenarios": 120,
+  "candidate_grid_size": 9,
+  "primary_policy": "VoltGuard interval-risk",
+  "primary_top_k": 3,
+  "primary_candidate_ac_audits": 360,
+  "primary_candidate_ac_audits_avoided": 720,
+  "primary_audit_reduction_ratio": 0.6666666666666666,
+  "primary_full_best_in_subset_rate": 0.9,
+  "primary_extra_violating_scenarios_vs_full": 0,
+  "primary_extra_violating_buses_vs_full": 0,
+  "primary_action_cost_delta_vs_full_mw": 7.2370864193689926
+}

@@ -1,0 +1,5 @@
+workflow,scenarios,seconds,ms_per_scenario,speedup_vs_full_ac
+VoltGuard online screening only,120,0.03045583300990984,0.25379860841591534,6796.166546869129
+Full AC grid search on every scenario,120,206.98291345898178,1724.8576121581816,1.0
+VoltGuard-flagged scenarios then AC grid search,93,160.4422137637208,1725.185094233557,1.2900776460476937
+VoltGuard top-20% budget then AC grid search,24,41.427038524806264,1726.126605200261,4.9963241600058295

@@ -1,0 +1,5 @@
+- VoltGuard-ECM frames voltage-risk screening as DMS integration.
+- The paper specifies data contracts for release, watch, and audit queues.
+- Fallback rules govern telemetry faults and out-of-envelope forecasts.
+- The screen is a front end for AC power flow, OPF, or MPC.
+- No method-performance claim is reused from the main manuscript.

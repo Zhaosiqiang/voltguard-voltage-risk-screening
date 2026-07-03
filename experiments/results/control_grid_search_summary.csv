@@ -1,0 +1,2 @@
+method,role,split_name,seed,test_scenarios,converged_scenarios,post_action_violating_scenarios,post_action_violating_buses,post_action_scenario_violation_rate,post_action_bus_violations_per_scenario,available_pv_mw,accepted_pv_mw,curtailed_pv_mw,relieved_load_mw,action_cost_proxy_mw,mean_load_relief,mean_pv_curtail
+AC corrective grid-search benchmark,downstream corrective optimizer triggered after risk screening,random_interpolation,7,120,120,51,398,0.425,3.316666666666667,191.23095295448223,191.23095295448223,0.0,59.14266215081935,59.14266215081935,0.12916666666666668,0.0

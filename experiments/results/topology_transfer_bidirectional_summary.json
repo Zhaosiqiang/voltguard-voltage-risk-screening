@@ -1,0 +1,34 @@
+{
+  "rows": 4,
+  "raw_rows": 12,
+  "seeds": [
+    7,
+    17,
+    42
+  ],
+  "directions": [
+    "33_to_69",
+    "69_to_33"
+  ],
+  "primary_alpha": 0.1,
+  "voltguard_min_scenario_recall_mean": 1.0,
+  "voltguard_max_post_screening_miss_rate_mean": 0.0,
+  "direction_summary": {
+    "33_to_69": {
+      "voltguard_scenario_recall_mean": 1.0,
+      "voltguard_post_screening_miss_rate_mean": 0.0,
+      "voltguard_missed_bus_violations_mean": 0.0,
+      "voltguard_ac_calls_avoided_mean": 15.666666666666666,
+      "missed_bus_delta_vs_boost": -0.3333333333333333,
+      "width_delta_vs_boost": -0.0007049540825119884
+    },
+    "69_to_33": {
+      "voltguard_scenario_recall_mean": 1.0,
+      "voltguard_post_screening_miss_rate_mean": 0.0,
+      "voltguard_missed_bus_violations_mean": 0.0,
+      "voltguard_ac_calls_avoided_mean": 52.333333333333336,
+      "missed_bus_delta_vs_boost": 0.0,
+      "width_delta_vs_boost": 4.7658202262211655e-05
+    }
+  }
+}

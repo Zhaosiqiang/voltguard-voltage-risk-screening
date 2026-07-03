@@ -1,0 +1,14 @@
+{
+  "scenarios": 270,
+  "converged_scenarios": 270,
+  "pre_overvoltage_scenarios": 132,
+  "post_overvoltage_scenarios": 43,
+  "pre_overvoltage_buses": 2262,
+  "post_overvoltage_buses": 552,
+  "max_pre_voltage": 1.245517735950434,
+  "max_post_voltage": 1.1373445019822421,
+  "mean_selected_pv_curtail_overvoltage": 0.3734848484848485,
+  "available_pv_mw_overvoltage": 784.7894049999999,
+  "accepted_pv_mw_overvoltage": 468.0453389999999,
+  "curtailed_pv_mw_overvoltage": 316.744066
+}

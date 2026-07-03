@@ -1,0 +1,12 @@
+| method                            | conformal_variant                |     mae |    rmse |   max_abs_error |   coverage |   avg_width |   precision |   recall |   false_alarm_rate |   missed_violations |
+|:----------------------------------|:---------------------------------|--------:|--------:|----------------:|-----------:|------------:|------------:|---------:|-------------------:|--------------------:|
+| LinDistFlow physical backbone     | none                             | 0.00092 | 0.0014  |         0.00661 |  nan       |   nan       |     1       |  0.9164  |            0       |                  77 |
+| Random forest                     | none                             | 0.00014 | 0.00023 |         0.00224 |  nan       |   nan       |     0.9989  |  0.99023 |            0.00019 |                   9 |
+| Gradient boosting                 | none                             | 0.00029 | 0.00041 |         0.00588 |  nan       |   nan       |     1       |  0.97286 |            0       |                  25 |
+| Boosting point + global conformal | global                           | 0.00029 | 0.00041 |         0.00588 |    0.9085  |     0.0011  |     0.98604 |  0.99674 |            0.0025  |                   3 |
+| VoltGuard topology-aware residual | global                           | 7e-05   | 0.00011 |         0.00083 |    0.94984 |     0.00053 |     0.99352 |  0.99891 |            0.00115 |                   1 |
+| VoltGuard topology-aware residual | pv_conditioned                   | 7e-05   | 0.00011 |         0.00083 |    0.9451  |     0.00049 |     0.99675 |  0.99891 |            0.00058 |                   1 |
+| VoltGuard topology-aware residual | topology_conditioned             | 7e-05   | 0.00011 |         0.00083 |    0.95523 |     0.00053 |     0.99138 |  0.99891 |            0.00154 |                   1 |
+| VoltGuard topology-aware residual | topology_pv_loading_conditioned  | 7e-05   | 0.00011 |         0.00083 |    0.9366  |     0.00043 |     0.99675 |  0.99891 |            0.00058 |                   1 |
+| VoltGuard topology-aware residual | topology_pv_loading_no_shrinkage | 7e-05   | 0.00011 |         0.00083 |    0.91258 |     0.00042 |     0.99783 |  0.99891 |            0.00038 |                   1 |
+| Neural graph residual ablation    | topology_conditioned             | 0.0013  | 0.00171 |         0.00966 |    0.9134  |     0.0054  |     0.88365 |  0.99783 |            0.02327 |                   2 |

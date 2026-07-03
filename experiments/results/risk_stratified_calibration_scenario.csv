@@ -1,0 +1,29 @@
+method,conformal_variant,risk_stratum,scenarios,risky_scenarios,safe_scenarios,scenario_coverage_mean,mean_interval_width,risk_flag_rate,scenario_recall,scenario_false_alarm_rate,missed_risky_scenarios,false_alarm_scenarios,missed_buses_inside_stratum,mean_true_severity,max_true_severity
+Boosting point + global conformal,global,violating,93,93,0,0.8813379234136596,0.001096371314743623,1.0,1.0,,0,0,3,0.022781005055881882,0.0637766086676218
+Boosting point + global conformal,global,boundary_safe,4,0,4,0.9891304347826086,0.001096371314743608,0.25,,0.25,0,1,0,0.0,0.0
+Boosting point + global conformal,global,near_safe,14,0,14,0.9768492377188032,0.0010963713147436333,0.0,,0.0,0,0,0,0.0,0.0
+Boosting point + global conformal,global,interior_safe,9,0,9,0.9348558044210219,0.0010963713147436162,0.0,,0.0,0,0,0,0.0,0.0
+Neural graph residual ablation,topology_conditioned,violating,93,93,0,0.9097284202473545,0.00574511739978667,1.0,1.0,,0,0,2,0.022781005055881882,0.0637766086676218
+Neural graph residual ablation,topology_conditioned,boundary_safe,4,0,4,0.9137022397891964,0.006553805695681304,1.0,,1.0,0,4,0,0.0,0.0
+Neural graph residual ablation,topology_conditioned,near_safe,14,0,14,0.8975155279503106,0.005876256042364164,0.42857142857142855,,0.42857142857142855,0,6,0,0.0,0.0
+Neural graph residual ablation,topology_conditioned,interior_safe,9,0,9,0.9029424681598593,0.0069302221697463695,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,global,violating,93,93,0,0.937764744216357,0.0005274910307726747,1.0,1.0,,0,0,1,0.022781005055881882,0.0637766086676218
+VoltGuard topology-aware residual,global,boundary_safe,4,0,4,1.0,0.0005274910307726689,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,global,near_safe,14,0,14,0.9408055712403539,0.000527491030772682,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,global,interior_safe,9,0,9,0.9246084028692726,0.0005274910307726692,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,pv_conditioned,violating,93,93,0,0.917902729964441,0.00044926412598657827,1.0,1.0,,0,0,1,0.022781005055881882,0.0637766086676218
+VoltGuard topology-aware residual,pv_conditioned,boundary_safe,4,0,4,1.0,0.0005240404864015376,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,pv_conditioned,near_safe,14,0,14,0.974025974025974,0.0006456494145887802,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,pv_conditioned,interior_safe,9,0,9,0.9647196603718344,0.0006185887525235511,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_conditioned,violating,93,93,0,0.9552183829883688,0.0005532954947717367,1.0,1.0,,0,0,1,0.022781005055881882,0.0637766086676218
+VoltGuard topology-aware residual,topology_conditioned,boundary_safe,4,0,4,1.0,0.0006152326522512978,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_conditioned,near_safe,14,0,14,0.9616036137775269,0.0005633393581468115,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_conditioned,interior_safe,9,0,9,0.930171277997365,0.0006440622600871128,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_pv_loading_conditioned,violating,93,93,0,0.9449757037414822,0.00046719930121571433,1.0,1.0,,0,0,1,0.022781005055881882,0.0637766086676218
+VoltGuard topology-aware residual,topology_pv_loading_conditioned,boundary_safe,4,0,4,1.0,0.00036136715414996956,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_pv_loading_conditioned,near_safe,14,0,14,0.9334650856389988,0.00043813584066766214,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_pv_loading_conditioned,interior_safe,9,0,9,0.8663446054750403,0.0004391540910924582,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,violating,93,93,0,0.92028277161517,0.0004630558868693402,1.0,1.0,,0,0,1,0.022781005055881882,0.0637766086676218
+VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,boundary_safe,4,0,4,0.9848484848484849,0.000290371579694146,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,near_safe,14,0,14,0.9035384904950122,0.00040836299960355467,0.0,,0.0,0,0,0,0.0,0.0
+VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,interior_safe,9,0,9,0.8361879666227493,0.0004024719685042377,0.0,,0.0,0,0,0,0.0,0.0

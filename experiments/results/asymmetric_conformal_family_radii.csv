@@ -1,0 +1,19 @@
+family,calibration_samples,lower_q,upper_q,asymmetry_ratio,method,base_variant,calibration
+__global__,6120,0.0007317076922318628,0.00043058187145018494,0.5884615892677298,Boosting point + global conformal,global,asymmetric
+__global__,6120,0.00018621336231416374,0.0003105623643218707,1.6677770083863028,VoltGuard topology-aware residual,global,asymmetric
+feeder=33|pv_bin=0.2|load_bin=high_load,198,9.904490999170786e-05,0.0004783086842356052,4.829210145939348,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.2|load_bin=low_load,198,0.0001113781882315097,0.00012424376809759763,1.1155125619330928,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.4|load_bin=high_load,231,0.00035526736427335544,0.00045848563750763437,1.2905368846513554,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.4|load_bin=low_load,297,0.00013541962288632773,0.00033750886431297854,2.4923187431727385,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.6|load_bin=high_load,396,0.0006264467763385658,0.00032511083551517114,0.5189759893336311,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.6|load_bin=low_load,231,0.00010674496384357188,0.0001946946336473202,1.82392336497142,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.8|load_bin=high_load,231,0.0004191578018962357,0.0004127758954820225,0.9847744539518483,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=33|pv_bin=0.8|load_bin=low_load,198,0.00020596051910146384,0.00039169354197723743,1.9017894482207756,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.2|load_bin=high_load,1104,0.00012855192634402113,0.0001616986029290646,1.2578465957510339,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.2|load_bin=low_load,621,6.81592434837267e-05,7.489791833232576e-05,1.0988666320835552,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.4|load_bin=high_load,276,0.00012166094663254069,0.0004042647327965447,3.3228800530179,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.4|load_bin=low_load,414,4.345468191066072e-05,0.00012666868375944417,2.9149605563760574,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.6|load_bin=high_load,345,0.0002964905023700627,0.0003244969100164649,1.094459712613142,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.6|load_bin=low_load,621,0.00013685769436252646,0.00026712261374704126,1.9518275168325732,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.8|load_bin=high_load,483,0.00038501715768192316,0.00043515598160368067,1.1302249079589826,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric
+feeder=69|pv_bin=0.8|load_bin=low_load,276,0.00020119227172992843,0.000190785655113694,0.9482752666056486,VoltGuard topology-aware residual,topology_pv_loading_conditioned,asymmetric

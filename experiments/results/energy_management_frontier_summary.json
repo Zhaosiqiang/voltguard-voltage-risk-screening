@@ -1,0 +1,20 @@
+{
+  "rows": 21,
+  "frontier_types": [
+    "budgeted_ac_triage",
+    "candidate_action_pruning",
+    "conformal_release",
+    "high_pv_hosting"
+  ],
+  "primary_release_calls_avoided_mean": 27.333333333333332,
+  "primary_release_missed_risky_scenarios_mean": 0.0,
+  "primary_release_width_mean": 0.0005117976565449,
+  "primary_budget_calls_avoided_mean": 96.0,
+  "primary_budget_severity_capture_mean": 0.3404828416936499,
+  "primary_budget_capture_gain_vs_random": 0.1398170514656076,
+  "primary_action_audits_avoided_mean": 720.0,
+  "primary_action_extra_violating_buses_mean": 0.0,
+  "primary_action_cost_delta_vs_full_mw": 0.1454761476314961,
+  "primary_hosting_accepted_pv_mw": 392.39470249999994,
+  "primary_hosting_overvoltage_scenario_reduction_ratio": 0.6742424242424242
+}

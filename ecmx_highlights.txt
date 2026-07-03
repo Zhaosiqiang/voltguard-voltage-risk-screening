@@ -1,0 +1,5 @@
+- LinDistFlow residual learning supports renewable-hosting voltage-risk screening.
+- Topology/PV/loading conformal calibration reduces missed voltage violations.
+- IEEE 33-bus and 69-bus feeders are the main distribution tests.
+- Shift and per-family audits define the method boundary.
+- Neural graph residual learning is retained only as an ablation.

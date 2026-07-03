@@ -1,0 +1,25 @@
+{
+  "rows": 4,
+  "raw_rows": 12,
+  "seeds": [
+    7,
+    17,
+    42
+  ],
+  "test_scenarios_per_seed": 120,
+  "candidate_grid_size": 9,
+  "top_k": 3,
+  "primary_policy": "VoltGuard interval-risk",
+  "primary_candidate_ac_audits_mean": 360.0,
+  "primary_candidate_ac_audits_avoided_mean": 720.0,
+  "primary_audit_reduction_ratio_mean": 0.6666666666666666,
+  "primary_full_best_in_subset_rate_mean": 0.8416666666666667,
+  "primary_extra_violating_scenarios_vs_full_mean": 0.0,
+  "primary_extra_violating_buses_vs_full_mean": 0.0,
+  "primary_action_cost_delta_vs_full_mw_mean": 11.588927758299135,
+  "ldf_extra_violating_scenarios_vs_full_mean": 0.6666666666666666,
+  "cheapest_extra_violating_scenarios_vs_full_mean": 29.333333333333332,
+  "ac_candidate_rows": 3240,
+  "score_rows": 3240,
+  "raw_prediction_rows": 165240
+}

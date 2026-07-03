@@ -1,0 +1,13 @@
+seed,target_fraction,protocol,target_calibration_scenarios,target_test_scenarios,target_calibration_buses,target_test_buses
+7,0.0,source_only,0,132,0,6876
+7,0.1,source_plus_target_high_pv,16,116,816,6060
+7,0.2,source_plus_target_high_pv,29,103,1497,5379
+7,0.4,source_plus_target_high_pv,55,77,2859,4017
+17,0.0,source_only,0,132,0,6876
+17,0.1,source_plus_target_high_pv,16,116,816,6060
+17,0.2,source_plus_target_high_pv,29,103,1497,5379
+17,0.4,source_plus_target_high_pv,55,77,2859,4017
+42,0.0,source_only,0,132,0,6876
+42,0.1,source_plus_target_high_pv,16,116,816,6060
+42,0.2,source_plus_target_high_pv,29,103,1497,5379
+42,0.4,source_plus_target_high_pv,55,77,2859,4017

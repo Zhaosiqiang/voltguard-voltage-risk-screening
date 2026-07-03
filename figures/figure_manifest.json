@@ -1,0 +1,78 @@
+{
+  "canonical_format": "svg",
+  "latex_companion_format": "pdf",
+  "figures": [
+    {
+      "svg": "figures/fig01_graphical_abstract_workflow.svg",
+      "pdf": "figures/fig01_graphical_abstract_workflow.pdf",
+      "bytes_svg": 944136,
+      "bytes_pdf": 846939
+    },
+    {
+      "svg": "figures/fig02_feeders_and_splits.svg",
+      "pdf": "figures/fig02_feeders_and_splits.pdf",
+      "bytes_svg": 26086,
+      "bytes_pdf": 32217
+    },
+    {
+      "svg": "figures/fig03_conformal_ablation.svg",
+      "pdf": "figures/fig03_conformal_ablation.pdf",
+      "bytes_svg": 31896,
+      "bytes_pdf": 26976
+    },
+    {
+      "svg": "figures/fig04_per_family_calibration.svg",
+      "pdf": "figures/fig04_per_family_calibration.pdf",
+      "bytes_svg": 23793,
+      "bytes_pdf": 23000
+    },
+    {
+      "svg": "figures/fig05_shift_generalization.svg",
+      "pdf": "figures/fig05_shift_generalization.pdf",
+      "bytes_svg": 25098,
+      "bytes_pdf": 27474
+    },
+    {
+      "svg": "figures/fig06_operating_value.svg",
+      "pdf": "figures/fig06_operating_value.pdf",
+      "bytes_svg": 29552,
+      "bytes_pdf": 27766
+    },
+    {
+      "svg": "figures/fig07_energy_frontier.svg",
+      "pdf": "figures/fig07_energy_frontier.pdf",
+      "bytes_svg": 31586,
+      "bytes_pdf": 26519
+    },
+    {
+      "svg": "figures/fig08_screening_budget.svg",
+      "pdf": "figures/fig08_screening_budget.pdf",
+      "bytes_svg": 17922,
+      "bytes_pdf": 27129
+    },
+    {
+      "svg": "figures/fig09_candidate_action_screening.svg",
+      "pdf": "figures/fig09_candidate_action_screening.pdf",
+      "bytes_svg": 32458,
+      "bytes_pdf": 29771
+    },
+    {
+      "svg": "figures/fig10_risk_ranking_quality.svg",
+      "pdf": "figures/fig10_risk_ranking_quality.pdf",
+      "bytes_svg": 29950,
+      "bytes_pdf": 29377
+    },
+    {
+      "svg": "figures/fig11_oajpe_lindistflow_quantile_pipeline.svg",
+      "pdf": "figures/fig11_oajpe_lindistflow_quantile_pipeline.pdf",
+      "bytes_svg": 943602,
+      "bytes_pdf": 844683
+    },
+    {
+      "svg": "figures/fig12_oajpe_minimal_performance.svg",
+      "pdf": "figures/fig12_oajpe_minimal_performance.pdf",
+      "bytes_svg": 25015,
+      "bytes_pdf": 26835
+    }
+  ]
+}

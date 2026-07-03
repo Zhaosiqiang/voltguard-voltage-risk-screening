@@ -1,0 +1,19 @@
+{
+  "rows": 10,
+  "raw_rows": 162,
+  "fractions": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "repeats": 20,
+  "primary_10pct_coverage_mean": 0.9290277777777778,
+  "primary_10pct_missed_mean": 0.9,
+  "primary_10pct_empty_test_families_mean": 7.6,
+  "primary_full_coverage": 0.9366013071895425,
+  "primary_full_missed": 1.0,
+  "primary_full_empty_test_families": 0.0,
+  "primary_full_width": 0.0004334041749203834
+}

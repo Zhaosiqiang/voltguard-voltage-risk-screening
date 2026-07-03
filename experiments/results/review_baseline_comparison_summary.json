@@ -1,0 +1,11 @@
+{
+  "rows": 2,
+  "seed": 7,
+  "train_rows": 18360,
+  "test_rows": 6120,
+  "gpr_training_subsample_rows": 900,
+  "methods": [
+    "Gradient-boosted quantile regression",
+    "Gaussian-process UQ baseline"
+  ]
+}

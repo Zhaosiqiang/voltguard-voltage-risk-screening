@@ -1,0 +1,80 @@
+split_name,seed,method,conformal_variant,available_pv_mw,accepted_pv_mw,curtailed_pv_mw,relieved_load_mw,curtailment_rate,flexible_load_relief_scenarios,missed_risky_scenarios
+random_interpolation,7,Boosting point + global conformal,global,191.23095295448223,191.23095295448223,0.0,35.64160569822138,0.0,94,0
+random_interpolation,7,VoltGuard topology-aware residual,global,191.23095295448223,191.23095295448223,0.0,35.33449156348388,0.0,93,0
+random_interpolation,7,VoltGuard topology-aware residual,pv_conditioned,191.23095295448223,191.23095295448223,0.0,35.33449156348388,0.0,93,0
+random_interpolation,7,VoltGuard topology-aware residual,topology_conditioned,191.23095295448223,191.23095295448223,0.0,35.33449156348388,0.0,93,0
+random_interpolation,7,VoltGuard topology-aware residual,topology_pv_loading_conditioned,191.23095295448223,191.23095295448223,0.0,35.33449156348388,0.0,93,0
+random_interpolation,7,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,191.23095295448223,191.23095295448223,0.0,35.33449156348388,0.0,93,0
+random_interpolation,7,Neural graph residual ablation,topology_conditioned,191.23095295448223,191.23095295448223,0.0,38.21999550128084,0.0,103,0
+synthetic_time_block,7,Boosting point + global conformal,global,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,7,VoltGuard topology-aware residual,global,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,7,VoltGuard topology-aware residual,pv_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,7,VoltGuard topology-aware residual,topology_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,7,VoltGuard topology-aware residual,topology_pv_loading_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,7,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+pv_penetration_shift,7,Boosting point + global conformal,global,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,7,VoltGuard topology-aware residual,global,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,7,VoltGuard topology-aware residual,pv_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,7,VoltGuard topology-aware residual,topology_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,7,VoltGuard topology-aware residual,topology_pv_loading_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,7,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+topology_heldout_33_to_69,7,Boosting point + global conformal,global,329.68037281917304,329.68037281917304,0.0,62.967347988671236,0.0,163,0
+topology_heldout_33_to_69,7,VoltGuard topology-aware residual,global,329.68037281917304,329.68037281917304,0.0,62.967347988671236,0.0,163,0
+topology_heldout_33_to_69,7,VoltGuard topology-aware residual,pv_conditioned,329.68037281917304,329.68037281917304,0.0,62.967347988671236,0.0,163,0
+topology_heldout_33_to_69,7,VoltGuard topology-aware residual,topology_conditioned,329.68037281917304,329.68037281917304,0.0,62.967347988671236,0.0,163,0
+topology_heldout_33_to_69,7,VoltGuard topology-aware residual,topology_pv_loading_conditioned,329.68037281917304,329.68037281917304,0.0,62.967347988671236,0.0,163,0
+topology_heldout_33_to_69,7,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,329.68037281917304,329.68037281917304,0.0,62.967347988671236,0.0,163,0
+random_interpolation,17,Boosting point + global conformal,global,236.47093655355442,236.47093655355442,0.0,36.56797097001855,0.0,91,0
+random_interpolation,17,VoltGuard topology-aware residual,global,236.47093655355442,236.47093655355442,0.0,36.56797097001855,0.0,91,0
+random_interpolation,17,VoltGuard topology-aware residual,pv_conditioned,236.47093655355442,236.47093655355442,0.0,36.56797097001855,0.0,91,0
+random_interpolation,17,VoltGuard topology-aware residual,topology_conditioned,236.47093655355442,236.47093655355442,0.0,36.56797097001855,0.0,91,0
+random_interpolation,17,VoltGuard topology-aware residual,topology_pv_loading_conditioned,236.47093655355442,236.47093655355442,0.0,36.56797097001855,0.0,91,0
+random_interpolation,17,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,236.47093655355442,236.47093655355442,0.0,36.56797097001855,0.0,91,0
+synthetic_time_block,17,Boosting point + global conformal,global,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,17,VoltGuard topology-aware residual,global,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,17,VoltGuard topology-aware residual,pv_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,17,VoltGuard topology-aware residual,topology_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,17,VoltGuard topology-aware residual,topology_pv_loading_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,17,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+pv_penetration_shift,17,Boosting point + global conformal,global,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,17,VoltGuard topology-aware residual,global,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,17,VoltGuard topology-aware residual,pv_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,17,VoltGuard topology-aware residual,topology_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,17,VoltGuard topology-aware residual,topology_pv_loading_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,17,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+topology_heldout_33_to_69,17,Boosting point + global conformal,global,334.89761274142074,334.89761274142074,0.0,64.82021724718244,0.0,166,0
+topology_heldout_33_to_69,17,VoltGuard topology-aware residual,global,334.89761274142074,334.89761274142074,0.0,64.82021724718244,0.0,166,0
+topology_heldout_33_to_69,17,VoltGuard topology-aware residual,pv_conditioned,334.89761274142074,334.89761274142074,0.0,64.82021724718244,0.0,166,0
+topology_heldout_33_to_69,17,VoltGuard topology-aware residual,topology_conditioned,334.89761274142074,334.89761274142074,0.0,64.82021724718244,0.0,166,0
+topology_heldout_33_to_69,17,VoltGuard topology-aware residual,topology_pv_loading_conditioned,334.89761274142074,334.89761274142074,0.0,64.82021724718244,0.0,166,0
+topology_heldout_33_to_69,17,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,334.89761274142074,334.89761274142074,0.0,64.82021724718244,0.0,166,0
+random_interpolation,42,Boosting point + global conformal,global,239.84934000057135,239.84934000057135,0.0,36.876146616641336,0.0,94,0
+random_interpolation,42,VoltGuard topology-aware residual,global,239.84934000057135,239.84934000057135,0.0,36.4863672325224,0.0,93,0
+random_interpolation,42,VoltGuard topology-aware residual,pv_conditioned,239.84934000057135,239.84934000057135,0.0,36.876146616641336,0.0,94,0
+random_interpolation,42,VoltGuard topology-aware residual,topology_conditioned,239.84934000057135,239.84934000057135,0.0,36.4863672325224,0.0,93,0
+random_interpolation,42,VoltGuard topology-aware residual,topology_pv_loading_conditioned,239.84934000057135,239.84934000057135,0.0,36.876146616641336,0.0,94,0
+random_interpolation,42,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,239.84934000057135,239.84934000057135,0.0,36.876146616641336,0.0,94,0
+synthetic_time_block,42,Boosting point + global conformal,global,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,42,VoltGuard topology-aware residual,global,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,42,VoltGuard topology-aware residual,pv_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,42,VoltGuard topology-aware residual,topology_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,42,VoltGuard topology-aware residual,topology_pv_loading_conditioned,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+synthetic_time_block,42,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,238.91598355171416,238.91598355171416,0.0,41.87255745149765,0.0,103,0
+pv_penetration_shift,42,Boosting point + global conformal,global,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,42,VoltGuard topology-aware residual,global,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,42,VoltGuard topology-aware residual,pv_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,42,VoltGuard topology-aware residual,topology_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,42,VoltGuard topology-aware residual,topology_pv_loading_conditioned,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+pv_penetration_shift,42,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,405.8250824885048,405.8250824885048,0.0,31.38572755379886,0.0,75,0
+topology_heldout_33_to_69,42,Boosting point + global conformal,global,350.19521361313764,350.19521361313764,0.0,64.28143627578164,0.0,164,0
+topology_heldout_33_to_69,42,VoltGuard topology-aware residual,global,350.19521361313764,350.19521361313764,0.0,64.28143627578164,0.0,164,0
+topology_heldout_33_to_69,42,VoltGuard topology-aware residual,pv_conditioned,350.19521361313764,350.19521361313764,0.0,64.28143627578164,0.0,164,0
+topology_heldout_33_to_69,42,VoltGuard topology-aware residual,topology_conditioned,350.19521361313764,350.19521361313764,0.0,64.28143627578164,0.0,164,0
+topology_heldout_33_to_69,42,VoltGuard topology-aware residual,topology_pv_loading_conditioned,350.19521361313764,350.19521361313764,0.0,64.28143627578164,0.0,164,0
+topology_heldout_33_to_69,42,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,350.19521361313764,350.19521361313764,0.0,64.28143627578164,0.0,164,0
+supplementary_118_random,7,Boosting point + global conformal,global,143861.94930602988,129475.75437542687,14386.19493060299,27077.11598477267,0.1,60,0
+supplementary_118_random,7,VoltGuard topology-aware residual,global,143861.94930602988,129475.75437542687,14386.19493060299,27077.11598477267,0.1,60,0
+supplementary_118_random,7,VoltGuard topology-aware residual,pv_conditioned,143861.94930602988,129475.75437542687,14386.19493060299,27077.11598477267,0.1,60,0
+supplementary_118_random,7,VoltGuard topology-aware residual,topology_conditioned,143861.94930602988,129475.75437542687,14386.19493060299,27077.11598477267,0.1,60,0
+supplementary_118_random,7,VoltGuard topology-aware residual,topology_pv_loading_conditioned,143861.94930602988,129475.75437542687,14386.19493060299,27077.11598477267,0.1,60,0
+supplementary_118_random,7,VoltGuard topology-aware residual,topology_pv_loading_no_shrinkage,143861.94930602988,129475.75437542687,14386.19493060299,27077.11598477267,0.1,60,0

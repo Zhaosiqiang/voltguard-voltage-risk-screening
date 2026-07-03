@@ -1,0 +1,10 @@
+| method                            | conformal_variant               |   alpha |   nominal_coverage |   coverage |   avg_width |   precision |   recall |      f1 |   false_alarm_rate |   missed_violations |
+|:----------------------------------|:--------------------------------|--------:|-------------------:|-----------:|------------:|------------:|---------:|--------:|-------------------:|--------------------:|
+| Boosting point + global conformal | global                          |    0.05 |               0.95 |    0.95523 |     0.00161 |     0.98186 |  0.99891 | 0.99031 |            0.00327 |                   1 |
+| VoltGuard topology-aware residual | topology_pv_loading_conditioned |    0.05 |               0.95 |    0.97026 |     0.00056 |     0.99139 |  1       | 0.99568 |            0.00154 |                   0 |
+| Boosting point + global conformal | global                          |    0.1  |               0.9  |    0.9085  |     0.0011  |     0.98604 |  0.99674 | 0.99136 |            0.0025  |                   3 |
+| VoltGuard topology-aware residual | topology_pv_loading_conditioned |    0.1  |               0.9  |    0.9366  |     0.00043 |     0.99675 |  0.99891 | 0.99783 |            0.00058 |                   1 |
+| Boosting point + global conformal | global                          |    0.15 |               0.85 |    0.85654 |     0.00088 |     0.99347 |  0.99131 | 0.99239 |            0.00115 |                   8 |
+| VoltGuard topology-aware residual | topology_pv_loading_conditioned |    0.15 |               0.85 |    0.9     |     0.00034 |     0.99783 |  0.99891 | 0.99837 |            0.00038 |                   1 |
+| Boosting point + global conformal | global                          |    0.2  |               0.8  |    0.80441 |     0.00075 |     0.99781 |  0.98806 | 0.99291 |            0.00038 |                  11 |
+| VoltGuard topology-aware residual | topology_pv_loading_conditioned |    0.2  |               0.8  |    0.84216 |     0.00028 |     0.99891 |  0.99891 | 0.99891 |            0.00019 |                   1 |

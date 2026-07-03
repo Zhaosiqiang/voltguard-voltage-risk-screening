@@ -1,0 +1,7 @@
+{
+  "rows": 7,
+  "primary_average_precision": 1.0,
+  "primary_spearman_score_severity": 0.9998454535236596,
+  "primary_top20_severity_capture": 0.45593923251745233,
+  "primary_bottom10_safe_precision": 1.0
+}

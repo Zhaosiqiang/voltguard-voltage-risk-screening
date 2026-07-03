@@ -1,0 +1,30 @@
+{
+  "rows": 8,
+  "raw_rows": 24,
+  "seeds": [
+    7,
+    17,
+    42
+  ],
+  "target_fractions": [
+    0.0,
+    0.1,
+    0.2,
+    0.4
+  ],
+  "primary_alpha": 0.1,
+  "source_screened_safe_scenarios_mean": 57.0,
+  "source_ac_calls_avoided_mean": 57.0,
+  "source_missed_bus_violations_mean": 1.0,
+  "source_width_mean": 0.0008108498528748673,
+  "adapted_fraction": 0.1,
+  "adapted_target_calibration_scenarios_mean": 16.0,
+  "adapted_screened_safe_scenarios_mean": 49.666666666666664,
+  "adapted_ac_calls_avoided_mean": 49.666666666666664,
+  "adapted_missed_bus_violations_mean": 0.0,
+  "adapted_risky_scenario_recall_mean": 1.0,
+  "adapted_post_screening_miss_rate_mean": 0.0,
+  "adapted_width_mean": 0.0020876463636523034,
+  "width_increase_vs_source": 0.0012767965107774362,
+  "screened_safe_delta_vs_source": -7.333333333333336
+}

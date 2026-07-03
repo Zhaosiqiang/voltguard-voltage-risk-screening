@@ -1,0 +1,11 @@
+{
+  "feeders": [
+    "33",
+    "69",
+    "118"
+  ],
+  "scenarios_per_feeder": 300,
+  "seed": 42,
+  "summary_path": "VoltGuard-CPGNN/experiments/results/scenario_summary.csv",
+  "bus_path": "VoltGuard-CPGNN/experiments/results/bus_voltage_labels.csv"
+}

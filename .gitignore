@@ -1,0 +1,29 @@
+.DS_Store
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local editor and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary render/build scratch files
+tmp/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# Keep generated manuscript PDFs and source .md/.tex files under version control.

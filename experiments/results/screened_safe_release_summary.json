@@ -1,0 +1,15 @@
+{
+  "rows": 11,
+  "point_gate_rows": 3,
+  "conformal_rows": 8,
+  "primary_alpha": 0.1,
+  "primary_released_scenarios": 27,
+  "primary_safe_release_precision": 1.0,
+  "primary_released_risky_scenarios": 0,
+  "primary_released_severity_share": 0.0,
+  "primary_ac_calls_avoided": 27,
+  "primary_mean_interval_width": 0.00045817743515701284,
+  "point_vg_released_risky_scenarios": 0,
+  "point_ldf_released_risky_scenarios": 2,
+  "point_ldf_released_severity_share": 0.0006134377902894917
+}

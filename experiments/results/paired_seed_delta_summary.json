@@ -1,0 +1,10 @@
+{
+  "rows": 5,
+  "comparison": "VoltGuard topology-aware residual / topology_pv_loading_conditioned minus Boosting point + global conformal / global",
+  "random_delta_missed_mean": -1.3333333333333333,
+  "random_delta_missed_ci95": 0.6533333333333333,
+  "random_delta_recall_mean": 0.0015241836717987771,
+  "random_delta_coverage_mean": 0.01928104575163392,
+  "topology_heldout_delta_missed_mean": 0.0,
+  "topology_heldout_delta_false_alarm_mean": -0.0012857695407511
+}

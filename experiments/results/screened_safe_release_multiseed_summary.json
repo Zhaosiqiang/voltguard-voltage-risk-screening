@@ -1,0 +1,18 @@
+{
+  "rows": 5,
+  "raw_rows": 15,
+  "seeds": [
+    7,
+    17,
+    42
+  ],
+  "primary_alpha": 0.1,
+  "primary_released_scenarios_mean": 27.333333333333332,
+  "primary_safe_release_precision_mean": 1.0,
+  "primary_released_risky_scenarios_mean": 0.0,
+  "primary_released_risky_scenarios_ci95": 0.0,
+  "primary_released_severity_share_mean": 0.0,
+  "primary_ac_calls_avoided_mean": 27.333333333333332,
+  "boost_released_risky_scenarios_mean": 0.0,
+  "ldf_point_released_risky_scenarios_mean": 1.6666666666666667
+}

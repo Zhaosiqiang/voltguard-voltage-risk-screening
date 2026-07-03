@@ -1,0 +1,4 @@
+| split_name           |   seed | method                               |     mae |    rmse |   max_abs_error |   coverage |   avg_width |   precision |   recall |      f1 |   false_alarm_rate |   missed_violations |
+|:---------------------|-------:|:-------------------------------------|--------:|--------:|----------------:|-----------:|------------:|------------:|---------:|--------:|-------------------:|--------------------:|
+| random_interpolation |      7 | Gradient-boosted quantile regression | 0.00019 | 0.00035 |         0.00663 |    0.83219 |     0.00444 |     0.99242 |  0.99566 | 0.99404 |            0.00135 |                   4 |
+| random_interpolation |      7 | Gaussian-process UQ baseline         | 0.00591 | 0.01165 |         0.08822 |    0.97827 |     0.05108 |     0.34689 |  1       | 0.5151  |            0.33353 |                   0 |

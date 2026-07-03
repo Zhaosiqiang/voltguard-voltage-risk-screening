@@ -1,0 +1,19 @@
+{
+  "rows": 12,
+  "raw_rows": 36,
+  "target_fractions": [
+    0.0,
+    0.1,
+    0.2,
+    0.4
+  ],
+  "primary_source_coverage": 0.7691487298817141,
+  "primary_source_width": 0.0008108498528748677,
+  "primary_source_missed": 1.0,
+  "primary_adapted_fraction": 0.1,
+  "primary_adapted_target_calibration_scenarios": 16.0,
+  "primary_adapted_coverage": 0.8952695269526952,
+  "primary_adapted_width": 0.0018893271816915237,
+  "primary_adapted_missed": 0.0,
+  "primary_adapted_scenario_recall": 1.0
+}

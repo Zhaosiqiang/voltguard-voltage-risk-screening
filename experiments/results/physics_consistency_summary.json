@@ -1,0 +1,9 @@
+{
+  "rows": 4,
+  "scenario_rows": 480,
+  "ac_label_drop_rmse_mean": 0.0002375727630604911,
+  "voltguard_drop_rmse_mean": 0.00025038274488281445,
+  "boosting_drop_rmse_mean": 0.0005628924713450681,
+  "voltguard_vs_boosting_drop_rmse_delta": -0.0003125097264622536,
+  "interpretation": "The audit measures LinDistFlow branch-drop consistency of saved predictions; the AC-label row is not zero because the proxy ignores losses and full AC effects."
+}

@@ -1,0 +1,33 @@
+{
+  "main_feeders": [
+    "33",
+    "69"
+  ],
+  "supplementary_feeders": [
+    "118"
+  ],
+  "evaluation_seeds": [
+    7,
+    17,
+    42
+  ],
+  "splits": [
+    "random_interpolation",
+    "synthetic_time_block",
+    "pv_penetration_shift",
+    "topology_heldout_33_to_69"
+  ],
+  "representative_seed": 7,
+  "primary_method": "VoltGuard topology-aware residual",
+  "primary_conformal_variant": "topology_pv_loading_conditioned",
+  "primary_rmse": 0.00011446658923916485,
+  "primary_coverage": 0.9366013071895425,
+  "primary_width": 0.000433404174920454,
+  "primary_recall": 0.998914223669924,
+  "primary_false_alarm_rate": 0.0005770340450086555,
+  "primary_missed_violations": 1,
+  "boosting_global_missed_violations": 3,
+  "neural_ablation_ran": true,
+  "raw_predictions_saved": true,
+  "conformal_scores_saved": true
+}

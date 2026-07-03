@@ -1,0 +1,12 @@
+{
+  "rows": 6,
+  "family_rows": 18,
+  "primary_symmetric_width": 0.00043340417492045255,
+  "primary_asymmetric_width": 0.00041111385347362403,
+  "primary_width_delta": -2.2290321446828524e-05,
+  "primary_symmetric_recall": 0.998914223669924,
+  "primary_asymmetric_recall": 1.0,
+  "primary_symmetric_missed": 1,
+  "primary_asymmetric_missed": 0,
+  "primary_asymmetric_scenario_recall": 1.0
+}

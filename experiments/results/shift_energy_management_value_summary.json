@@ -1,0 +1,22 @@
+{
+  "rows": 8,
+  "raw_rows": 24,
+  "seeds": [
+    7,
+    17,
+    42
+  ],
+  "splits": [
+    "pv_penetration_shift",
+    "random_interpolation",
+    "synthetic_time_block",
+    "topology_heldout_33_to_69"
+  ],
+  "primary_alpha": 0.1,
+  "voltguard_min_risky_scenario_recall_mean": 1.0,
+  "voltguard_max_post_screening_miss_rate_mean": 0.0,
+  "voltguard_random_ac_calls_avoided_mean": 27.333333333333332,
+  "voltguard_pv_shift_missed_risky_scenarios_mean": 0.0,
+  "voltguard_topology_missed_risky_scenarios_mean": 0.0,
+  "voltguard_topology_bus_recall_mean": 1.0
+}

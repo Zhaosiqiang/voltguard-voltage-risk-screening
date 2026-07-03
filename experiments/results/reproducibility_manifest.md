@@ -1,0 +1,161 @@
+# Reproducibility Manifest
+
+Generated UTC: 2026-07-03T02:08:04Z
+
+Target route: Energy Conversion and Management: X
+
+Validation: run `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/validate_project.py` after manifest generation.
+
+## Reproduction Commands
+
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/generate_scenarios.py --feeders 33 69 118 --scenarios 300 --seed 42`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_models.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_control_benchmark.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_sensitivity.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_asymmetric_conformal.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_calibration_budget_sensitivity.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_family_recalibration.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_paired_seed_deltas.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_feature_ablation.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_ev_conditioning.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_energy_management_value.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_energy_management_value_multiseed.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_energy_management_frontier.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_shift_energy_management_value.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_topology_transfer_bidirectional.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_screened_safe_release.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_screened_safe_release_multiseed.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_forecast_noise_robustness.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_risk_ranking.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_pv_shift_recalibration.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_pv_shift_recalibration_energy_value.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_risk_stratified_calibration.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_screening_budget.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_screening_budget_multiseed.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_statistical_evidence.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_candidate_action_screening.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_candidate_action_screening_multiseed.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_action_cost_tradeoff.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_action_cost_tradeoff_multiseed.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_runtime_benchmark.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_physics_consistency.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_high_pv_hosting_stress.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/evaluate_high_pv_hosting_frontier.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/write_submission_manuscript.py`
+- `VoltGuard-CPGNN/.venv/bin/python VoltGuard-CPGNN/experiments/validate_project.py`
+
+## Artifact Counts
+
+- Source files: 38
+- Result files: 107
+- Submission files: 55
+
+## Key Result Artifacts
+
+- `experiments/results/scenario_generation_meta.json` (251 bytes, sha256 `16793688dfa4a4bb...`)
+- `experiments/results/scenario_summary.csv` (135347 bytes, sha256 `6c19cfea708e1004...`)
+- `experiments/results/dataset_split_summary.csv` (6929 bytes, sha256 `11e247d65ce21bd9...`)
+- `experiments/results/bus_voltage_labels.csv` (13283956 bytes, sha256 `ab8ea861928e31bc...`)
+- `experiments/results/evaluation_summary.json` (818 bytes, sha256 `597d653a4f3864ba...`)
+- `experiments/results/evaluation_metrics_all_runs.csv` (27619 bytes, sha256 `6f8190b813a1b730...`)
+- `experiments/results/model_voltage_screening_metrics.csv` (2501 bytes, sha256 `219b1522d34db68d...`)
+- `experiments/results/multi_seed_summary.csv` (13573 bytes, sha256 `0fbfb133e632dcc1...`)
+- `experiments/results/paired_seed_delta_summary.csv` (2790 bytes, sha256 `8a29e36f02dcbe1f...`)
+- `experiments/results/paired_seed_delta_summary.json` (469 bytes, sha256 `5c3deaa822de04af...`)
+- `experiments/results/paired_seed_deltas_raw.csv` (3206 bytes, sha256 `c35cdc07b5a6dbd6...`)
+- `experiments/results/feature_residual_ablation.csv` (3451 bytes, sha256 `7d8777cfdbbddaf8...`)
+- `experiments/results/feature_residual_ablation_raw.csv` (2966 bytes, sha256 `d68a8e32cb2aba7f...`)
+- `experiments/results/feature_residual_ablation_summary.json` (443 bytes, sha256 `985c043fb7ec08e6...`)
+- `experiments/results/ev_conditioning_ablation.csv` (910 bytes, sha256 `180b58f1a7602789...`)
+- `experiments/results/ev_conditioning_summary.json` (270 bytes, sha256 `6f50f09edef3c58b...`)
+- `experiments/results/ev_conditioning_family_counts.csv` (15896 bytes, sha256 `a315238a9b4f3114...`)
+- `experiments/results/ev_conditioning_sample_size_outlook.csv` (432 bytes, sha256 `c03b33877fbc0ae3...`)
+- `experiments/results/ev_conditioning_sample_size_outlook.md` (1233 bytes, sha256 `dc7d3b634a9bbf4e...`)
+- `experiments/results/scenario_level_metrics.csv` (12578 bytes, sha256 `f466ee8ca972a7c3...`)
+- `experiments/results/conformal_ablation_metrics.csv` (20686 bytes, sha256 `65f4453f1ed73b50...`)
+- `experiments/results/calibration_budget_sensitivity_metrics.csv` (5825 bytes, sha256 `38e597404e64c8b9...`)
+- `experiments/results/calibration_budget_sensitivity_raw.csv` (55212 bytes, sha256 `2aa3577a523753b9...`)
+- `experiments/results/calibration_budget_sensitivity_summary.json` (425 bytes, sha256 `6b49ea4d4c7d7e4b...`)
+- `experiments/results/asymmetric_conformal_metrics.csv` (2639 bytes, sha256 `da22df671a5ef764...`)
+- `experiments/results/asymmetric_conformal_family_radii.csv` (3300 bytes, sha256 `f188e7ce36d8e102...`)
+- `experiments/results/asymmetric_conformal_summary.json` (390 bytes, sha256 `834e3893b9598c9b...`)
+- `experiments/results/per_family_conformal_metrics.csv` (91768 bytes, sha256 `5eb96291e09d7576...`)
+- `experiments/results/family_recalibration_audit.csv` (3980 bytes, sha256 `f166c2b8a594aea2...`)
+- `experiments/results/family_recalibration_summary.json` (620 bytes, sha256 `ceb63422f357ec74...`)
+- `experiments/results/forecast_noise_robustness_metrics.csv` (3084 bytes, sha256 `175f23dbe6375bbc...`)
+- `experiments/results/forecast_noise_robustness_raw.csv` (4052 bytes, sha256 `6343202953eddb1b...`)
+- `experiments/results/forecast_noise_robustness_summary.json` (479 bytes, sha256 `bd64d0699f31e0f7...`)
+- `experiments/results/pv_shift_recalibration_metrics.csv` (5358 bytes, sha256 `cdcf926b8835a407...`)
+- `experiments/results/pv_shift_recalibration_raw.csv` (11184 bytes, sha256 `ab8b389ae632a954...`)
+- `experiments/results/pv_shift_recalibration_target_splits.csv` (669 bytes, sha256 `a2a151af7d52ec16...`)
+- `experiments/results/pv_shift_recalibration_summary.json` (494 bytes, sha256 `9d3a420c400c91d7...`)
+- `experiments/results/pv_shift_recalibration_energy_value_metrics.csv` (7659 bytes, sha256 `3ff259613d9bccca...`)
+- `experiments/results/pv_shift_recalibration_energy_value_raw.csv` (7180 bytes, sha256 `fca9d4b209330670...`)
+- `experiments/results/pv_shift_recalibration_energy_value_summary.json` (828 bytes, sha256 `ad1af11f2c3f3e8e...`)
+- `experiments/results/risk_stratified_calibration_bus.csv` (4726 bytes, sha256 `e7ab9f2177a72f9c...`)
+- `experiments/results/risk_stratified_calibration_scenario.csv` (4286 bytes, sha256 `e86551d2ef9b108c...`)
+- `experiments/results/risk_stratified_calibration_summary.json` (346 bytes, sha256 `ea3676d8209bdc51...`)
+- `experiments/results/conformal_sensitivity_metrics.csv` (1562 bytes, sha256 `9da8f7f3a6501df8...`)
+- `experiments/results/operating_value_metrics.csv` (11898 bytes, sha256 `7986ccd59377b272...`)
+- `experiments/results/energy_management_value_metrics.csv` (2377 bytes, sha256 `03f266771c576c4a...`)
+- `experiments/results/energy_management_value_multiseed_metrics.csv` (8189 bytes, sha256 `e2181f3248e4205e...`)
+- `experiments/results/energy_management_value_multiseed_raw.csv` (6311 bytes, sha256 `ffd35a3346494e21...`)
+- `experiments/results/energy_management_value_multiseed_summary.json` (696 bytes, sha256 `afb4ef9ea641dea7...`)
+- `experiments/results/energy_management_frontier_metrics.csv` (5951 bytes, sha256 `dc967ccac7f5cdac...`)
+- `experiments/results/energy_management_frontier_metrics.md` (16353 bytes, sha256 `1c37d6fba25212b4...`)
+- `experiments/results/energy_management_frontier_summary.json` (779 bytes, sha256 `6cedccb1eae99a2a...`)
+- `experiments/results/shift_energy_management_value_metrics.csv` (7168 bytes, sha256 `4ef3bab83a063fec...`)
+- `experiments/results/shift_energy_management_value_raw.csv` (6932 bytes, sha256 `d13b20506c5a1245...`)
+- `experiments/results/shift_energy_management_value_summary.json` (560 bytes, sha256 `5aac3375ac26c35d...`)
+- `experiments/results/topology_transfer_bidirectional_metrics.csv` (6535 bytes, sha256 `3957a5e6496ef23e...`)
+- `experiments/results/topology_transfer_bidirectional_raw.csv` (5160 bytes, sha256 `74fc2b512e7132fd...`)
+- `experiments/results/topology_transfer_bidirectional_summary.json` (953 bytes, sha256 `6b7b1b563f852e9b...`)
+- `experiments/results/screened_safe_release_metrics.csv` (2852 bytes, sha256 `60da7768360bdc59...`)
+- `experiments/results/screened_safe_release_summary.json` (485 bytes, sha256 `f201ea9fdc6c2eb0...`)
+- `experiments/results/screened_safe_release_multiseed_metrics.csv` (3654 bytes, sha256 `07d67673c40cb3e9...`)
+- `experiments/results/screened_safe_release_multiseed_raw.csv` (3801 bytes, sha256 `2fff3cdc52ac995f...`)
+- `experiments/results/screened_safe_release_multiseed_summary.json` (509 bytes, sha256 `483feee72f06f731...`)
+- `experiments/results/screening_budget_metrics.csv` (15793 bytes, sha256 `333ec7321fa3f51f...`)
+- `experiments/results/screening_budget_summary.json` (430 bytes, sha256 `59dcdf3fae025279...`)
+- `experiments/results/screening_budget_multiseed_metrics.csv` (19442 bytes, sha256 `98ecca111417c716...`)
+- `experiments/results/screening_budget_multiseed_raw.csv` (16850 bytes, sha256 `81e9b3960c673b19...`)
+- `experiments/results/screening_budget_multiseed_summary.json` (782 bytes, sha256 `08dd14e0af204e60...`)
+- `experiments/results/statistical_evidence_metrics.csv` (4659 bytes, sha256 `13b44f64901a3be4...`)
+- `experiments/results/statistical_evidence_raw.csv` (17349 bytes, sha256 `43d0241c4ea3c75b...`)
+- `experiments/results/statistical_evidence_summary.json` (428 bytes, sha256 `cbc0dc23e23122a8...`)
+- `experiments/results/runtime_operational_benchmark.csv` (450 bytes, sha256 `20b927c9ee5067f9...`)
+- `experiments/results/runtime_operational_summary.json` (755 bytes, sha256 `c0d18bde90744d39...`)
+- `experiments/results/runtime_ac_grid_raw.csv` (3604 bytes, sha256 `0a9ead94e69c744a...`)
+- `experiments/results/control_grid_search_candidate_actions.csv` (141465 bytes, sha256 `783b4e692122a196...`)
+- `experiments/results/candidate_action_screening_metrics.csv` (3188 bytes, sha256 `ac6671dc0e98efe0...`)
+- `experiments/results/candidate_action_screening_scores.csv` (73338 bytes, sha256 `2c44cceabbfb86bc...`)
+- `experiments/results/candidate_action_screening_raw_predictions.csv` (5289823 bytes, sha256 `8d9121f01be92af1...`)
+- `experiments/results/candidate_action_screening_summary.json` (478 bytes, sha256 `98855e714e895cf6...`)
+- `experiments/results/candidate_action_screening_multiseed_metrics.csv` (4783 bytes, sha256 `80f3e8187263093c...`)
+- `experiments/results/candidate_action_screening_multiseed_raw.csv` (2844 bytes, sha256 `283b4153aa2eee59...`)
+- `experiments/results/candidate_action_screening_multiseed_ac_candidates.csv` (435378 bytes, sha256 `8fbe44fe4cc981f5...`)
+- `experiments/results/candidate_action_screening_multiseed_scores.csv` (227908 bytes, sha256 `f87b1be0df0cd111...`)
+- `experiments/results/candidate_action_screening_multiseed_raw_predictions.csv` (22252056 bytes, sha256 `66783ba88e51960a...`)
+- `experiments/results/candidate_action_screening_multiseed_summary.json` (819 bytes, sha256 `42172de4961aecd2...`)
+- `experiments/results/action_cost_tradeoff_metrics.csv` (12966 bytes, sha256 `5708a1af314ddef1...`)
+- `experiments/results/action_cost_tradeoff_summary.json` (781 bytes, sha256 `4ddb9e7366d722ee...`)
+- `experiments/results/action_cost_tradeoff_multiseed_metrics.csv` (59110 bytes, sha256 `5dc09209a63da52d...`)
+- `experiments/results/action_cost_tradeoff_multiseed_raw.csv` (38414 bytes, sha256 `ac6ce99fd20614a7...`)
+- `experiments/results/action_cost_tradeoff_multiseed_summary.json` (1060 bytes, sha256 `88131484d4cad6f7...`)
+- `experiments/results/physics_consistency_audit.csv` (751 bytes, sha256 `27b0291fe8646125...`)
+- `experiments/results/physics_consistency_audit_raw.csv` (69386 bytes, sha256 `71c861d012edd242...`)
+- `experiments/results/physics_consistency_summary.json` (447 bytes, sha256 `a0808f98e60e4f5f...`)
+- `experiments/results/high_pv_hosting_stress_raw.csv` (41232 bytes, sha256 `56e8fc09e11b4815...`)
+- `experiments/results/high_pv_hosting_stress_by_feeder.csv` (422 bytes, sha256 `e56d4ee77e2d7e51...`)
+- `experiments/results/high_pv_hosting_stress_summary.json` (482 bytes, sha256 `f6c4d64eacc68d81...`)
+- `experiments/results/high_pv_hosting_frontier_raw.csv` (186467 bytes, sha256 `0c804967afea77e1...`)
+- `experiments/results/high_pv_hosting_frontier_metrics.csv` (4946 bytes, sha256 `57e4c7a542b00caf...`)
+- `experiments/results/high_pv_hosting_frontier_summary.json` (618 bytes, sha256 `ecaebd03c4db35c2...`)
+- `experiments/results/scenario_risk_ranking_metrics.csv` (2085 bytes, sha256 `8062771d02ddab96...`)
+- `experiments/results/scenario_risk_ranking_summary.json` (207 bytes, sha256 `287d89650dab4884...`)
+- `experiments/results/scenario_risk_ranking_raw.csv` (106119 bytes, sha256 `7eb3112815af0863...`)
+- `experiments/results/raw_predictions_random_seed7.csv` (7897666 bytes, sha256 `667141f8f32e5d13...`)
+- `experiments/results/conformal_scores_random_seed7.csv` (5796078 bytes, sha256 `7867e263244e9e93...`)
+- `experiments/results/runtime_metrics.csv` (1102 bytes, sha256 `e90866adb3bc5622...`)
+- `experiments/results/control_grid_search_summary.json` (690 bytes, sha256 `7131ce2edd761393...`)
+- `experiments/results/control_grid_search_selected_actions.csv` (15117 bytes, sha256 `e156dbf1b5e9882b...`)

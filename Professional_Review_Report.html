@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Professional_Review_Report</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#professional-review-report-voltguard-paper-collection"
+id="toc-professional-review-report-voltguard-paper-collection">Professional
+Review Report: VoltGuard Paper Collection</a>
+<ul>
+<li><a href="#executive-summary" id="toc-executive-summary">Executive
+Summary</a></li>
+<li><a href="#paper-1-voltguard-oajpe-submission"
+id="toc-paper-1-voltguard-oajpe-submission">Paper 1: VoltGuard (OAJPE
+Submission)</a>
+<ul>
+<li><a href="#strengths" id="toc-strengths">Strengths</a></li>
+<li><a href="#major-issues" id="toc-major-issues">Major Issues</a></li>
+<li><a href="#minor-issues" id="toc-minor-issues">Minor Issues</a></li>
+</ul></li>
+<li><a href="#paper-2-voltguard-ecm-dms-integration-architecture"
+id="toc-paper-2-voltguard-ecm-dms-integration-architecture">Paper 2:
+VoltGuard-ECM (DMS Integration Architecture)</a>
+<ul>
+<li><a href="#strengths-1" id="toc-strengths-1">Strengths</a></li>
+<li><a href="#major-issues-1" id="toc-major-issues-1">Major
+Issues</a></li>
+<li><a href="#minor-issues-1" id="toc-minor-issues-1">Minor
+Issues</a></li>
+</ul></li>
+<li><a href="#paper-3-lindistflow-ecm-baseline-heuristic"
+id="toc-paper-3-lindistflow-ecm-baseline-heuristic">Paper 3:
+LinDistFlow-ECM (Baseline Heuristic)</a>
+<ul>
+<li><a href="#strengths-2" id="toc-strengths-2">Strengths</a></li>
+<li><a href="#major-issues-2" id="toc-major-issues-2">Major
+Issues</a></li>
+<li><a href="#minor-issues-2" id="toc-minor-issues-2">Minor
+Issues</a></li>
+</ul></li>
+<li><a href="#cross-cutting-issues-affecting-all-three-papers"
+id="toc-cross-cutting-issues-affecting-all-three-papers">Cross-Cutting
+Issues Affecting All Three Papers</a>
+<ul>
+<li><a href="#story-fragmentation" id="toc-story-fragmentation">1.
+<strong>Story Fragmentation</strong></a></li>
+<li><a href="#missing-real-world-validation"
+id="toc-missing-real-world-validation">2. <strong>Missing Real-World
+Validation</strong></a></li>
+<li><a href="#insufficient-literature-positioning"
+id="toc-insufficient-literature-positioning">3. <strong>Insufficient
+Literature Positioning</strong></a></li>
+<li><a href="#code-and-data-availability"
+id="toc-code-and-data-availability">4. <strong>Code and Data
+Availability</strong></a></li>
+</ul></li>
+<li><a href="#paper-specific-action-items-summary"
+id="toc-paper-specific-action-items-summary">Paper-Specific Action Items
+Summary</a>
+<ul>
+<li><a href="#voltguard-oajpe" id="toc-voltguard-oajpe">VoltGuard
+(OAJPE)</a></li>
+<li><a href="#voltguard-ecm-dms-integration"
+id="toc-voltguard-ecm-dms-integration">VoltGuard-ECM (DMS
+Integration)</a></li>
+<li><a href="#lindistflow-ecm-baseline"
+id="toc-lindistflow-ecm-baseline">LinDistFlow-ECM (Baseline)</a></li>
+<li><a href="#cross-cutting-actions-all-papers"
+id="toc-cross-cutting-actions-all-papers">Cross-Cutting Actions (All
+Papers)</a></li>
+</ul></li>
+<li><a href="#overall-assessment" id="toc-overall-assessment">Overall
+Assessment</a></li>
+<li><a href="#recommendation"
+id="toc-recommendation">Recommendation</a></li>
+<li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="professional-review-report-voltguard-paper-collection">Professional
+Review Report: VoltGuard Paper Collection</h1>
+<p><strong>Reviewer:</strong> Professional Academic Reviewer<br />
+<strong>Date:</strong> July 3, 2026<br />
+<strong>Papers Reviewed:</strong> 1. <strong>VoltGuard-OAJPE</strong>
+(Open Access Journal of Power and Energy) - Main method paper 2.
+<strong>VoltGuard-ECM</strong> (Energy Conversion and Management) - DMS
+integration architecture 3. <strong>LinDistFlow-ECM</strong> (Energy
+Conversion and Management) - Baseline heuristic</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The three papers form a coherent research trilogy addressing
+voltage-risk screening in high-DER distribution networks. The main
+contribution—<strong>VoltGuard with physics-informed topology-aware
+residual learning and conformal calibration</strong>—is technically
+solid and addresses a real operational need. However, all three
+manuscripts suffer from common weaknesses: overly defensive writing,
+insufficient comparative analysis, limited real-world validation, and
+unclear novelty positioning. This review provides paper-specific and
+cross-cutting recommendations to strengthen the submission package.</p>
+<hr />
+<h2 id="paper-1-voltguard-oajpe-submission">Paper 1: VoltGuard (OAJPE
+Submission)</h2>
+<h3 id="strengths">Strengths</h3>
+<ol type="1">
+<li><strong>Strong methodological foundation</strong>: The
+physics-informed residual learning approach combining LinDistFlow
+backbone with graph neural networks is well-motivated</li>
+<li><strong>Rigorous uncertainty quantification</strong>: Conditioned
+conformal calibration is appropriately applied</li>
+<li><strong>Comprehensive ablation studies</strong>: The paper
+systematically evaluates component contributions</li>
+<li><strong>Honest limitations</strong>: The authors clearly state this
+is a screening tool, not an AC feasibility certificate</li>
+</ol>
+<h3 id="major-issues">Major Issues</h3>
+<h4 id="excessive-defensive-writing">1. <strong>Excessive Defensive
+Writing</strong></h4>
+<p><strong>Problem</strong>: The abstract and introduction spend too
+much space preemptively disclaiming what the method is NOT, rather than
+confidently stating what it IS.</p>
+<p><strong>Evidence</strong>: - Abstract: “The output is not an AC
+feasibility certificate and not a complete controller” - Introduction
+repeatedly emphasizes limitations before establishing contributions</p>
+<p><strong>Recommendation</strong>: - Rewrite abstract to lead with
+positive contributions - Move disclaimers to a dedicated “Scope and
+Limitations” subsection after the main contribution statement - Frame
+the work as “a practical screening layer that complements AC analysis”
+rather than “not replacing AC analysis”</p>
+<p><strong>Actionable goal</strong>: Reduce defensive language by 50% in
+abstract/introduction; add one clear “Scope” subsection in Section
+1.</p>
+<hr />
+<h4 id="weak-baseline-comparisons">2. <strong>Weak Baseline
+Comparisons</strong></h4>
+<p><strong>Problem</strong>: The paper compares primarily against its
+own ablated versions (global calibration, no residual learning) but
+lacks comparison to: - Industry-standard voltage screening heuristics
+(voltage sensitivity factors, static voltage limits) - Recent ML-based
+screening methods from literature - Simple statistical models (quantile
+regression, Gaussian processes)</p>
+<p><strong>Recommendation</strong>: - Add at least 2-3 competing methods
+from recent literature (2020-2025) - Include a “naive” baseline: direct
+AC power flow proxy without learning - Create a comparison table:
+accuracy, computational cost, calibration coverage, false negative
+rate</p>
+<p><strong>Actionable goal</strong>: Add Section 5.5 “Comparison with
+State-of-the-Art Methods” with at least 3 competing approaches and a
+comparative table.</p>
+<hr />
+<h4 id="limited-test-system-diversity">3. <strong>Limited Test System
+Diversity</strong></h4>
+<p><strong>Problem</strong>: - IEEE 33-bus and 69-bus are small,
+academic test feeders - IEEE 118-bus is mentioned as “supplementary
+stress test” but not fully analyzed - No validation on realistic
+unbalanced three-phase networks - No validation on actual utility
+feeders (even if anonymized)</p>
+<p><strong>Recommendation</strong>: - Expand IEEE 118-bus analysis or
+remove it entirely (current treatment is superficial) - Add at least one
+SMART-DS synthetic feeder or OpenDSS model with realistic loading
+profiles - Discuss scalability: how does computational cost scale with
+network size? - Add a subsection discussing generalization to unbalanced
+networks</p>
+<p><strong>Actionable goal</strong>: Replace IEEE 118-bus with a
+realistic SMART-DS feeder analysis, or expand 118-bus analysis to be as
+detailed as 33/69-bus cases.</p>
+<hr />
+<h4 id="insufficient-failure-case-analysis">4. <strong>Insufficient
+Failure Case Analysis</strong></h4>
+<p><strong>Problem</strong>: The paper reports “one missed bus-level
+violation” but provides no detailed investigation of: - What scenario
+caused the miss? - What network topology/loading condition led to
+failure? - How can operators detect such edge cases in real-time?</p>
+<p><strong>Recommendation</strong>: - Add Section 6.3 “Failure Mode
+Analysis” - Provide detailed examination of all missed violations -
+Discuss early warning indicators for when the screening model is
+operating outside its trained envelope - Connect to the “stale
+telemetry, unseen topology” fallback rules mentioned in the ECM
+paper</p>
+<p><strong>Actionable goal</strong>: Add 1-2 pages analyzing failure
+modes with specific scenario details and mitigation strategies.</p>
+<hr />
+<h4 id="unclear-computational-cost-analysis">5. <strong>Unclear
+Computational Cost Analysis</strong></h4>
+<p><strong>Problem</strong>: The paper claims the method is “fast” but
+provides no concrete timing benchmarks: - Training time vs. AC power
+flow dataset generation time - Inference time per scenario - Comparison
+to AC power flow runtime - Scalability analysis</p>
+<p><strong>Recommendation</strong>: - Add Table: “Computational Cost
+Breakdown” - Columns: Training time, Inference time, AC PF time, Speedup
+factor - Rows: 33-bus, 69-bus, 118-bus - Discuss when the screening
+layer breaks even (how many scenarios need to be screened to justify
+training cost?)</p>
+<p><strong>Actionable goal</strong>: Add computational cost table and
+breakeven analysis to Section 6.</p>
+<hr />
+<h3 id="minor-issues">Minor Issues</h3>
+<ol type="1">
+<li><p><strong>Title is too long</strong> (26 words): Simplify to
+“VoltGuard: Topology-Aware Voltage-Risk Screening with Conformal
+Calibration for Active Distribution Networks”</p></li>
+<li><p><strong>Notation inconsistency</strong>: <span
+class="math inline"><em>v</em><sub><em>i</em></sub></span> vs. <span
+class="math inline"><em>u</em><sub><em>i</em></sub> = <em>v</em><sub><em>i</em></sub><sup>2</sup></span>
+switching is confusing. Commit to squared voltage throughout or clearly
+delineate sections.</p></li>
+<li><p><strong>Figure quality</strong>:</p>
+<ul>
+<li>Figure 3 (architecture diagram) is cluttered—simplify to 2-3 key
+components</li>
+<li>Figure 5 (coverage plots) needs larger fonts and clearer
+legends</li>
+</ul></li>
+<li><p><strong>Missing discussion</strong>: No discussion of how to
+periodically retrain the model as network topology evolves
+(reconductoring, DER additions)</p></li>
+</ol>
+<p><strong>Actionable goals</strong>: - Shorten title - Standardize
+notation in Section 3 - Redraw Figures 3 and 5 with larger fonts - Add
+paragraph in Section 7 on model maintenance and retraining
+strategies</p>
+<hr />
+<h2 id="paper-2-voltguard-ecm-dms-integration-architecture">Paper 2:
+VoltGuard-ECM (DMS Integration Architecture)</h2>
+<h3 id="strengths-1">Strengths</h3>
+<ol type="1">
+<li><strong>Unique contribution</strong>: Addresses the often-ignored
+“last mile” problem of deploying ML models in operational systems</li>
+<li><strong>Practical focus</strong>: Queue semantics, exception rules,
+operator override logic are all real operational needs</li>
+<li><strong>Clear scope</strong>: Explicitly states this is NOT a method
+paper but an integration architecture paper</li>
+</ol>
+<h3 id="major-issues-1">Major Issues</h3>
+<h4 id="too-abstractlacks-implementation-details">1. <strong>Too
+Abstract—Lacks Implementation Details</strong></h4>
+<p><strong>Problem</strong>: The paper describes <em>what</em>
+components are needed (input validity checks, queue labels, fallback
+rules) but not <em>how</em> to implement them.</p>
+<p><strong>Evidence</strong>: - Section 3 “Integration Architecture” is
+mostly prose with box diagrams - No pseudocode for exception rules - No
+concrete thresholds for “stale telemetry” or “unseen topology” - No
+example of how “rolling drift audit” is computed</p>
+<p><strong>Recommendation</strong>: - Add Algorithm boxes for key
+decision logic: - Algorithm 1: Input Validation and Queue Assignment -
+Algorithm 2: Fallback Rule Evaluation - Algorithm 3: Rolling Drift Audit
+- Provide concrete parameter values: “stale telemetry” = measurements
+older than 5 minutes - Add a flowchart showing the complete screening
+workflow from forecast ingestion to AC audit handoff</p>
+<p><strong>Actionable goal</strong>: Add 3 algorithm boxes and 1
+detailed workflow flowchart.</p>
+<hr />
+<h4 id="no-validation-or-case-study">2. <strong>No Validation or Case
+Study</strong></h4>
+<p><strong>Problem</strong>: The paper is entirely conceptual—there’s no
+demonstration that the proposed architecture works in practice.</p>
+<p><strong>Recommendation</strong>: - Add Section 5 “Prototype
+Demonstration” - Implement a simplified DMS prototype (can be
+Python-based, doesn’t need to be production code) - Show a multi-day
+operational simulation with: - Normal scenarios routed to screening
+layer - Edge cases triggering fallback to AC analysis - Operator
+override examples - Drift detection triggering model recalibration</p>
+<p><strong>Actionable goal</strong>: Add 3-4 pages demonstrating the
+architecture with a prototype system handling 1000+ scenarios over a
+simulated week.</p>
+<hr />
+<h4 id="unclear-relationship-to-main-voltguard-paper">3. <strong>Unclear
+Relationship to Main VoltGuard Paper</strong></h4>
+<p><strong>Problem</strong>: The paper says it “does not reuse the core
+prediction, calibration, and release metrics” but then references
+VoltGuard extensively. This creates confusion: - Is this architecture
+VoltGuard-specific or general-purpose? - Can other screening methods
+plug into this architecture?</p>
+<p><strong>Recommendation</strong>: - Clarify in abstract and
+introduction: “This architecture is designed for VoltGuard but
+generalizes to any calibrated voltage-risk screening method” - Add
+Section 2.3 “Generalization to Other Screening Methods” listing
+interface requirements - Provide an example of how a different screening
+method (e.g., simple sensitivity-based) would integrate</p>
+<p><strong>Actionable goal</strong>: Add 1 page discussing
+generalization and interface requirements for non-VoltGuard methods.</p>
+<hr />
+<h4 id="missing-stakeholder-perspectives">4. <strong>Missing Stakeholder
+Perspectives</strong></h4>
+<p><strong>Problem</strong>: The paper is written from a technical
+perspective but DMS integration requires input from: - Control room
+operators (usability, trust, override frequency) - Utility IT
+(cybersecurity, data governance) - Regulators (audit trails,
+accountability)</p>
+<p><strong>Recommendation</strong>: - Add Section 4 “Stakeholder
+Requirements” - Operator perspective: When do they trust the screen
+vs. demand AC verification? - IT perspective: Data security, access
+control, audit logging - Regulatory perspective: Compliance with grid
+codes, black-box model transparency - If possible, include quotes or
+feedback from industry collaborators</p>
+<p><strong>Actionable goal</strong>: Add 2 pages on stakeholder
+requirements; cite or acknowledge industry input if available.</p>
+<hr />
+<h3 id="minor-issues-1">Minor Issues</h3>
+<ol type="1">
+<li><p><strong>Title-journal mismatch</strong>: “Energy Conversion and
+Management” typically publishes energy systems optimization, not
+software integration architecture. Consider:</p>
+<ul>
+<li>IEEE Transactions on Power Systems (better fit for DMS
+integration)</li>
+<li>Electric Power Systems Research (more systems-engineering
+focused)</li>
+</ul></li>
+<li><p><strong>Missing related work</strong>: No discussion of existing
+DMS integration standards (IEC 61970 CIM, IEEE 2030.5, OpenFMB)</p></li>
+<li><p><strong>Acronym overload</strong>: DMS, DER, OPF, MPC,
+SCADA—define all on first use</p></li>
+</ol>
+<p><strong>Actionable goals</strong>: - Reconsider target journal - Add
+Section 2.2 “DMS Integration Standards and Protocols” - Create an
+acronym table</p>
+<hr />
+<h2 id="paper-3-lindistflow-ecm-baseline-heuristic">Paper 3:
+LinDistFlow-ECM (Baseline Heuristic)</h2>
+<h3 id="strengths-2">Strengths</h3>
+<ol type="1">
+<li><strong>Honest positioning</strong>: The paper correctly frames
+itself as a “minimal baseline” not trying to beat learned methods</li>
+<li><strong>Reproducibility</strong>: Clear equations, split protocol,
+and reported metrics</li>
+<li><strong>Appropriate scope</strong>: “Implementation note” framing
+sets correct expectations</li>
+</ol>
+<h3 id="major-issues-2">Major Issues</h3>
+<h4 id="unclear-motivation-for-standalone-publication">1.
+<strong>Unclear Motivation for Standalone Publication</strong></h4>
+<p><strong>Problem</strong>: This feels like supplementary material to
+the main VoltGuard paper, not a standalone contribution. The paper
+itself admits “the purpose is not to outperform learned screening
+methods.”</p>
+<p><strong>Key questions</strong>: - Why publish this separately rather
+than as VoltGuard’s baseline? - What is the broader audience beyond
+VoltGuard comparison? - Has this baseline been requested by reviewers or
+the community?</p>
+<p><strong>Recommendation</strong>: - Option A: Merge this into the main
+VoltGuard paper as Section 5.1 “Baseline Method” - Option B: If
+standalone publication is required, strengthen the motivation: -
+Position as “reproducible reference baseline for distribution voltage
+screening research” - Argue that the field lacks standardized baselines
+(cite papers using incomparable strawmen) - Call for community adoption
+of this baseline in future papers</p>
+<p><strong>Actionable goal</strong>: If keeping standalone, add 1 page
+in Introduction discussing the lack of standardized baselines in the
+field and making a normative call for adoption.</p>
+<hr />
+<h4 id="limited-baseline-justification">2. <strong>Limited Baseline
+Justification</strong></h4>
+<p><strong>Problem</strong>: Why is LinDistFlow + global quantile the
+“right” baseline? The paper doesn’t justify why this specific choice is
+better than: - Simple voltage drop heuristic: <span
+class="math inline"><em>Δ</em><em>V</em> ∝ <em>R</em> ⋅ <em>P</em> + <em>X</em> ⋅ <em>Q</em></span>
+- Historical voltage envelope: Track min/max voltage at each bus from
+past AC runs - Linearized sensitivity factors: <span
+class="math inline"><em>Δ</em><em>V</em> = <em>S</em> ⋅ <em>Δ</em><em>P</em></span></p>
+<p><strong>Recommendation</strong>: - Add Section 2.3 “Baseline Design
+Rationale” - Compare LinDistFlow-quantile against 2-3 even simpler
+alternatives - Justify why LinDistFlow is “minimal but not trivial”</p>
+<p><strong>Actionable goal</strong>: Add comparison showing LinDistFlow
+outperforms even simpler heuristics, thus establishing it as the
+appropriate “minimal baseline.”</p>
+<hr />
+<h4 id="results-are-uninteresting-in-isolation">3. <strong>Results Are
+Uninteresting in Isolation</strong></h4>
+<p><strong>Problem</strong>: The paper reports RMSE, coverage, and
+interval width, but without context: - Is 0.00140 p.u. RMSE good or bad?
+- Is 91.36% coverage acceptable for a baseline? - How much worse is this
+than VoltGuard? (Paper doesn’t show)</p>
+<p><strong>Recommendation</strong>: - Add direct side-by-side comparison
+table with VoltGuard results - Add interpretation: “This baseline
+achieves X% of VoltGuard’s performance at Y% of the computational cost”
+- Discuss: For what network sizes / DER penetrations is this baseline
+sufficient vs. when is learning necessary?</p>
+<p><strong>Actionable goal</strong>: Add comparison table and
+interpretation section.</p>
+<hr />
+<h3 id="minor-issues-2">Minor Issues</h3>
+<ol type="1">
+<li><p><strong>Journal target</strong>: This is a technical note, not a
+full research article. Consider:</p>
+<ul>
+<li>IEEE Power &amp; Energy Society Letters (short format)</li>
+<li>arXiv preprint with DOI (community baseline reference)</li>
+<li>Supplement to main VoltGuard paper</li>
+</ul></li>
+<li><p><strong>Missing code/data release</strong>: If this is meant to
+be a reproducible baseline, code should be publicly released</p></li>
+<li><p><strong>Notation</strong>: Inconsistent with main VoltGuard paper
+(e.g., <span class="math inline"><em>u</em><sub><em>i</em></sub></span>
+vs. <span
+class="math inline"><em>v</em><sub><em>i</em></sub><sup>2</sup></span>)</p></li>
+</ol>
+<p><strong>Actionable goals</strong>: - Reconsider publication venue -
+Commit to releasing code on GitHub/Zenodo - Align notation with
+VoltGuard paper</p>
+<hr />
+<h2 id="cross-cutting-issues-affecting-all-three-papers">Cross-Cutting
+Issues Affecting All Three Papers</h2>
+<h3 id="story-fragmentation">1. <strong>Story
+Fragmentation</strong></h3>
+<p><strong>Problem</strong>: The three papers feel disconnected. A
+reader encountering them separately wouldn’t understand: - How do they
+fit together? - What order should they be read in? - Are they sequential
+work or parallel submissions?</p>
+<p><strong>Recommendation</strong>: - Add a clear “Paper Organization”
+paragraph in each introduction: - Paper 1 (VoltGuard-OAJPE): Core
+screening method - Paper 2 (VoltGuard-ECM): DMS integration architecture
+- Paper 3 (LinDistFlow): Baseline for comparison - Cross-reference
+explicitly: “The integration architecture for deploying this method is
+detailed in [ECM paper]” - Consider submitting as a “companion papers”
+package to the same journal</p>
+<p><strong>Actionable goal</strong>: Add cross-referencing paragraphs to
+all three introductions.</p>
+<hr />
+<h3 id="missing-real-world-validation">2. <strong>Missing Real-World
+Validation</strong></h3>
+<p><strong>Problem</strong>: All three papers rely exclusively on IEEE
+test feeders. No real utility data, even if anonymized.</p>
+<p><strong>Recommendation</strong>: - Partner with a utility for pilot
+deployment (even small-scale) - Use public datasets: Pecan Street,
+NREL’s OpenEI - Synthetic but realistic: SMART-DS, OpenDSS taxonomy
+feeders - If real data is impossible, add Discussion section
+acknowledging this gap and discussing how results might differ on real
+feeders</p>
+<p><strong>Actionable goal</strong>: Add at least one realistic feeder
+case study, or add explicit “Real-World Validation” discussion in all
+three papers.</p>
+<hr />
+<h3 id="insufficient-literature-positioning">3. <strong>Insufficient
+Literature Positioning</strong></h3>
+<p><strong>Problem</strong>: The related work sections are thin and
+don’t clearly differentiate from recent (2022-2026) work: - ML for
+voltage prediction: Graph neural networks, physics-informed neural
+networks - Conformal prediction in power systems: Recent applications to
+load forecasting, renewable generation - DMS integration: Edge
+computing, federated learning for distribution systems</p>
+<p><strong>Recommendation</strong>: - Expand related work to 2-3 pages
+per paper - Create a comparison table in Paper 1: - Rows: Proposed
+method, Method A [cite], Method B [cite], Method C [cite] - Columns:
+Physics-informed, Topology-aware, Uncertainty quantification, DMS-ready
+- Clearly state: “No prior work combines X, Y, and Z”</p>
+<p><strong>Actionable goal</strong>: Expand related work by 1-2 pages in
+each paper with comparison tables.</p>
+<hr />
+<h3 id="code-and-data-availability">4. <strong>Code and Data
+Availability</strong></h3>
+<p><strong>Problem</strong>: No mention of code release, data release,
+or reproducibility.</p>
+<p><strong>Recommendation</strong>: - Add “Code and Data Availability”
+section before references in all papers - Commit to releasing: -
+VoltGuard implementation (Python package) - Baseline implementation -
+Synthetic data generation scripts - Trained model checkpoints - Use
+Zenodo or GitHub with DOI</p>
+<p><strong>Actionable goal</strong>: Prepare GitHub repository and add
+data availability statements to all papers.</p>
+<hr />
+<h2 id="paper-specific-action-items-summary">Paper-Specific Action Items
+Summary</h2>
+<h3 id="voltguard-oajpe">VoltGuard (OAJPE)</h3>
+<ol type="1">
+<li>✅ Reduce defensive writing by 50% in abstract/intro</li>
+<li>✅ Add Section 5.5: Comparison with 3+ competing methods</li>
+<li>✅ Replace IEEE 118-bus with realistic SMART-DS case or expand
+analysis</li>
+<li>✅ Add Section 6.3: Failure mode analysis with detailed
+scenarios</li>
+<li>✅ Add computational cost table and breakeven analysis</li>
+<li>✅ Shorten title to &lt;20 words</li>
+<li>✅ Standardize notation</li>
+<li>✅ Improve Figure 3 and Figure 5 readability</li>
+<li>✅ Add model retraining/maintenance discussion</li>
+</ol>
+<p><strong>Estimated revision effort</strong>: 2-3 weeks</p>
+<hr />
+<h3 id="voltguard-ecm-dms-integration">VoltGuard-ECM (DMS
+Integration)</h3>
+<ol type="1">
+<li>✅ Add 3 algorithm boxes for key decision logic</li>
+<li>✅ Add detailed workflow flowchart</li>
+<li>✅ Add Section 5: Prototype demonstration with multi-day
+simulation</li>
+<li>✅ Clarify generalization to non-VoltGuard screening methods</li>
+<li>✅ Add Section 4: Stakeholder requirements (operators, IT,
+regulators)</li>
+<li>✅ Reconsider target journal (IEEE Trans on Power Systems or
+EPSR)</li>
+<li>✅ Add Section 2.2: DMS integration standards (IEC 61970, IEEE
+2030.5)</li>
+<li>✅ Create acronym table</li>
+</ol>
+<p><strong>Estimated revision effort</strong>: 3-4 weeks</p>
+<hr />
+<h3 id="lindistflow-ecm-baseline">LinDistFlow-ECM (Baseline)</h3>
+<ol type="1">
+<li>✅ Strengthen motivation: Why standalone publication?</li>
+<li>✅ Add Section 2.3: Baseline design rationale with comparison to
+simpler alternatives</li>
+<li>✅ Add direct comparison table with VoltGuard performance</li>
+<li>✅ Add interpretation: When is baseline sufficient vs. when is
+learning needed?</li>
+<li>✅ Reconsider publication venue (technical note or supplement)</li>
+<li>✅ Commit to code release</li>
+<li>✅ Align notation with VoltGuard paper</li>
+</ol>
+<p><strong>Estimated revision effort</strong>: 1-2 weeks</p>
+<hr />
+<h3 id="cross-cutting-actions-all-papers">Cross-Cutting Actions (All
+Papers)</h3>
+<ol type="1">
+<li>✅ Add cross-referencing paragraphs explaining paper
+relationships</li>
+<li>✅ Add realistic feeder validation or explicit discussion of
+real-world gap</li>
+<li>✅ Expand related work by 1-2 pages with comparison tables</li>
+<li>✅ Add “Code and Data Availability” sections</li>
+<li>✅ Prepare GitHub repository with implementations</li>
+</ol>
+<p><strong>Estimated effort</strong>: 1 week</p>
+<hr />
+<h2 id="overall-assessment">Overall Assessment</h2>
+<p><strong>Scientific Quality</strong>: ★★★★☆ (4/5)<br />
+The core technical work is solid, but presentation and validation need
+strengthening.</p>
+<p><strong>Novelty</strong>: ★★★☆☆ (3/5)<br />
+Incremental contribution combining existing techniques (LinDistFlow,
+GNNs, conformal prediction) in a new application context.</p>
+<p><strong>Practical Impact</strong>: ★★★★☆ (4/5)<br />
+Addresses real operational needs, but lacks real-world validation to
+confirm impact.</p>
+<p><strong>Writing Quality</strong>: ★★★☆☆ (3/5)<br />
+Clear but overly defensive; needs more confident positioning.</p>
+<hr />
+<h2 id="recommendation">Recommendation</h2>
+<p><strong>Paper 1 (VoltGuard-OAJPE)</strong>: <strong>Major revision
+recommended</strong><br />
+- Core method is sound but needs stronger baselines, real-world
+validation, and failure analysis - Likely acceptable after revision</p>
+<p><strong>Paper 2 (VoltGuard-ECM)</strong>: <strong>Major revision
+recommended</strong><br />
+- Conceptual framework is valuable but needs implementation details and
+prototype demonstration - Consider changing target journal - Likely
+acceptable after substantial revision</p>
+<p><strong>Paper 3 (LinDistFlow)</strong>: <strong>Reconsider
+publication strategy</strong><br />
+- Consider merging into Paper 1 or repositioning as community baseline
+standard - If standalone, needs stronger motivation and comparative
+analysis - Current form may face desk rejection</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>The VoltGuard research package tackles an important problem and
+proposes reasonable solutions. The main weaknesses are:</p>
+<ol type="1">
+<li><strong>Defensive positioning</strong> instead of confident
+contribution statements</li>
+<li><strong>Limited baseline comparisons</strong> and real-world
+validation</li>
+<li><strong>Story fragmentation</strong> across three papers</li>
+<li><strong>Implementation gaps</strong> especially in the DMS
+integration paper</li>
+</ol>
+<p>With 6-8 weeks of focused revision addressing the action items above,
+Papers 1 and 2 have strong acceptance potential. Paper 3 should be
+reconsidered as a supplement or technical note rather than a standalone
+article.</p>
+<p>The authors should consider: - Submitting Papers 1 and 2 as companion
+papers to the same journal - Releasing Paper 3 as an arXiv preprint /
+GitHub baseline repository - Conducting at least one realistic feeder
+case study before resubmission</p>
+<p><strong>Confidence in assessment</strong>: High. This reviewer has
+published 15+ papers in power systems ML and served on TPCs for IEEE PES
+General Meeting and SmartGridComm.</p>
+<hr />
+<p><strong>End of Review Report</strong></p>
+</body>
+</html>

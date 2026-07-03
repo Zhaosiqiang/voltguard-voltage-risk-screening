@@ -1,0 +1,4 @@
+feeder,network_name,scenario_id,converged,load_scale,pv_penetration,ev_scale,pv_buses,min_vm_pu,max_vm_pu,violation_any,error
+69,case69_project_local,0,True,1.3104727539273877,0.6,0.1,"[68, 52, 38, 49, 66, 44, 13, 48, 33, 20, 9, 6]",0.8887803500489789,1.0041218095747704,True,
+69,case69_project_local,1,True,1.005305935704419,0.2,0.1,"[64, 38, 23, 48, 51, 36, 52, 67, 26, 68, 9, 16]",0.9147169282867776,1.0,True,
+69,case69_project_local,2,True,0.973428944768135,0.2,0.0,"[21, 34, 20, 32, 27, 52, 36, 48, 58, 61, 6, 11]",0.9184168122837648,1.001532272051623,True,

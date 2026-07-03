@@ -1,0 +1,19 @@
+{
+  "test_scenarios": 120,
+  "test_bus_rows": 6120,
+  "offline_fit_seconds": 0.5964264590002131,
+  "calibration_prediction_seconds": 0.03820245902170427,
+  "online_screening_seconds": 0.03045583300990984,
+  "online_screening_ms_per_scenario": 0.25379860841591534,
+  "risk_flagged_scenarios": 93,
+  "screened_safe_scenarios": 27,
+  "full_ac_grid_seconds": 206.98291345898178,
+  "full_ac_grid_seconds_per_scenario": 1.7248576121581816,
+  "full_ac_grid_candidate_actions": 1080,
+  "screen_then_ac_estimated_seconds": 160.4422137637208,
+  "screen_then_ac_saved_seconds": 46.57115552827091,
+  "screen_then_ac_speedup": 1.2900776460476937,
+  "budget20_ac_calls": 24,
+  "budget20_estimated_seconds": 41.427038524806264,
+  "budget20_speedup": 4.9963241600058295
+}

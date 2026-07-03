@@ -1,0 +1,17 @@
+{
+  "rows": 16,
+  "nominal_coverage": 0.9,
+  "undercovered_families": 5,
+  "missed_current_total": 1,
+  "missed_audited_total": 1,
+  "missed_recovered_total": 0,
+  "weighted_width_current": 0.0004334041749203833,
+  "weighted_width_audited": 0.0004509377269383751,
+  "weighted_false_alarm_current": 0.0005770340450086555,
+  "weighted_false_alarm_audited": 0.0005770340450086555,
+  "worst_family": "feeder=33|pv_bin=0.8|load_bin=low_load",
+  "worst_family_coverage_current": 0.7676767676767676,
+  "worst_family_coverage_audited": 0.9090909090909091,
+  "worst_family_missed_current": 0,
+  "worst_family_missed_audited": 0
+}

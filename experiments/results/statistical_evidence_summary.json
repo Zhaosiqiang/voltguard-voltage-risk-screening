@@ -1,0 +1,12 @@
+{
+  "rows": 20,
+  "raw_rows": 105,
+  "bootstrap_draws": 10000,
+  "prediction_units": 12,
+  "prediction_rmse_delta_mean": -0.0008480033019338,
+  "prediction_rmse_better_fraction": 1.0,
+  "budget_random_severity_capture_delta_mean": 0.1398170514656076,
+  "budget_random_severity_capture_better_fraction": 1.0,
+  "budget_lindistflow_post_policy_bus_delta_mean": -153.0,
+  "budget_lindistflow_post_policy_bus_better_fraction": 1.0
+}

@@ -1,0 +1,11 @@
+{
+  "rows": 5,
+  "primary_missed": 1,
+  "ev_full_missed": 1,
+  "primary_families": 16,
+  "ev_full_families": 55,
+  "ev_full_min_calibration_samples": 33,
+  "ev_full_empty_test_families": 7,
+  "ev_full_width_delta": 4.2398873337915627e-05,
+  "ev_full_recall_delta": 0.0
+}

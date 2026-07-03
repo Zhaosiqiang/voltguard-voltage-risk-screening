@@ -1,0 +1,21 @@
+{
+  "rows": 12,
+  "raw_rows": 12,
+  "audit_seeds": [
+    7
+  ],
+  "noise_levels": [
+    0.0,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "primary_clean_rmse": 0.00011446658923916473,
+  "primary_clean_coverage": 0.9366013071895425,
+  "primary_clean_recall": 0.998914223669924,
+  "primary_10pct_rmse": 0.0020806318023842037,
+  "primary_10pct_coverage": 0.8933006535947713,
+  "primary_10pct_recall": 0.9847991313789359,
+  "primary_10pct_missed": 14.0,
+  "primary_10pct_scenario_recall": 1.0
+}

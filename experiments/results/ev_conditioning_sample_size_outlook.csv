@@ -1,0 +1,6 @@
+calibration_scale,current_min_ev_family_samples,approx_min_ev_family_samples,expected_status
+1,33,33,"Fragmented; no recall gain observed and intervals are wider"
+2,33,66,"Still below primary-family support; diagnostic use only"
+4,33,132,"Candidate regime for retesting EV-conditioned intervals"
+6,33,198,"Comparable weakest-family support to topology+PV+loading"
+8,33,264,"Plausible regime if width and false alarms begin to fall"

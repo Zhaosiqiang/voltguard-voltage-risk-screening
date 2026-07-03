@@ -1,0 +1,28 @@
+{
+  "rows": 20,
+  "raw_rows": 60,
+  "seeds": [
+    7,
+    17,
+    42
+  ],
+  "budgets": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    1.0
+  ],
+  "primary_budget_fraction": 0.2,
+  "primary_ac_calls_mean": 24.0,
+  "primary_ac_calls_avoided_mean": 96.0,
+  "primary_risky_recall_mean": 0.25995509866477606,
+  "primary_severity_capture_mean": 0.3404828416936499,
+  "primary_severity_reduction_ratio_mean": 0.19707684976061243,
+  "primary_post_policy_violating_scenarios_mean": 86.33333333333333,
+  "primary_post_policy_violating_buses_mean": 651.6666666666666,
+  "primary_action_cost_proxy_mw_mean": 18.576930172118953,
+  "random_severity_capture_mean": 0.20066579022804235,
+  "oracle_severity_capture_mean": 0.5308467249871288,
+  "severity_capture_gain_vs_random_mean": 0.13981705146560755
+}

@@ -1,0 +1,19 @@
+{
+  "method": "AC corrective grid-search benchmark",
+  "role": "downstream corrective optimizer triggered after risk screening",
+  "split_name": "random_interpolation",
+  "seed": 7,
+  "test_scenarios": 120,
+  "converged_scenarios": 120,
+  "post_action_violating_scenarios": 51,
+  "post_action_violating_buses": 398,
+  "post_action_scenario_violation_rate": 0.425,
+  "post_action_bus_violations_per_scenario": 3.316666666666667,
+  "available_pv_mw": 191.23095295448223,
+  "accepted_pv_mw": 191.23095295448223,
+  "curtailed_pv_mw": 0.0,
+  "relieved_load_mw": 59.14266215081935,
+  "action_cost_proxy_mw": 59.14266215081935,
+  "mean_load_relief": 0.12916666666666668,
+  "mean_pv_curtail": 0.0
+}

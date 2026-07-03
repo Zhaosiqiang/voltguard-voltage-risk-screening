@@ -1,0 +1,11 @@
+{
+  "bus_rows": 28,
+  "scenario_rows": 28,
+  "primary_violating_bus_recall": 0.998914223669924,
+  "primary_violating_bus_missed": 1,
+  "primary_boundary_safe_bus_false_alarm_rate": 0.05454545454545454,
+  "primary_violating_scenario_recall": 1.0,
+  "primary_safe_scenario_false_alarms": 0,
+  "boundary_margin_pu": 0.002,
+  "near_margin_pu": 0.01
+}

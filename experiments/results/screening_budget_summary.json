@@ -1,0 +1,18 @@
+{
+  "rows": 45,
+  "budgets": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    1.0
+  ],
+  "primary_budget_fraction": 0.2,
+  "primary_ac_calls": 24,
+  "primary_calls_avoided": 96,
+  "primary_risky_recall": 0.25806451612903225,
+  "primary_severity_capture": 0.5258585852288032,
+  "primary_severity_reduction_ratio": 0.21415591606149512,
+  "primary_post_policy_violating_scenarios": 93,
+  "primary_action_cost_proxy_mw": 18.050321536394957
+}

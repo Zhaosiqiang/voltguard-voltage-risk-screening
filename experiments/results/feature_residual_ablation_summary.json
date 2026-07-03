@@ -1,0 +1,13 @@
+{
+  "rows": 4,
+  "raw_rows": 12,
+  "runs_per_variant": 3,
+  "full_residual_missed_mean": 0.3333333333333333,
+  "local_residual_missed_mean": 3.3333333333333335,
+  "direct_full_missed_mean": 1.3333333333333333,
+  "full_vs_local_missed_delta": -3.0,
+  "full_vs_direct_missed_delta": -1.0,
+  "full_residual_rmse_mean": 0.00016908534643368168,
+  "local_residual_rmse_mean": 0.0007301828875197624,
+  "direct_full_rmse_mean": 0.0002890491431464485
+}
