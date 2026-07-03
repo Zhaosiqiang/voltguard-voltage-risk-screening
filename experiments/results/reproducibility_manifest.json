@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-03T02:12:23Z",
+  "generated_utc": "2026-07-03T02:14:26Z",
   "target_route": "Energy Conversion and Management: X",
   "claim_boundary": "VoltGuard is a calibrated screening layer, not an AC feasibility certificate or OPF/MPC replacement.",
   "configuration": {
@@ -301,8 +301,8 @@
     },
     {
       "path": "experiments/validate_project.py",
-      "bytes": 108461,
-      "sha256": "e898a8fe99529c990a481aa0c2b4365dc6466195ed1575095f6ba0d252f5b5f0"
+      "bytes": 108600,
+      "sha256": "52c66729711467166ae04a55dfdd9104e8f074ad2024ae270c940dd48152e213"
     },
     {
       "path": "experiments/ieee69_feeder.py",

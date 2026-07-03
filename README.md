@@ -113,6 +113,8 @@ supplementary stress test.
   checklist for the manuscript package.
 - `CITATION.cff` - citation metadata stub for the planned public release.
 - `.zenodo.json` - Zenodo metadata for DOI minting after repository integration.
+- `LICENSE` - MIT license for code, experiment scripts, configuration files,
+  and reproducibility artifacts.
 
 ## Recommended High-Impact Target
 

@@ -28,6 +28,8 @@ The public repository should contain:
   artifacts;
 - manuscript source files, generated submission markdown/TeX, and final PDF
   builds.
+- `LICENSE`, `CITATION.cff`, and `.zenodo.json` for reuse, citation, and DOI
+  metadata.
 
 ## Files To Exclude Before Public Upload
 
