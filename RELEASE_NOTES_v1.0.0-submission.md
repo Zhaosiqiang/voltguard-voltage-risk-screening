@@ -34,3 +34,15 @@ python VoltGuard-CPGNN/experiments/validate_project.py
 ```
 
 The latest local validation status before this release was `pass`.
+
+## Public Archive Status
+
+- Repository:
+  `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening`
+- Release tag: `v1.0.0-submission`
+- License: MIT for code, experiment scripts, configuration files, and
+  reproducibility artifacts; manuscript publication rights remain governed by
+  the eventual publisher agreement.
+- Citation metadata: `CITATION.cff`
+- Zenodo metadata: `.zenodo.json`
+- DOI status: pending Zenodo account authorization or `ZENODO_TOKEN`.
