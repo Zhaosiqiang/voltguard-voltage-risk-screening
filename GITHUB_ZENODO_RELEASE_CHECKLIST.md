@@ -1,8 +1,13 @@
 # GitHub and Zenodo Release Checklist
 
-This checklist prepares the VoltGuard paper collection for a public
-GitHub/Zenodo archive. It records the release scope promised in the manuscript
-Code and Data Availability sections.
+This checklist records the public release of the VoltGuard paper collection
+and the remaining DOI action for Zenodo.
+
+GitHub repository:
+`https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening`
+
+GitHub release:
+`https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission`
 
 ## Repository Scope
 
@@ -31,18 +36,21 @@ The public repository should contain:
 - temporary PDF render folders under `/tmp`;
 - any private utility data, if future feeder pilots are added.
 
-## DOI Release Steps
+## DOI Release Status
 
-1. Create a public GitHub repository named `voltguard-voltage-risk-screening`.
-2. Upload the cleaned project tree with this checklist, `README.md`,
-   `CITATION.cff`, `requirements.txt`, manuscript sources, scripts, and
-   reproducibility manifest.
-3. Run `python VoltGuard-CPGNN/experiments/validate_project.py` from the parent
-   directory and archive the pass output.
-4. Create a GitHub release tagged `v1.0.0-submission`.
-5. Connect the GitHub repository to Zenodo and mint a DOI for the release.
-6. Replace the manuscript placeholder phrase "public GitHub/Zenodo archive
-   before publication" with the final repository URL and DOI after upload.
+Completed:
+
+- public GitHub repository created;
+- cleaned project tree pushed to `main`;
+- validation pass archived locally;
+- GitHub release tagged `v1.0.0-submission`;
+- three manuscript PDFs attached to the release.
+
+Remaining external-account action:
+
+- connect the GitHub repository to Zenodo and mint a DOI. This requires the
+  repository owner's Zenodo authorization or a `ZENODO_TOKEN`, which is not
+  present in the current execution environment.
 
 ## Current Local Evidence
 
@@ -54,4 +62,3 @@ The public repository should contain:
 - `submission_build/submission_manuscript_ecmx.pdf`
 - `submission_build/submission_manuscript_ecm.pdf`
 - `submission_build/submission_manuscript_oajpe.pdf`
-

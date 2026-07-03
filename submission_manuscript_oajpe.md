@@ -7,7 +7,7 @@ documentclass: IEEEtran
 classoption: journal
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 02:02 UTC"
+date: "Generated 2026-07-03 02:10 UTC"
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
 ---
@@ -332,7 +332,7 @@ This research did not receive any specific grant from funding agencies in the pu
 
 # Code and Data Availability {.unnumbered}
 
-The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The authors will release the baseline implementation, scenario-generation scripts, and table-generation scripts through a public GitHub/Zenodo archive before publication; the current reproducibility package is available from the corresponding author upon reasonable request.
+The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The baseline implementation, scenario-generation scripts, table-generation scripts, manuscript sources, and release PDFs are publicly archived at `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission`. A Zenodo DOI will be added after the GitHub repository is connected to Zenodo by the account owner.
 
 # Conflict of Interest {.unnumbered}
 

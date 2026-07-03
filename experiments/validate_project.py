@@ -1373,6 +1373,9 @@ def main() -> int:
             and "Code and Data Availability" in ecmx_submission_text
             and "Code and Data Availability" in ecm_submission_text
             and "Code and Data Availability" in oajpe_submission_text
+            and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in ecmx_submission_text
+            and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in ecm_submission_text
+            and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in oajpe_submission_text
             and (ROOT / "GITHUB_ZENODO_RELEASE_CHECKLIST.md").exists()
             and (ROOT / "CITATION.cff").exists()
             and "voltguard-voltage-risk-screening" in (ROOT / "GITHUB_ZENODO_RELEASE_CHECKLIST.md").read_text(encoding="utf-8")

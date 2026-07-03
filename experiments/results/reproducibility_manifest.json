@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-03T02:08:04Z",
+  "generated_utc": "2026-07-03T02:10:42Z",
   "target_route": "Energy Conversion and Management: X",
   "claim_boundary": "VoltGuard is a calibrated screening layer, not an AC feasibility certificate or OPF/MPC replacement.",
   "configuration": {
@@ -301,8 +301,8 @@
     },
     {
       "path": "experiments/validate_project.py",
-      "bytes": 107894,
-      "sha256": "48a26fa74ab6797d6b19a5062ab0766f23f57180bbe552180b63baf49a266f10"
+      "bytes": 108305,
+      "sha256": "e6dae8c8aea2cc9c61404233f486edb1f34deb74b38af3566edb3219396c3d58"
     },
     {
       "path": "experiments/ieee69_feeder.py",
@@ -875,8 +875,8 @@
     },
     {
       "path": "submission_manuscript_ecmx.md",
-      "bytes": 62589,
-      "sha256": "3b4b20692e087a4aa6c52727aac1edb07eef45f4ba8ee4d05574a8ad9481175d"
+      "bytes": 62658,
+      "sha256": "82b5a694d6eccfb64c2a4c72ca7151eaf154dbe0e0a9611f67281957d0772999"
     },
     {
       "path": "submission_manuscript_ecmx.tex",
@@ -890,8 +890,8 @@
     },
     {
       "path": "submission_manuscript_ecm.md",
-      "bytes": 28982,
-      "sha256": "be5fae7f3d3632ed2d1f6c703278b798fd7ffaefdf482cb5e9d96bef008206d2"
+      "bytes": 29051,
+      "sha256": "9c98c9c75e13dcf78b9d9a237975c4135c8038e1f9c3fc10c479fa9e6415e088"
     },
     {
       "path": "submission_manuscript_ecm.tex",
@@ -905,8 +905,8 @@
     },
     {
       "path": "submission_manuscript_oajpe.md",
-      "bytes": 19421,
-      "sha256": "33efe438b95004a117fb3db993478d345f476456196c17bdcfd333235cc2f058"
+      "bytes": 19490,
+      "sha256": "f20ed113371ec8c1eb9f31f4274ed45d6d3c6ed642ab8a02f8016d86182f8ea4"
     },
     {
       "path": "submission_manuscript_oajpe.tex",
