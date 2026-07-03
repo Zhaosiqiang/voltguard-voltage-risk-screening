@@ -7,7 +7,7 @@ documentclass: IEEEtran
 classoption: journal
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 02:31 UTC"
+date: "Generated 2026-07-03 02:47 UTC"
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
 ---
@@ -173,20 +173,28 @@ methods, which is why it is useful as a baseline rather than as the strongest
 screen.
 
 The reviewer-requested rationale experiment compares LinDistFlow against three
-even simpler alternatives on the same representative random split.
+even simpler alternatives on the same representative random split. To keep the
+printed table readable, Table \ref{tab:baseline_design_rationale} uses compact
+method labels: Flat-GQ denotes the flat 1.0 p.u. voltage proxy with a global
+quantile, Hist-env denotes the historical bus envelope, Linear-GQ denotes the
+linear-sensitivity regression with a global quantile, and LDF-GQ denotes
+LinDistFlow with a global quantile.
+Equivalently, the full baseline names are Flat 1.0 p.u. + global quantile,
+Historical bus envelope, Linear sensitivity regression + global quantile, and
+LinDistFlow + global quantile.
 
 \begin{table*}[t]
 \centering
 \caption{Baseline design-rationale comparison on the representative random split.}
 \label{tab:baseline_design_rationale}
-\begin{tabular}{lrrrrrrr}
+\begin{tabular}{lrrrrr}
 \hline
-Baseline & RMSE & Coverage & Width & Precision & Recall & False alarm & Missed \\
+Baseline & RMSE & Coverage & Width & Recall & False alarm \\
 \hline
-Flat 1.0 p.u. + global quantile & 0.03290 & 0.90016 & 0.11745 & 0.15049 & 1.00000 & 1.00000 & 0 \\
-Historical bus envelope & 0.01258 & 0.95768 & 0.03499 & 0.35698 & 1.00000 & 0.31910 & 0 \\
-Linear sensitivity regression + global quantile & 0.02052 & 0.90245 & 0.06683 & 0.24116 & 0.99240 & 0.55318 & 7 \\
-LinDistFlow + global quantile & 0.00140 & 0.91356 & 0.00474 & 0.97977 & 0.99891 & 0.00365 & 1 \\
+Flat-GQ & 0.03290 & 0.90016 & 0.11745 & 1.00000 & 1.00000 \\
+Hist-env & 0.01258 & 0.95768 & 0.03499 & 1.00000 & 0.31910 \\
+Linear-GQ & 0.02052 & 0.90245 & 0.06683 & 0.99240 & 0.55318 \\
+LDF-GQ & 0.00140 & 0.91356 & 0.00474 & 0.99891 & 0.00365 \\
 \hline
 \end{tabular}
 \end{table*}
@@ -196,7 +204,8 @@ raising false alarms and producing very wide intervals. The simple linear
 sensitivity regression misses more violations and remains much wider than
 LinDistFlow. LinDistFlow is therefore an appropriate minimal baseline: it is
 simple and physical, but it is not so weak that learned methods can win only
-against an unrealistic strawman.
+against an unrealistic strawman. The missed bus-level violation counts are
+0, 0, 7, and 1 for Flat-GQ, Hist-env, Linear-GQ, and LDF-GQ, respectively.
 
 \begin{figure*}[t]
 \centering
@@ -254,12 +263,12 @@ with one missed bus-level violation while reducing the mean interval width to
 \centering
 \caption{Contextual comparison between the baseline and the VoltGuard method on the same representative random split.}
 \label{tab:baseline_vs_voltguard}
-\begin{tabular}{lrrrrrrr}
+\begin{tabular}{lrrrrr}
 \hline
-Screen & RMSE & Coverage & Width & Bus recall & False alarm & Missed buses & Scenario recall \\
+Screen & RMSE & Coverage & Width & Bus recall & False alarm \\
 \hline
-LinDistFlow + global quantile & 0.00140 & 0.91356 & 0.00474 & 0.99891 & 0.00365 & 1 & 1.00000 \\
-VoltGuard topology/PV/loading conformal & 0.00011 & 0.93660 & 0.00043 & 0.99891 & 0.00058 & 1 & 1.00000 \\
+LDF-GQ & 0.00140 & 0.91356 & 0.00474 & 0.99891 & 0.00365 \\
+VoltGuard & 0.00011 & 0.93660 & 0.00043 & 0.99891 & 0.00058 \\
 \hline
 \end{tabular}
 \end{table*}
@@ -269,7 +278,10 @@ It shows the baseline's practical envelope. For rough triage on small,
 balanced feeders, the physical-quantile screen may be sufficient. When a
 workflow needs sharper intervals, fewer false alarms, family-level calibration
 analysis, or topology/PV/load shift audits, the learned residual screen becomes
-necessary.
+necessary. In Table \ref{tab:baseline_vs_voltguard}, VoltGuard denotes the
+topology/PV/loading-conditioned conformal residual screen. Both screens have
+one missed bus-level violation and scenario-level recall of 1.00000 in this
+representative split.
 
 ## Three-Seed Check
 
@@ -332,7 +344,7 @@ This research did not receive any specific grant from funding agencies in the pu
 
 # Code and Data Availability {.unnumbered}
 
-The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The baseline implementation, scenario-generation scripts, table-generation scripts, manuscript sources, and release PDFs are publicly archived at `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission` and on Zenodo with DOI `10.5281/zenodo.21149702`.
+The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The baseline implementation, scenario-generation scripts, table-generation scripts, manuscript sources, and release PDFs are archived in the GitHub repository `Zhaosiqiang/voltguard-voltage-risk-screening`, release `v1.0.0-submission`, and on Zenodo with DOI `10.5281/zenodo.21149702`.
 
 # Conflict of Interest {.unnumbered}
 
@@ -368,4 +380,3 @@ During the preparation of this work, the authors used AI-assisted coding and lan
 [12] Molzahn DK, Dorfler F, Sandberg H, Low SH, Chakrabarti S, Baldick R, et al. A survey of distributed optimization and control algorithms for electric power systems. IEEE Transactions on Smart Grid. 2017;8(6):2941-2962. https://doi.org/10.1109/TSG.2017.2720471.
 
 [13] Karagiannopoulos S, Aristidou P, Hug G. Data-driven local control design for active distribution grids using off-line optimal power flow and machine learning techniques. IEEE Transactions on Smart Grid. 2019;10(6):6461-6471.
-

@@ -63,6 +63,90 @@ def read(path: Path) -> str:
     return path.read_text(encoding="utf-8").strip()
 
 
+TABLE_LABEL_REPLACEMENTS = [
+    ("LinDistFlow physical backbone", "LDF"),
+    ("LinDistFlow + global quantile", "LDF-GQ"),
+    ("Boosting point + global conformal", "Boost-GC"),
+    ("Boosting + global conformal", "Boost-GC"),
+    ("Gradient-boosted quantile regression", "GB-quantile"),
+    ("Gaussian-process UQ baseline", "GP-UQ"),
+    ("Neural graph residual ablation", "GNN ablation"),
+    ("VoltGuard topology-aware residual", "VoltGuard"),
+    ("VoltGuard topology+PV+loading", "VoltGuard"),
+    ("VoltGuard interval-risk", "VoltGuard"),
+    ("LinDistFlow point-risk", "LDF point"),
+    ("Random budget expectation", "Random"),
+    ("Oracle realized severity", "Oracle"),
+    ("Full AC grid search on every scenario", "Full AC all"),
+    ("VoltGuard-flagged scenarios then AC grid search", "Flagged+AC"),
+    ("VoltGuard top-20% budget then AC grid search", "Top20+AC"),
+    ("AC corrective grid-search benchmark", "AC grid-search"),
+    ("Full AC grid search", "Full AC"),
+    ("High-PV AC stress, 33/69", "High-PV 33/69"),
+    ("Initially overvoltage 33/69", "Overvolt 33/69"),
+    ("Source PV 0.6 calibration only", "Src only"),
+    ("Source + 10% target high-PV calibration", "Src+10% target"),
+    ("Source + 20% target high-PV calibration", "Src+20% target"),
+    ("full topology/electrical", "full T/E"),
+    ("local operating only", "local"),
+    ("local+topology", "local+T"),
+    ("topology+PV+loading conditioned", "T/PV/L"),
+    ("topology+PV+loading no-shrinkage", "No shrinkage"),
+    ("topology+PV+loading", "T/PV/L"),
+    ("topology/PV/loading conformal", "T/PV/L"),
+    ("topology/PV/loading", "T/PV/L"),
+    ("PV conditioned", "PV-cond"),
+    ("PV-conditioned", "PV-cond"),
+    ("topology-conditioned", "Topo-cond"),
+    ("global conformal", "Global"),
+    ("learned 5/95% quantiles", "5/95% Q"),
+    ("90% Gaussian interval", "Gaussian"),
+    ("pooled residual quantile", "pooled Q"),
+]
+
+TABLE_HEADER_REPLACEMENTS = [
+    ("Conformal variant", "Calib."),
+    ("Interval source", "Interval"),
+    ("False alarm", "FA"),
+    ("False alarm mean", "FA mean"),
+    ("Missed buses mean", "Missed mean"),
+    ("Missed buses", "Missed"),
+    ("Scenario recall", "Scen. recall"),
+    ("Risky recall mean", "Risky recall"),
+    ("Post-screen miss mean", "Post miss"),
+    ("Post-action violating scenarios", "Post scen."),
+    ("Post-action violating buses", "Post buses"),
+    ("Released scenarios mean", "Released"),
+    ("Safe-release precision mean", "Safe precision"),
+    ("Released risky mean", "Risky released"),
+    ("Released severity share mean", "Severity share"),
+    ("Released violating buses mean", "Viol. buses"),
+    ("AC calls avoided mean", "AC avoided"),
+    ("AC calls avoided", "AC avoided"),
+    ("Candidate AC audits", "AC audits"),
+    ("Audits avoided", "Audits saved"),
+    ("Full-best retained", "Best kept"),
+    ("Same action as full", "Same action"),
+    ("Extra violating scenarios", "Extra scen."),
+    ("Extra violating buses", "Extra buses"),
+    ("Calibration scale relative to current EV-conditioned split", "Scale"),
+    ("Approx. minimum EV-family calibration samples", "Min EV calib."),
+    ("Expected EV-conditioning status", "Status"),
+]
+
+
+def compact_markdown_table_labels(markdown: str) -> str:
+    """Use compact labels inside tables so generated PDFs remain readable."""
+
+    lines = []
+    for line in markdown.splitlines():
+        if line.lstrip().startswith("|") and "|" in line[1:]:
+            for old, new in TABLE_LABEL_REPLACEMENTS + TABLE_HEADER_REPLACEMENTS:
+                line = line.replace(old, new)
+        lines.append(line)
+    return "\n".join(lines)
+
+
 def section_from(path: Path, heading: str) -> str:
     text = read(path)
     marker = f"## {heading}"
@@ -314,7 +398,7 @@ def clean_declarations(route: str) -> str:
                 "",
                 "# Code and Data Availability {.unnumbered}",
                 "",
-                "The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The local reproducibility package includes the scenario generator, configured evaluation pipeline, conformal calibration code, raw predictions, conformal scores, runtime tables, post-action AC audit outputs, DMS prototype logs, reviewer-requested baseline comparisons, and energy-management value metrics. File-level checksums and reproduction commands are recorded in `experiments/results/reproducibility_manifest.json` and `experiments/results/reproducibility_manifest.md`. The Python implementation, synthetic scenario-generation scripts, trained model artifacts, table-generation scripts, manuscript sources, and release PDFs are publicly archived at `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission` and on Zenodo with DOI `10.5281/zenodo.21149702`.",
+                "The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The local reproducibility package includes the scenario generator, configured evaluation pipeline, conformal calibration code, raw predictions, conformal scores, runtime tables, post-action AC audit outputs, DMS prototype logs, reviewer-requested baseline comparisons, and energy-management value metrics. File-level checksums and reproduction commands are recorded in `experiments/results/reproducibility_manifest.json` and `experiments/results/reproducibility_manifest.md`. The Python implementation, synthetic scenario-generation scripts, trained model artifacts, table-generation scripts, manuscript sources, and release PDFs are archived in the GitHub repository `Zhaosiqiang/voltguard-voltage-risk-screening`, release `v1.0.0-submission`, and on Zenodo with DOI `10.5281/zenodo.21149702`.",
                 "",
                 "# Declaration of Generative AI and AI-Assisted Technologies in the Writing Process {.unnumbered}",
                 "",
@@ -333,7 +417,7 @@ def clean_declarations(route: str) -> str:
             "",
             "# Code and Data Availability {.unnumbered}",
             "",
-            "The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The baseline implementation, scenario-generation scripts, table-generation scripts, manuscript sources, and release PDFs are publicly archived at `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission` and on Zenodo with DOI `10.5281/zenodo.21149702`.",
+            "The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The baseline implementation, scenario-generation scripts, table-generation scripts, manuscript sources, and release PDFs are archived in the GitHub repository `Zhaosiqiang/voltguard-voltage-risk-screening`, release `v1.0.0-submission`, and on Zenodo with DOI `10.5281/zenodo.21149702`.",
             "",
             "# Conflict of Interest {.unnumbered}",
             "",
@@ -513,7 +597,7 @@ def assemble_route(route: str, config: dict) -> str:
     out.append(clean_declarations(route) + "\n")
     out.append(references + "\n")
 
-    return "\n".join(out) + "\n"
+    return compact_markdown_table_labels("\n".join(out)) + "\n"
 
 
 def main() -> int:

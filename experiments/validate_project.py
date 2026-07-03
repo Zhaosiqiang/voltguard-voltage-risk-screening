@@ -1350,8 +1350,8 @@ def main() -> int:
         "professional_review_requirements_present": (
             "Scope and Companion-Paper Positioning" in manuscript_text
             and "Comparison with Competing Screening Methods" in ecmx_submission_text
-            and "Gradient-boosted quantile regression" in ecmx_submission_text
-            and "Gaussian-process UQ baseline" in ecmx_submission_text
+            and "GB-quantile" in ecmx_submission_text
+            and "GP-UQ" in ecmx_submission_text
             and set(review_baseline_metrics["method"])
             == {"Gradient-boosted quantile regression", "Gaussian-process UQ baseline"}
             and "Expanded IEEE 118-Bus Stress Audit" in ecmx_submission_text
@@ -1375,9 +1375,12 @@ def main() -> int:
             and "Code and Data Availability" in ecmx_submission_text
             and "Code and Data Availability" in ecm_submission_text
             and "Code and Data Availability" in oajpe_submission_text
-            and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in ecmx_submission_text
-            and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in ecm_submission_text
-            and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in oajpe_submission_text
+            and "Zhaosiqiang/voltguard-voltage-risk-screening" in ecmx_submission_text
+            and "Zhaosiqiang/voltguard-voltage-risk-screening" in ecm_submission_text
+            and "Zhaosiqiang/voltguard-voltage-risk-screening" in oajpe_submission_text
+            and "v1.0.0-submission" in ecmx_submission_text
+            and "v1.0.0-submission" in ecm_submission_text
+            and "v1.0.0-submission" in oajpe_submission_text
             and "10.5281/zenodo.21149702" in ecmx_submission_text
             and "10.5281/zenodo.21149702" in ecm_submission_text
             and "10.5281/zenodo.21149702" in oajpe_submission_text

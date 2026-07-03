@@ -434,6 +434,11 @@ scenario-level recall/false alarms, and family-level calibration behavior.
 Downstream operating audits remain project artifacts outside the main method
 submission.
 
+For readability, result tables use compact labels: LDF denotes the
+LinDistFlow physical backbone, Boost-GC denotes boosting with global conformal
+calibration, T/PV/L denotes topology/PV/loading conditioning, and GNN ablation
+denotes the neural graph residual diagnostic.
+
 ### 5.5 Comparison with State-of-the-Art Screening Baselines
 
 The experiments include six competing or diagnostic approaches. LinDistFlow is

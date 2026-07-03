@@ -5,7 +5,7 @@ documentclass: elsarticle
 classoption: preprint,12pt
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 02:31 UTC"
+date: "Generated 2026-07-03 02:47 UTC"
 geometry: margin=1in
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
@@ -426,7 +426,7 @@ This research did not receive any specific grant from funding agencies in the pu
 
 # Code and Data Availability {.unnumbered}
 
-The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The local reproducibility package includes the scenario generator, configured evaluation pipeline, conformal calibration code, raw predictions, conformal scores, runtime tables, post-action AC audit outputs, DMS prototype logs, reviewer-requested baseline comparisons, and energy-management value metrics. File-level checksums and reproduction commands are recorded in `experiments/results/reproducibility_manifest.json` and `experiments/results/reproducibility_manifest.md`. The Python implementation, synthetic scenario-generation scripts, trained model artifacts, table-generation scripts, manuscript sources, and release PDFs are publicly archived at `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission` and on Zenodo with DOI `10.5281/zenodo.21149702`.
+The experiments use publicly available IEEE test systems implemented through pandapower and a project-local IEEE 69-bus feeder implementation. The local reproducibility package includes the scenario generator, configured evaluation pipeline, conformal calibration code, raw predictions, conformal scores, runtime tables, post-action AC audit outputs, DMS prototype logs, reviewer-requested baseline comparisons, and energy-management value metrics. File-level checksums and reproduction commands are recorded in `experiments/results/reproducibility_manifest.json` and `experiments/results/reproducibility_manifest.md`. The Python implementation, synthetic scenario-generation scripts, trained model artifacts, table-generation scripts, manuscript sources, and release PDFs are archived in the GitHub repository `Zhaosiqiang/voltguard-voltage-risk-screening`, release `v1.0.0-submission`, and on Zenodo with DOI `10.5281/zenodo.21149702`.
 
 # Declaration of Generative AI and AI-Assisted Technologies in the Writing Process {.unnumbered}
 
@@ -492,4 +492,3 @@ During the preparation of this work, the authors used AI-assisted coding and lan
 [29] IEEE Standards Association. IEEE Std 2030.5: Smart Energy Profile Application Protocol. IEEE; current edition.
 
 [30] Open Field Message Bus Consortium. OpenFMB framework and data model specification. OpenFMB; current edition.
-
