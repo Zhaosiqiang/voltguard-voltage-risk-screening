@@ -1378,13 +1378,18 @@ def main() -> int:
             and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in ecmx_submission_text
             and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in ecm_submission_text
             and "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission" in oajpe_submission_text
+            and "10.5281/zenodo.21149702" in ecmx_submission_text
+            and "10.5281/zenodo.21149702" in ecm_submission_text
+            and "10.5281/zenodo.21149702" in oajpe_submission_text
             and (ROOT / "GITHUB_ZENODO_RELEASE_CHECKLIST.md").exists()
             and (ROOT / "CITATION.cff").exists()
             and (ROOT / ".zenodo.json").exists()
             and (ROOT / "LICENSE").exists()
             and "voltguard-voltage-risk-screening" in (ROOT / "GITHUB_ZENODO_RELEASE_CHECKLIST.md").read_text(encoding="utf-8")
             and "Siqiang" in (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+            and "10.5281/zenodo.21149702" in (ROOT / "CITATION.cff").read_text(encoding="utf-8")
             and "Zhao, Siqiang" in (ROOT / ".zenodo.json").read_text(encoding="utf-8")
+            and "10.5281/zenodo.21149702" in (ROOT / ".zenodo.json").read_text(encoding="utf-8")
             and "MIT License" in (ROOT / "LICENSE").read_text(encoding="utf-8")
             and "Professional Review Action Matrix" in professional_review_action_text
         ),

@@ -9,6 +9,12 @@ GitHub repository:
 GitHub release:
 `https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening/releases/tag/v1.0.0-submission`
 
+Zenodo DOI:
+`10.5281/zenodo.21149702`
+
+DOI URL:
+`https://doi.org/10.5281/zenodo.21149702`
+
 ## Repository Scope
 
 The public repository should contain:
@@ -47,12 +53,9 @@ Completed:
 - validation pass archived locally;
 - GitHub release tagged `v1.0.0-submission`;
 - three manuscript PDFs attached to the release.
-
-Remaining external-account action:
-
-- connect the GitHub repository to Zenodo and mint a DOI. This requires the
-  repository owner's Zenodo authorization or a `ZENODO_TOKEN`, which is not
-  present in the current execution environment.
+- Zenodo GitHub integration enabled;
+- GitHub release event delivered to Zenodo;
+- DOI minted: `10.5281/zenodo.21149702`.
 
 ## Current Local Evidence
 

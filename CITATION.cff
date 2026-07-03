@@ -13,6 +13,7 @@ authors:
 version: "1.0.0-submission"
 date-released: "2026-07-03"
 repository-code: "https://github.com/Zhaosiqiang/voltguard-voltage-risk-screening"
+doi: "10.5281/zenodo.21149702"
 abstract: "VoltGuard is a topology-aware, conformal-calibrated voltage-risk screening framework for active distribution networks, with reproducible feeder experiments, reviewer-requested baselines, DMS prototype artifacts, and manuscript-generation scripts."
 keywords:
   - voltage-risk screening

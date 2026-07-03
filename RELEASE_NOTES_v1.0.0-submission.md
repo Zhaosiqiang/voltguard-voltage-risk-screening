@@ -45,4 +45,5 @@ The latest local validation status before this release was `pass`.
   the eventual publisher agreement.
 - Citation metadata: `CITATION.cff`
 - Zenodo metadata: `.zenodo.json`
-- DOI status: pending Zenodo account authorization or `ZENODO_TOKEN`.
+- Zenodo DOI: `10.5281/zenodo.21149702`
+- DOI URL: `https://doi.org/10.5281/zenodo.21149702`
