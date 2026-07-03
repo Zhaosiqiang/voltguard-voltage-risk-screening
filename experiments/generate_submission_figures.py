@@ -271,7 +271,11 @@ def fig02_feeders_splits() -> tuple[Path, Path]:
     ax.set_title("Distribution feeders used in the study", loc="left", fontweight="bold")
     ax.axis("off")
     rng = np.random.default_rng(7)
-    for offset, label, n in [(0.0, "IEEE 33-bus", 33), (0.58, "IEEE 69-bus", 69)]:
+    feeder_specs = [
+        (0.0, "IEEE 33-bus", 33, 0.965),
+        (0.58, "IEEE 69-bus", 69, 0.405),
+    ]
+    for offset, label, n, label_y in feeder_specs:
         xs = np.linspace(0.05, 0.92, 12)
         ys = 0.72 - offset + 0.07 * np.sin(np.linspace(0, 2.6 * np.pi, 12))
         ax.plot(xs, ys, color=BLUE, lw=3.0)
@@ -283,13 +287,14 @@ def fig02_feeders_splits() -> tuple[Path, Path]:
             ax.plot([bx, bx + 0.08], [by, by + 0.08], color=BLUE, lw=2.4)
             ax.scatter([bx + 0.08], [by + 0.08], s=75, facecolor="white", edgecolor=AMBER, lw=2.4)
         ax.text(
-            0.05,
-            0.88 - offset,
+            0.06,
+            label_y,
             label,
             transform=ax.transAxes,
+            ha="left",
+            va="top",
             fontweight="bold",
             color=INK,
-            bbox={"facecolor": "white", "edgecolor": "none", "pad": 1.5, "alpha": 0.95},
         )
 
     ax = axes[1]
@@ -378,12 +383,12 @@ def fig04_family_calibration() -> tuple[Path, Path]:
     ].copy()
     d = d.sort_values(["missed_violations", "test_samples"], ascending=[False, False]).head(16)
     d = d.sort_values("coverage")
-    fig, ax = plt.subplots(figsize=(12.2, 7.4))
+    fig, ax = plt.subplots(figsize=(12.6, 5.8))
     y = np.arange(len(d))
     colors = np.where(d["coverage"] >= 0.90, GREEN, np.where(d["coverage"] >= 0.85, AMBER, RED))
     ax.barh(y, d["coverage"], color=colors)
     ax.axvline(0.90, color=GRAY, ls="--", lw=2)
-    ax.set_yticks(y, [compact_family_label(f) for f in d["family"]], fontsize=12)
+    ax.set_yticks(y, [compact_family_label(f) for f in d["family"]], fontsize=11, fontweight="bold")
     ax.set_xlim(0.70, 1.08)
     ax.set_xlabel("Empirical coverage")
     for yi, (_, row) in enumerate(d.iterrows()):
@@ -392,7 +397,7 @@ def fig04_family_calibration() -> tuple[Path, Path]:
             yi,
             f"n={int(row['calibration_samples'])}, miss={int(row['missed_violations'])}",
             va="center",
-            fontsize=11,
+            fontsize=10,
             fontweight="bold",
             color=GRAY,
         )

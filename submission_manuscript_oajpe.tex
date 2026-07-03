@@ -54,7 +54,7 @@
 \title{LinDistFlow-Quantile Screen: A Baseline Heuristic for
 Distribution Voltage-Risk Filtering}
 \author{Siqiang Zhao (corresponding author) \and Fengxiang Zhang}
-\date{Generated 2026-07-03 04:58 UTC}
+\date{Generated 2026-07-03 05:33 UTC}
 
 \begin{document}
 \maketitle
@@ -153,7 +153,7 @@ their added complexity.
 \centering
 \caption{Positioning of the proposed baseline against common voltage-screening references.}
 \label{tab:baseline_positioning}
-\begin{tabular}{lllll}
+\begin{tabular}{ccccc}
 \hline
 Reference option & Feeder physics & Training & Interval & Role \\
 \hline
@@ -265,9 +265,9 @@ global quantile.
 \centering
 \caption{Baseline design-rationale comparison on the representative random split.}
 \label{tab:baseline_design_rationale}
-\begin{tabular}{lrrrrr}
+\begin{tabular}{cccccc}
 \hline
-Baseline & RMSE & Coverage & Width & Recall & FA \\
+Baseline & RMSE & Cov. & Wid. & Recall & FA \\
 \hline
 Flat-GQ & 0.03290 & 0.90016 & 0.11745 & 1.00000 & 1.00000 \\
 Hist-env & 0.01258 & 0.95768 & 0.03499 & 1.00000 & 0.31910 \\
@@ -351,9 +351,9 @@ mean interval width to 0.00043 p.u. and the false-alarm rate to 0.00058.
 \centering
 \caption{Contextual comparison between the baseline and the VoltGuard method on the same representative random split.}
 \label{tab:baseline_vs_voltguard}
-\begin{tabular}{lrrrrr}
+\begin{tabular}{cccccc}
 \hline
-Screen & RMSE & Coverage & Width & Recall & FA \\
+Screen & RMSE & Cov. & Wid. & Recall & FA \\
 \hline
 LDF-GQ & 0.00140 & 0.91356 & 0.00474 & 0.99891 & 0.00365 \\
 VoltGuard & 0.00011 & 0.93660 & 0.00043 & 0.99891 & 0.00058 \\

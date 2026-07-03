@@ -18,6 +18,19 @@ LONGTABLE_SPEC = re.compile(
     flags=re.S,
 )
 
+LONGTABLE_GROUP = re.compile(
+    r"\{\\def\\LTcaptype\{none\} % do not increment counter\n"
+    r"(?P<table>\\begin\{longtable\}.*?\\end\{longtable\})\n"
+    r"\}",
+    flags=re.S,
+)
+
+LONGTABLE_BLOCK = re.compile(r"\\begin\{longtable\}.*?\\end\{longtable\}", flags=re.S)
+
+SIMPLE_LONGTABLE_SPEC = re.compile(r"\\begin\{longtable\}\[\]\{@\{\}(?P<spec>[lcr]+)@\{\}\}")
+
+TABULAR_SPEC = re.compile(r"\\begin\{tabular\}\{(?P<spec>[^{}]+)\}")
+
 HEADER_MINIPAGE = re.compile(
     r"\\begin\{minipage\}\[b\]\{\\linewidth\}\\ragged(?:right|left|center)\n"
     r"(?P<body>.*?)\n"
@@ -43,13 +56,9 @@ def compact_longtable_spec(match: re.Match[str]) -> str:
     available = 2 * (len(aligns) - 1)
     cols = []
     for align, weight in zip(aligns, weights, strict=True):
-        ragged = {
-            "left": r"\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000",
-            "right": r"\raggedleft",
-            "center": r"\centering\hyphenpenalty=10000\exhyphenpenalty=10000",
-        }[align]
+        ragged = r"\centering\hyphenpenalty=10000\exhyphenpenalty=10000"
         cols.append(
-            rf"  >{{{ragged}\arraybackslash}}p{{(\linewidth - {available}\tabcolsep) * \real{{{weight:.4f}}}}}"
+            rf"  >{{{ragged}\arraybackslash}}m{{(\linewidth - {available}\tabcolsep) * \real{{{weight:.4f}}}}}"
         )
     return "\\begin{longtable}[]{@{}\n" + "\n".join(cols) + "@{}}"
 
@@ -97,9 +106,117 @@ def unwrap_header_minipage(match: re.Match[str]) -> str:
     return " ".join(match.group("body").strip().split())
 
 
+def center_tabular_spec(match: re.Match[str]) -> str:
+    spec = match.group("spec")
+    centered = "".join("c" if char in "lcr" else char for char in spec)
+    return rf"\begin{{tabular}}{{{centered}}}"
+
+
+def center_simple_longtable_spec(match: re.Match[str]) -> str:
+    spec = match.group("spec")
+    return r"\begin{longtable}[]{@{}" + ("c" * len(spec)) + r"@{}}"
+
+
+def normalize_header_labels(tex: str) -> str:
+    replacements = {
+        "RMSE mean": r"\shortstack{RMSE\\mean}",
+        "Coverage mean": r"\shortstack{Coverage\\mean}",
+        "Width mean": r"\shortstack{Width\\mean}",
+        "Recall mean": r"\shortstack{Recall\\mean}",
+        "FA mean": r"\shortstack{FA\\mean}",
+        "Missed mean": r"\shortstack{Missed\\mean}",
+        "Delta coverage": r"\shortstack{Delta\\coverage}",
+        "Delta width": r"\shortstack{Delta\\width}",
+        "Delta recall": r"\shortstack{Delta\\recall}",
+        "Delta FA": r"\shortstack{Delta\\FA}",
+        "Delta missed": r"\shortstack{Delta\\missed}",
+        "Calib. fraction": r"\shortstack{Calib.\\frac.}",
+        "Calib. scenarios": r"\shortstack{Calib.\\scen.}",
+        "Observed families": r"\shortstack{Obs.\\fam.}",
+        "Empty fam.": r"\shortstack{Empty\\fam.}",
+        "Min EV calib.": r"\shortstack{Min EV\\calib.}",
+        "Min calib.": r"\shortstack{Min\\calib.}",
+        "Calib. n": r"\shortstack{Calib.\\n}",
+        "Test n": r"\shortstack{Test\\n}",
+        "Avg width": r"\shortstack{Avg.\\width}",
+        "Violation recall": r"\shortstack{Violation\\recall}",
+        "False alarm": r"\shortstack{False\\alarm}",
+        "Missed violations": r"\shortstack{Missed\\viol.}",
+        "Scenario recall": r"\shortstack{Scenario\\recall}",
+        "Scenario FA": r"\shortstack{Scenario\\FA}",
+        "Post-action viol.": r"\shortstack{Post-action\\viol.}",
+        "Runtime s": r"\shortstack{Runtime\\s}",
+        "AC scen.": r"\shortstack{AC\\scen.}",
+    }
+    for old, new in replacements.items():
+        tex = tex.replace(old, new)
+    compact_headers = {
+        "& Coverage & Width & Recall": "& Cov. & Wid. & Recall",
+        "& Coverage & Width &": "& Cov. & Wid. &",
+        "Coverage & Width": "Cov. & Wid.",
+    }
+    for old, new in compact_headers.items():
+        tex = tex.replace(old, new)
+    return tex
+
+
+def caption_for_longtable(table: str, number: int) -> str:
+    compact = " ".join(table.split())
+    rules = [
+        ("Line of work", "Positioning relative to related work."),
+        ("Line & Contribution & Screening gap", "ECM integration gap and role."),
+        ("Integration line", "DMS integration positioning."),
+        ("Acronym", "Acronym table."),
+        ("Calib. fraction", "Calibration-budget sensitivity."),
+        ("Method & Calib.", "Representative screening metrics."),
+        ("Drop RMSE", "Physics-consistency audit."),
+        ("RMSE mean", "Multi-seed screening summary."),
+        ("Delta coverage", "Paired seed deltas relative to the global baseline."),
+        ("Feature family", "Residual feature-family ablation."),
+        ("Method & Interval", "Comparison with competing screening methods."),
+        ("Variant & Coverage", "Conformal calibration variants."),
+        ("Calibration & Coverage", "Asymmetric conformal calibration audit."),
+        ("Conditioning key", "EV-conditioning family ablation."),
+        ("Scale & Min EV", "EV family sample-size outlook."),
+        ("Family & Calib.", "Per-family conformal calibration analysis."),
+        ("Audit & Families", "Family recalibration audit."),
+        ("Stratum & Bus", "Risk-stratified calibration audit."),
+        ("PV protocol & Target calib. & Hi-PV test", "PV-shift recalibration protocol."),
+        ("PV protocol & Target calib. & AC avoided", "PV-shift operating-screening protocol."),
+        ("Method & Variant & RMSE", "IEEE 118-bus supplementary stress audit."),
+        ("Workflow & AC scen.", "Operational runtime benchmark."),
+        ("Queue & Records", "DMS prototype queue summary."),
+        ("Artifact & Fields", "Implementation record contract."),
+    ]
+    for marker, caption in rules:
+        if marker in compact:
+            return caption
+    return f"Tabulated results summary {number}."
+
+
+def add_longtable_captions(tex: str) -> str:
+    tex = LONGTABLE_GROUP.sub(lambda match: match.group("table"), tex)
+    counter = 0
+
+    def repl(match: re.Match[str]) -> str:
+        nonlocal counter
+        table = match.group(0)
+        if r"\caption{" in table:
+            return table
+        counter += 1
+        caption = caption_for_longtable(table, counter)
+        return table.replace(r"\toprule", rf"\caption{{{caption}}}\\\toprule", 1)
+
+    return LONGTABLE_BLOCK.sub(repl, tex)
+
+
 def format_tables(tex: str) -> str:
     tex = LONGTABLE_SPEC.sub(compact_longtable_spec, tex)
+    tex = SIMPLE_LONGTABLE_SPEC.sub(center_simple_longtable_spec, tex)
+    tex = TABULAR_SPEC.sub(center_tabular_spec, tex)
     tex = HEADER_MINIPAGE.sub(unwrap_header_minipage, tex)
+    tex = add_longtable_captions(tex)
+    tex = normalize_header_labels(tex)
     return tex
 
 

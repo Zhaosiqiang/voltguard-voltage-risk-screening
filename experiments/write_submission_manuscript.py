@@ -391,6 +391,17 @@ def figure_block(name: str, idx: int, route: str) -> str:
                 r"\end{figure*}",
             ]
         )
+    if route == "ecmx" and name == "fig04_per_family_calibration":
+        return "\n".join(
+            [
+                r"\begin{figure}[!htbp]",
+                r"\centering",
+                rf"\includegraphics[width=0.86\linewidth]{{figures/{name}.pdf}}",
+                rf"\caption{{{title} {caption}}}",
+                rf"\label{{fig:{name}}}",
+                r"\end{figure}",
+            ]
+        )
     if route == "oajpe":
         return "\n".join(
             [

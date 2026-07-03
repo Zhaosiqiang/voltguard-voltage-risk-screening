@@ -11,8 +11,8 @@
     {
       "svg": "figures/fig02_feeders_and_splits.svg",
       "pdf": "figures/fig02_feeders_and_splits.pdf",
-      "bytes_svg": 26086,
-      "bytes_pdf": 32217
+      "bytes_svg": 25720,
+      "bytes_pdf": 32094
     },
     {
       "svg": "figures/fig03_conformal_ablation.svg",
@@ -23,8 +23,8 @@
     {
       "svg": "figures/fig04_per_family_calibration.svg",
       "pdf": "figures/fig04_per_family_calibration.pdf",
-      "bytes_svg": 23793,
-      "bytes_pdf": 23000
+      "bytes_svg": 23724,
+      "bytes_pdf": 22990
     },
     {
       "svg": "figures/fig05_shift_generalization.svg",
@@ -66,7 +66,7 @@
       "svg": "figures/fig11_oajpe_lindistflow_quantile_pipeline.svg",
       "pdf": "figures/fig11_oajpe_lindistflow_quantile_pipeline.pdf",
       "bytes_svg": 943602,
-      "bytes_pdf": 844683
+      "bytes_pdf": 844684
     },
     {
       "svg": "figures/fig12_oajpe_minimal_performance.svg",

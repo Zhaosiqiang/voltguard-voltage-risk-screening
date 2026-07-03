@@ -7,7 +7,7 @@ documentclass: IEEEtran
 classoption: journal
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 04:58 UTC"
+date: "Generated 2026-07-03 05:33 UTC"
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
 ---

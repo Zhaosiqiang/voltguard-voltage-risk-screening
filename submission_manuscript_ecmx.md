@@ -5,7 +5,7 @@ documentclass: elsarticle
 classoption: preprint,12pt
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 04:58 UTC"
+date: "Generated 2026-07-03 05:33 UTC"
 geometry: margin=1in
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
@@ -787,7 +787,12 @@ interval-inefficient.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Inflate undercovered families only | 16 | 5 | 1 | 1 | 0.000433 | 0.000451 | 0.00058 | 0.00058 |
 
-![Per-family conditioned calibration audit. The bars show empirical coverage by topology/PV/loading family with sample counts and missed violations, exposing the small-family regimes where shrinkage matters.](figures/fig04_per_family_calibration.pdf){#fig:fig04_per_family_calibration width=110%}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/fig04_per_family_calibration.pdf}
+\caption{Per-family conditioned calibration audit. The bars show empirical coverage by topology/PV/loading family with sample counts and missed violations, exposing the small-family regimes where shrinkage matters.}
+\label{fig:fig04_per_family_calibration}
+\end{figure}
 
 ## Risk-Stratified Calibration and Screening
 

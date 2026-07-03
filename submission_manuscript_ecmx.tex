@@ -81,7 +81,7 @@
 \title{VoltGuard: Topology-Aware Voltage-Risk Screening with Conformal
 Calibration for Active Distribution Networks}
 \author{Siqiang Zhao (corresponding author), Fengxiang Zhang}
-\date{Generated 2026-07-03 04:58 UTC}
+\date{Generated 2026-07-03 05:33 UTC}
 
 \begin{document}
 \maketitle
@@ -279,14 +279,13 @@ The comparison is not a claim that every cited method solves the same
 screening task; it identifies the missing combination that motivates
 VoltGuard.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2400}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1900}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1900}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1900}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1900}}@{}}
-\toprule\noalign{}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 8\tabcolsep) * \real{0.2400}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 8\tabcolsep) * \real{0.1900}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 8\tabcolsep) * \real{0.1900}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 8\tabcolsep) * \real{0.1900}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 8\tabcolsep) * \real{0.1900}}@{}}
+\caption{Positioning relative to related work.}\\\toprule\noalign{}
 Line of work & Physics model & Topology-aware learning & Calibrated interval & Screening/DMS interface \\
 \midrule\noalign{}
 \endhead
@@ -305,7 +304,6 @@ Conformalized GNNs {[}10,11{]} & no explicit feeder physics & yes & yes
 VoltGuard & LinDistFlow backbone & yes & T/PV/L conditioned &
 voltage-risk screening \\
 \end{longtable}
-}
 
 \section{Problem Formulation}\label{problem-formulation}
 
@@ -666,18 +664,17 @@ On the representative IEEE 33/69 random split, VoltGuard with
 topology+PV+loading conditioned calibration achieves the strongest
 screening tradeoff among the selected main estimators.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2108}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1292}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
-\toprule\noalign{}
-Method & Calib. & RMSE & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.2108}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1292}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
+\caption{Representative screening metrics.}\\\toprule\noalign{}
+Method & Calib. & RMSE & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -692,7 +689,6 @@ VoltGuard & T/PV/L & 0.00011 & 0.93660 & 0.00043 & 0.99891 & 0.00058 &
 GNN ablation & topology & 0.00171 & 0.91340 & 0.00540 & 0.99783 &
 0.02327 & 2 \\
 \end{longtable}
-}
 
 The neural ablation attains high recall but with substantially wider
 intervals, higher RMSE, and higher false-alarm rate. It is therefore
@@ -716,16 +712,15 @@ is computed on each branch. This is a LinDistFlow consistency audit, not
 an AC feasibility certificate; the AC-label row is not zero because the
 proxy ignores losses and other full AC effects.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2294}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1406}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}@{}}
-\toprule\noalign{}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.2294}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1406}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}@{}}
+\caption{Physics-consistency audit.}\\\toprule\noalign{}
 Method & Variant & Scenarios & Drop RMSE & Drop MAE & 95\% max drop & Viol. drop RMSE \\
 \midrule\noalign{}
 \endhead
@@ -738,7 +733,6 @@ VoltGuard & T/PV/L & 120 & 0.000250 & 0.000122 & 0.002395 & 0.000279 \\
 GNN ablation & topology & 120 & 0.003139 & 0.002437 & 0.014201 &
 0.002904 \\
 \end{longtable}
-}
 
 VoltGuard substantially reduces the branch-drop RMSE relative to
 boosting plus global conformal and remains close to the AC-label audit
@@ -756,19 +750,18 @@ Across three random seeds, VoltGuard reduces missed violations relative
 to boosting plus global conformal while maintaining near-nominal
 coverage.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.2108}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1292}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}@{}}
-\toprule\noalign{}
-Method & Variant & RMSE mean & Coverage mean & Width mean & Recall mean & FA mean & Missed mean & Runs \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.2108}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.1292}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}@{}}
+\caption{Multi-seed screening summary.}\\\toprule\noalign{}
+Method & Variant & \shortstack{RMSE\\mean} & \shortstack{Coverage\\mean} & \shortstack{Width\\mean} & \shortstack{Recall\\mean} & \shortstack{FA\\mean} & \shortstack{Missed\\mean} & Runs \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -778,7 +771,6 @@ Boost-GC & Global & 0.00076 & 0.90468 & 0.00127 & 0.99811 & 0.00240 &
 VoltGuard & T/PV/L & 0.00017 & 0.92397 & 0.00049 & 0.99964 & 0.00171 &
 0.33 & 3 \\
 \end{longtable}
-}
 
 The confidence intervals are reported in
 \texttt{multi\_seed\_summary.md}. The main interpretation is not that
@@ -799,17 +791,16 @@ violations are unchanged while intervals and false alarms are lower, but
 this is still a protocol-specific transfer result rather than a
 topology-invariant safety guarantee.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2400}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}@{}}
-\toprule\noalign{}
-Split & Runs & Delta coverage & Delta width & Delta recall & Delta FA & Delta missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.2400}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}@{}}
+\caption{Paired seed deltas relative to the global baseline.}\\\toprule\noalign{}
+Split & Runs & \shortstack{Delta\\coverage} & \shortstack{Delta\\width} & \shortstack{Delta\\recall} & \shortstack{Delta\\FA} & \shortstack{Delta\\missed} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -823,7 +814,6 @@ PV-penetration shift & 3 & -0.02652 & -0.00044 & 0.00064 & -0.00016 &
 topology-held-out 33-to-69 & 3 & 0.00242 & -0.00078 & 0.00000 & -0.00129
 & 0.00 \\
 \end{longtable}
-}
 
 \subsection{Feature/Residual Ablation}\label{featureresidual-ablation}
 
@@ -837,19 +827,18 @@ neighbor load/PV/net-demand features. A direct full ExtraTrees model
 tests whether the residual formulation matters once the same full
 feature family is available.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.2108}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1292}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0943}}@{}}
-\toprule\noalign{}
-Variant & Feature family & Runs & RMSE & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.2108}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.1292}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0943}}@{}}
+\caption{Residual feature-family ablation.}\\\toprule\noalign{}
+Variant & Feature family & Runs & RMSE & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -863,7 +852,6 @@ residual & local+T & 3 & 0.00022 & 0.91694 & 0.00071 & 0.99964 & 0.00298
 residual & full T/E & 3 & 0.00017 & 0.92413 & 0.00050 & 0.99964 &
 0.00171 & 0.33 \\
 \end{longtable}
-}
 
 The ablation supports the topology/electrical part of the claim
 strongly: removing topology and neighbor electrical features increases
@@ -890,18 +878,17 @@ subsample for tractability and is included to test whether generic
 probabilistic regression gives useful screening intervals without
 feeder-specific residual structure.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2108}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1292}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
-\toprule\noalign{}
-Method & Interval & RMSE & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.2108}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1292}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
+\caption{Comparison with competing screening methods.}\\\toprule\noalign{}
+Method & Interval & RMSE & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -920,7 +907,6 @@ GNN ablation & Topo-cond & 0.00171 & 0.91340 & 0.00540 & 0.99783 &
 VoltGuard & T/PV/L & 0.00011 & 0.93660 & 0.00043 & 0.99891 & 0.00058 &
 1 \\
 \end{longtable}
-}
 
 The comparison clarifies the novelty boundary. Standard tree models can
 give competitive point accuracy, but their uncalibrated risk flags miss
@@ -937,10 +923,9 @@ calibration rather than a generic ML model alone.
 
 The representative random split directly compares calibration variants.
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}lrrrrr@{}}
-\toprule\noalign{}
-Variant & Coverage & Width & Recall & FA & Missed \\
+\begin{longtable}[]{@{}cccccc@{}}
+\caption{Conformal calibration variants.}\\\toprule\noalign{}
+Variant & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -951,7 +936,6 @@ Topo-cond & 0.95523 & 0.00053 & 0.99891 & 0.00154 & 1 \\
 T/PV/L & 0.93660 & 0.00043 & 0.99891 & 0.00058 & 1 \\
 No shrinkage & 0.91258 & 0.00042 & 0.99891 & 0.00038 & 1 \\
 \end{longtable}
-}
 
 All VoltGuard conformal variants miss only one bus-level violation in
 this split. The topology+PV+loading conditioned variant is selected
@@ -983,20 +967,19 @@ cases are repeated 20 times. Sampling is done at the scenario level so
 buses from the same scenario are not treated as independent calibration
 draws.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.1800}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0911}}@{}}
-\toprule\noalign{}
-Method & Calib. fraction & Calib. scenarios & Observed families & Empty fam. & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.1800}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 18\tabcolsep) * \real{0.0911}}@{}}
+\caption{Calibration-budget sensitivity.}\\\toprule\noalign{}
+Method & \shortstack{Calib.\\frac.} & \shortstack{Calib.\\scen.} & \shortstack{Obs.\\fam.} & \shortstack{Empty\\fam.} & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1016,7 +999,6 @@ VoltGuard & 0.75 & 90 & 16.00 & 0.00 & 0.94051 & 0.00044 & 0.99919 &
 VoltGuard & 1.00 & 120 & 16.00 & 0.00 & 0.93660 & 0.00043 & 0.99891 &
 0.00058 & 1.00 \\
 \end{longtable}
-}
 
 The budget audit supports deployment, but with a clear boundary. With
 only 12 calibration scenarios, the shrinkage/fallback construction
@@ -1041,17 +1023,16 @@ conformal radii. It is not a new distribution-shift guarantee; it is a
 tail-aware calibration ablation under the same split and exchangeability
 assumptions as the main conformal analysis.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2294}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1406}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1260}}@{}}
-\toprule\noalign{}
-Method & Calibration & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.2294}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1406}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1260}}@{}}
+\caption{Asymmetric conformal calibration audit.}\\\toprule\noalign{}
+Method & Calibration & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1065,7 +1046,6 @@ VoltGuard Global & asymmetric & 0.94624 & 0.000497 & 0.99891 & 0.00058 &
 VoltGuard & symmetric & 0.93660 & 0.000433 & 0.99891 & 0.00058 & 1 \\
 VoltGuard & asymmetric & 0.91977 & 0.000411 & 1.00000 & 0.00058 & 0 \\
 \end{longtable}
-}
 
 For the main topology+PV+loading variant, the asymmetric audit narrows
 the mean interval by 0.000022 p.u. and removes the remaining missed
@@ -1090,19 +1070,18 @@ false alarms. Thus EV demand remains a pre-dispatch feature for residual
 learning, but the conformal calibration key is kept at feeder/PV/loading
 granularity unless a larger EV-calibration set is available.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.2200}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}@{}}
-\toprule\noalign{}
-Conditioning key & Families & Min calib. & Empty fam. & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.2200}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}@{}}
+\caption{EV-conditioning family ablation.}\\\toprule\noalign{}
+Conditioning key & Families & \shortstack{Min\\calib.} & \shortstack{Empty\\fam.} & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1113,7 +1092,6 @@ T/PV/EV & 31 & 33 & 1 & 0.94853 & 0.00050 & 0.99891 & 0.00173 & 1 \\
 PV/load/EV & 32 & 33 & 0 & 0.94003 & 0.00045 & 0.99891 & 0.00077 & 1 \\
 EV only & 4 & 1359 & 0 & 0.94444 & 0.00053 & 0.99891 & 0.00115 & 1 \\
 \end{longtable}
-}
 
 This ablation is therefore a sample-size outlook rather than a claim
 that EV information has no value. At the current calibration scale, EV
@@ -1127,10 +1105,9 @@ supplementary sensitivity curve below records this threshold logic and
 should be used to decide when EV-conditioned calibration is worth
 retesting.
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}rrl@{}}
-\toprule\noalign{}
-Scale & Min EV calib. & Status \\
+\begin{longtable}[]{@{}ccc@{}}
+\caption{EV family sample-size outlook.}\\\toprule\noalign{}
+Scale & \shortstack{Min EV\\calib.} & Status \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1141,7 +1118,6 @@ Scale & Min EV calib. & Status \\
 6x & 198 & Support matched \\
 8x & 264 & Monitor width/FA \\
 \end{longtable}
-}
 
 The status labels mean, respectively, that the EV-keyed split is too
 sparse and wider than the primary split; remains below primary-family
@@ -1155,18 +1131,17 @@ Analysis}\label{per-family-calibration-analysis}
 Per-family analysis exposes where conditioned calibration works and
 where it remains weak.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2200}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}@{}}
-\toprule\noalign{}
-Family & Calib. samples & Test samples & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.2200}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}@{}}
+\caption{Per-family conformal calibration analysis.}\\\toprule\noalign{}
+Family & Calib. samples & Test samples & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1184,7 +1159,6 @@ Family & Calib. samples & Test samples & Coverage & Width & Recall & FA & Missed
 69, PV 0.4, low load & 414 & 483 & 0.82402 & 0.00022 & 1.00000 & 0.00000
 & 0 \\
 \end{longtable}
-}
 
 The low-coverage 33-bus PV 0.8 low-load family has no actual violating
 buses, so it is a calibration-efficiency warning rather than a
@@ -1211,18 +1185,17 @@ family reporting identifies where explicit recalibration changes
 coverage and sharpness, and whether the undercovered family is
 operationally risky or merely interval-inefficient.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.2200}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0975}}@{}}
-\toprule\noalign{}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.2200}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 16\tabcolsep) * \real{0.0975}}@{}}
+\caption{Family recalibration audit.}\\\toprule\noalign{}
 Audit & Families & Under-cov. & Miss cur. & Miss audit & Width cur. & Width audit & FA cur. & FA audit \\
 \midrule\noalign{}
 \endhead
@@ -1231,15 +1204,12 @@ Audit & Families & Under-cov. & Miss cur. & Miss audit & Width cur. & Width audi
 Inflate undercovered families only & 16 & 5 & 1 & 1 & 0.000433 &
 0.000451 & 0.00058 & 0.00058 \\
 \end{longtable}
-}
 
-\begin{figure}
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=1.1\linewidth,height=\textheight,keepaspectratio,alt={Per-family conditioned calibration audit. The bars show empirical coverage by topology/PV/loading family with sample counts and missed violations, exposing the small-family regimes where shrinkage matters.}]{figures/fig04_per_family_calibration.pdf}
-\caption{Per-family conditioned calibration audit. The bars show
-empirical coverage by topology/PV/loading family with sample counts and
-missed violations, exposing the small-family regimes where shrinkage
-matters.}\label{fig:fig04_per_family_calibration}
+\includegraphics[width=0.86\linewidth]{figures/fig04_per_family_calibration.pdf}
+\caption{Per-family conditioned calibration audit. The bars show empirical coverage by topology/PV/loading family with sample counts and missed violations, exposing the small-family regimes where shrinkage matters.}
+\label{fig:fig04_per_family_calibration}
 \end{figure}
 
 \subsection{Risk-Stratified Calibration and
@@ -1253,18 +1223,17 @@ limit, near-safe cases within 0.010 p.u., and interior-safe cases. This
 audit is derived from saved raw interval predictions and does not
 retrain any estimator.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2108}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1292}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
-\toprule\noalign{}
-Method & Stratum & Bus samples & Coverage & Width & Risk rate & Recall/FA & Missed / FAs \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.2108}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1292}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
+\caption{Risk-stratified calibration audit.}\\\toprule\noalign{}
+Method & Stratum & Bus samples & Cov. & Wid. & Risk rate & Recall/FA & Missed / FAs \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1282,7 +1251,6 @@ FA & 3 FAs \\
 GNN ablation & boundary-safe & 55 & 0.90909 & 0.00664 & 0.81818 &
 0.81818 FA & 45 FAs \\
 \end{longtable}
-}
 
 The boundary-safe rows are important for operating value. A conservative
 interval can achieve high recall by flagging many near-limit but safe
@@ -1317,18 +1285,17 @@ simulates periodic AC-audited recalibration after a feeder enters a
 higher renewable-hosting regime; the target calibration labels are not
 reused for testing.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2200}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1114}}@{}}
-\toprule\noalign{}
-PV protocol & Target calib. & Hi-PV test & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.2200}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1114}}@{}}
+\caption{PV-shift recalibration protocol.}\\\toprule\noalign{}
+PV protocol & Target calib. & Hi-PV test & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1339,7 +1306,6 @@ Src+10\% target & 16 & 116 & 0.89527 & 0.00189 & 1.00000 & 0.00398 &
 Src+20\% target & 29 & 103 & 0.88790 & 0.00176 & 1.00000 & 0.00322 &
 0.00 \\
 \end{longtable}
-}
 
 Thus target recalibration repairs much of the coverage loss and removes
 the remaining missed bus-level violation, but it does so by widening
@@ -1361,17 +1327,16 @@ target recalibration improves high-PV risk conservatism, but it consumes
 calibration data and reduces the number of scenarios that can be safely
 bypassed.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2400}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1267}}@{}}
-\toprule\noalign{}
-PV protocol & Target calib. & AC avoided & Risky recall & Post miss & Missed mean & Width mean \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.2400}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 12\tabcolsep) * \real{0.1267}}@{}}
+\caption{PV-shift operating-screening protocol.}\\\toprule\noalign{}
+PV protocol & Target calib. & AC avoided & Risky recall & Post miss & \shortstack{Missed\\mean} & \shortstack{Width\\mean} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1379,7 +1344,6 @@ PV protocol & Target calib. & AC avoided & Risky recall & Post miss & Missed mea
 Src only & 0 & 57.00 & 1.00000 & 0.00000 & 1.00 & 0.00081 \\
 Src+10\% target & 16 & 49.67 & 1.00000 & 0.00000 & 0.00 & 0.00209 \\
 \end{longtable}
-}
 
 At scenario level, the representative random split has 120 test
 scenarios and 93 risky scenarios. VoltGuard topology+PV+loading
@@ -1408,18 +1372,17 @@ The result is intentionally interpreted as a stress audit because the
 LinDistFlow assumptions and radial distribution-feeder interpretation
 are not native to this system.
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2108}}
-  >{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1292}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}
-  >{\raggedleft\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
-\toprule\noalign{}
-Method & Variant & RMSE & Coverage & Width & Recall & FA & Missed \\
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.2108}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1292}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}
+  >{\centering\hyphenpenalty=10000\exhyphenpenalty=10000\arraybackslash}m{(\linewidth - 14\tabcolsep) * \real{0.1100}}@{}}
+\caption{IEEE 118-bus supplementary stress audit.}\\\toprule\noalign{}
+Method & Variant & RMSE & Cov. & Wid. & Recall & FA & Missed \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1436,7 +1399,6 @@ VoltGuard & PV-cond & 0.00572 & 0.91243 & 0.01211 & 0.88755 & 0.07159 &
 VoltGuard & T/PV/L & 0.00572 & 0.91328 & 0.01211 & 0.88353 & 0.07100 &
 29 \\
 \end{longtable}
-}
 
 The 118-bus audit does not strengthen the distribution-feeder claim; it
 exposes where the present physical backbone is inappropriate. The stress
@@ -1483,10 +1445,9 @@ takes 1.858 s; the full train/calibration/test evaluation takes 4.468 s.
 The supplementary 118-bus stress run takes 2.426 s for model fitting and
 2.508 s end-to-end.
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}lrrrr@{}}
-\toprule\noalign{}
-Workflow & AC scen. & Seconds & ms/scenario & Speedup \\
+\begin{longtable}[]{@{}ccccc@{}}
+\caption{Operational runtime benchmark.}\\\toprule\noalign{}
+Workflow & \shortstack{AC\\scen.} & Seconds & ms/scenario & Speedup \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1496,7 +1457,6 @@ Full AC all & 120 & 206.98291 & 1724.86 & 1.00 \\
 VG flag+AC & 93 & 160.44221 & 1725.19 & 1.29 \\
 VG top20+AC & 24 & 41.42704 & 1726.13 & 5.00 \\
 \end{longtable}
-}
 
 A rough breakeven calculation is favorable because online screening is
 cheap. Using the 1.858 s fit time and the per-scenario difference
