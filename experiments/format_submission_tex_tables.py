@@ -44,9 +44,9 @@ def compact_longtable_spec(match: re.Match[str]) -> str:
     cols = []
     for align, weight in zip(aligns, weights, strict=True):
         ragged = {
-            "left": r"\raggedright",
+            "left": r"\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000",
             "right": r"\raggedleft",
-            "center": r"\centering",
+            "center": r"\centering\hyphenpenalty=10000\exhyphenpenalty=10000",
         }[align]
         cols.append(
             rf"  >{{{ragged}\arraybackslash}}p{{(\linewidth - {available}\tabcolsep) * \real{{{weight:.4f}}}}}"
@@ -59,18 +59,28 @@ def table_widths(aligns: list[str]) -> list[float]:
     text_cols = [idx for idx, align in enumerate(aligns) if align != "right"]
     if not text_cols:
         return [1.0 / ncols] * ncols
+    if len(text_cols) == ncols:
+        if ncols == 2:
+            return [0.24, 0.76]
+        if ncols == 3:
+            return [0.30, 0.33, 0.37]
+        if ncols == 4:
+            return [0.29, 0.24, 0.25, 0.22]
+        return [1.0 / ncols] * ncols
 
     weights = [0.0] * ncols
-    if ncols >= 9:
-        text_budget = min(0.34, 0.12 * len(text_cols))
-    elif ncols >= 7:
-        text_budget = min(0.36, 0.16 + 0.12 * max(0, len(text_cols) - 1))
+    if ncols >= 10:
+        text_budget = min(0.42, 0.18 + 0.12 * max(0, len(text_cols) - 1))
+    elif ncols >= 8:
+        text_budget = min(0.44, 0.22 + 0.12 * max(0, len(text_cols) - 1))
+    elif ncols >= 6:
+        text_budget = min(0.46, 0.24 + 0.13 * max(0, len(text_cols) - 1))
     else:
-        text_budget = min(0.42, 0.20 * len(text_cols))
+        text_budget = min(0.50, 0.24 * len(text_cols))
 
     for pos, idx in enumerate(text_cols):
         if pos == 0:
-            weights[idx] = min(0.20, text_budget * 0.58 if len(text_cols) > 1 else text_budget)
+            weights[idx] = min(0.24, text_budget * 0.62 if len(text_cols) > 1 else text_budget)
         else:
             weights[idx] = (text_budget - weights[text_cols[0]]) / (len(text_cols) - 1)
 

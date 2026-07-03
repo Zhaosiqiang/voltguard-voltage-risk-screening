@@ -66,15 +66,27 @@ def read(path: Path) -> str:
 TABLE_LABEL_REPLACEMENTS = [
     ("LinDistFlow physical backbone", "LDF"),
     ("LinDistFlow + global quantile", "LDF-GQ"),
+    ("LinDistFlow point-risk", "LDF point"),
+    ("Historical bus envelope", "Hist-env"),
+    ("Linear sensitivity regression + global quantile", "Linear-GQ"),
+    ("Linear sensitivity screen", "Linear-GQ"),
+    ("VoltGuard residual screen", "VoltGuard"),
+    ("AC power-flow audit", "AC audit"),
+    ("Random forest", "RF"),
+    ("Gradient boosting", "GB"),
     ("Boosting point + global conformal", "Boost-GC"),
     ("Boosting + global conformal", "Boost-GC"),
+    ("Boosting + global", "Boost-GC"),
     ("Gradient-boosted quantile regression", "GB-quantile"),
     ("Gaussian-process UQ baseline", "GP-UQ"),
     ("Neural graph residual ablation", "GNN ablation"),
+    ("Neural graph ablation", "GNN ablation"),
     ("VoltGuard topology-aware residual", "VoltGuard"),
     ("VoltGuard topology+PV+loading", "VoltGuard"),
     ("VoltGuard interval-risk", "VoltGuard"),
-    ("LinDistFlow point-risk", "LDF point"),
+    ("VoltGuard online screening only", "VG screen"),
+    ("VoltGuard-flagged scenarios then AC grid search", "VG flag+AC"),
+    ("VoltGuard top-20% budget then AC grid search", "VG top20+AC"),
     ("Random budget expectation", "Random"),
     ("Oracle realized severity", "Oracle"),
     ("Full AC grid search on every scenario", "Full AC all"),
@@ -95,13 +107,20 @@ TABLE_LABEL_REPLACEMENTS = [
     ("topology+PV+loading", "T/PV/L"),
     ("topology/PV/loading conformal", "T/PV/L"),
     ("topology/PV/loading", "T/PV/L"),
+    ("topology+PV+EV", "T/PV/EV"),
+    ("PV+loading+EV", "PV/load/EV"),
+    ("EV-only", "EV only"),
     ("PV conditioned", "PV-cond"),
     ("PV-conditioned", "PV-cond"),
     ("topology-conditioned", "Topo-cond"),
+    ("topology conformal", "Topo-cond"),
     ("global conformal", "Global"),
+    ("global", "Global"),
     ("learned 5/95% quantiles", "5/95% Q"),
     ("90% Gaussian interval", "Gaussian"),
     ("pooled residual quantile", "pooled Q"),
+    ("false alarms", "FAs"),
+    ("false alarm", "FA"),
 ]
 
 TABLE_HEADER_REPLACEMENTS = [
@@ -112,6 +131,10 @@ TABLE_HEADER_REPLACEMENTS = [
     ("Missed buses mean", "Missed mean"),
     ("Missed buses", "Missed"),
     ("Scenario recall", "Scen. recall"),
+    ("Risk-flag rate", "Risk rate"),
+    ("Bus recall", "Recall"),
+    ("Recall / false-alarm", "Recall/FA"),
+    ("Missed / false alarms", "Miss/FA"),
     ("Risky recall mean", "Risky recall"),
     ("Post-screen miss mean", "Post miss"),
     ("Post-action violating scenarios", "Post scen."),
@@ -132,6 +155,34 @@ TABLE_HEADER_REPLACEMENTS = [
     ("Calibration scale relative to current EV-conditioned split", "Scale"),
     ("Approx. minimum EV-family calibration samples", "Min EV calib."),
     ("Expected EV-conditioning status", "Status"),
+    ("PV-shift calibration protocol", "PV protocol"),
+    ("PV-shift screening protocol", "PV protocol"),
+    ("Target high-PV calibration scenarios", "Target calib."),
+    ("High-PV test scenarios", "Hi-PV test"),
+    ("Scenarios sent to AC", "AC scen."),
+    ("Speedup vs full AC", "Speedup"),
+    ("95% max-abs drop residual", "95% max drop"),
+    ("Violating-only drop RMSE", "Viol. drop RMSE"),
+    ("Empty test families", "Empty fam."),
+    ("Recalibration audit", "Audit"),
+    ("Undercovered", "Under-cov."),
+    ("Missed current", "Miss cur."),
+    ("Missed audited", "Miss audit"),
+    ("Width current", "Width cur."),
+    ("Width audited", "Width audit"),
+    ("FA current", "FA cur."),
+    ("FA audited", "FA audit"),
+    ("Integration line", "Line"),
+    ("Main contribution", "Contribution"),
+    ("Gap for voltage-risk screening", "Screening gap"),
+    ("VoltGuard-ECM role", "ECM role"),
+    ("Required fields", "Fields"),
+    ("Violating records", "Viol. rec."),
+    ("Stale telemetry", "Stale tel."),
+    ("Unseen topology", "Unseen topo."),
+    ("Out-of-envelope", "Out-env."),
+    ("Operator overrides", "Overrides"),
+    ("Record share", "Share"),
 ]
 
 
@@ -140,7 +191,9 @@ def compact_markdown_table_labels(markdown: str) -> str:
 
     lines = []
     for line in markdown.splitlines():
-        if line.lstrip().startswith("|") and "|" in line[1:]:
+        is_pipe_table = line.lstrip().startswith("|") and "|" in line[1:]
+        is_latex_table_row = "&" in line and r"\\" in line
+        if is_pipe_table or is_latex_table_row:
             for old, new in TABLE_LABEL_REPLACEMENTS + TABLE_HEADER_REPLACEMENTS:
                 line = line.replace(old, new)
         lines.append(line)

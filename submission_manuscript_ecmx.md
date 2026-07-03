@@ -5,7 +5,7 @@ documentclass: elsarticle
 classoption: preprint,12pt
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 02:47 UTC"
+date: "Generated 2026-07-03 03:25 UTC"
 geometry: margin=1in
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
@@ -448,10 +448,13 @@ scenario-level recall/false alarms, and family-level calibration behavior.
 Downstream operating audits remain project artifacts outside the main method
 submission.
 
-For readability, result tables use compact labels: LDF denotes the
-LinDistFlow physical backbone, Boost-GC denotes boosting with global conformal
-calibration, T/PV/L denotes topology/PV/loading conditioning, and GNN ablation
-denotes the neural graph residual diagnostic.
+For readability, result tables use a fixed compact label set: LDF denotes the
+LinDistFlow physical backbone, RF denotes random forest, GB denotes gradient
+boosting, Boost-GC denotes boosting with global conformal calibration,
+GB-quantile denotes gradient-boosted quantile regression, GP-UQ denotes the
+Gaussian-process uncertainty baseline, T/PV/L denotes topology/PV/loading
+conditioning, full T/E denotes the full topology/electrical feature family,
+and GNN ablation denotes the neural graph residual diagnostic.
 
 ## Comparison with State-of-the-Art Screening Baselines
 
@@ -479,9 +482,9 @@ tradeoff among the selected main estimators.
 | Method | Calib. | RMSE | Coverage | Width | Recall | FA | Missed |
 |---|---|---:|---:|---:|---:|---:|---:|
 | LDF | none | 0.00140 | -- | -- | 0.91640 | 0.00000 | 77 |
-| Random forest | none | 0.00023 | -- | -- | 0.99023 | 0.00019 | 9 |
-| Gradient boosting | none | 0.00041 | -- | -- | 0.97286 | 0.00000 | 25 |
-| Boost-GC | global | 0.00041 | 0.90850 | 0.00110 | 0.99674 | 0.00250 | 3 |
+| RF | none | 0.00023 | -- | -- | 0.99023 | 0.00019 | 9 |
+| GB | none | 0.00041 | -- | -- | 0.97286 | 0.00000 | 25 |
+| Boost-GC | Global | 0.00041 | 0.90850 | 0.00110 | 0.99674 | 0.00250 | 3 |
 | VoltGuard | T/PV/L | 0.00011 | 0.93660 | 0.00043 | 0.99891 | 0.00058 | 1 |
 | GNN ablation | topology | 0.00171 | 0.91340 | 0.00540 | 0.99783 | 0.02327 | 2 |
 
@@ -505,10 +508,10 @@ is computed on each branch. This is a LinDistFlow consistency audit, not an AC
 feasibility certificate; the AC-label row is not zero because the proxy ignores
 losses and other full AC effects.
 
-| Method | Variant | Scenarios | Drop RMSE | Drop MAE | 95% max-abs drop residual | Violating-only drop RMSE |
+| Method | Variant | Scenarios | Drop RMSE | Drop MAE | 95% max drop | Viol. drop RMSE |
 |---|---|---:|---:|---:|---:|---:|
 | AC power-flow label | reference | 120 | 0.000238 | 0.000101 | 0.002516 | 0.000272 |
-| Boost-GC | global | 120 | 0.000563 | 0.000379 | 0.004631 | 0.000621 |
+| Boost-GC | Global | 120 | 0.000563 | 0.000379 | 0.004631 | 0.000621 |
 | VoltGuard | T/PV/L | 120 | 0.000250 | 0.000122 | 0.002395 | 0.000279 |
 | GNN ablation | topology | 120 | 0.003139 | 0.002437 | 0.014201 | 0.002904 |
 
@@ -527,7 +530,7 @@ boosting plus global conformal while maintaining near-nominal coverage.
 
 | Method | Variant | RMSE mean | Coverage mean | Width mean | Recall mean | FA mean | Missed mean | Runs |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| Boost-GC | global | 0.00076 | 0.90468 | 0.00127 | 0.99811 | 0.00240 | 1.67 | 3 |
+| Boost-GC | Global | 0.00076 | 0.90468 | 0.00127 | 0.99811 | 0.00240 | 1.67 | 3 |
 | VoltGuard | T/PV/L | 0.00017 | 0.92397 | 0.00049 | 0.99964 | 0.00171 | 0.33 | 3 |
 
 The confidence intervals are reported in `multi_seed_summary.md`. The main
@@ -548,7 +551,7 @@ violations are unchanged while intervals and false alarms are lower, but this
 is still a protocol-specific transfer result rather than a topology-invariant
 safety guarantee.
 
-| Split | Runs | Delta coverage | Delta width | Delta recall | Delta false alarm | Delta missed |
+| Split | Runs | Delta coverage | Delta width | Delta recall | Delta FA | Delta missed |
 |---|---:|---:|---:|---:|---:|---:|
 | random interpolation | 3 | 0.01928 | -0.00078 | 0.00152 | -0.00070 | -1.33 |
 | synthetic time-block | 3 | 0.04025 | -0.00058 | 0.00140 | -0.00110 | -1.33 |
@@ -598,12 +601,12 @@ without feeder-specific residual structure.
 | Method | Interval | RMSE | Coverage | Width | Recall | FA | Missed |
 |---|---|---:|---:|---:|---:|---:|---:|
 | LDF | point only | 0.00140 | n/a | n/a | 0.91640 | 0.00000 | 77 |
-| Random forest | point only | 0.00023 | n/a | n/a | 0.99023 | 0.00019 | 9 |
-| Gradient boosting | point only | 0.00042 | n/a | n/a | 0.97286 | 0.00000 | 25 |
+| RF | point only | 0.00023 | n/a | n/a | 0.99023 | 0.00019 | 9 |
+| GB | point only | 0.00042 | n/a | n/a | 0.97286 | 0.00000 | 25 |
 | Boost-GC | pooled Q | 0.00042 | 0.90850 | 0.00110 | 0.99674 | 0.00250 | 3 |
 | GB-quantile | 5/95% Q | 0.00035 | 0.83219 | 0.00444 | 0.99566 | 0.00135 | 4 |
 | GP-UQ | Gaussian | 0.01165 | 0.97827 | 0.05108 | 1.00000 | 0.33353 | 0 |
-| GNN ablation | topology conformal | 0.00171 | 0.91340 | 0.00540 | 0.99783 | 0.02327 | 2 |
+| GNN ablation | Topo-cond | 0.00171 | 0.91340 | 0.00540 | 0.99783 | 0.02327 | 2 |
 | VoltGuard | T/PV/L | 0.00011 | 0.93660 | 0.00043 | 0.99891 | 0.00058 | 1 |
 
 The comparison clarifies the novelty boundary. Standard tree models can give
@@ -622,7 +625,7 @@ The representative random split directly compares calibration variants.
 
 | Variant | Coverage | Width | Recall | FA | Missed |
 |---|---:|---:|---:|---:|---:|
-| global | 0.94984 | 0.00053 | 0.99891 | 0.00115 | 1 |
+| Global | 0.94984 | 0.00053 | 0.99891 | 0.00115 | 1 |
 | PV-cond | 0.94510 | 0.00049 | 0.99891 | 0.00058 | 1 |
 | Topo-cond | 0.95523 | 0.00053 | 0.99891 | 0.00154 | 1 |
 | T/PV/L | 0.93660 | 0.00043 | 0.99891 | 0.00058 | 1 |
@@ -648,10 +651,10 @@ set. Partial-budget cases are repeated 20 times. Sampling is done at the
 scenario level so buses from the same scenario are not treated as independent
 calibration draws.
 
-| Method | Calib. fraction | Calib. scenarios | Observed families | Empty test families | Coverage | Width | Recall | FA | Missed |
+| Method | Calib. fraction | Calib. scenarios | Observed families | Empty fam. | Coverage | Width | Recall | FA | Missed |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Boosting + global | 0.10 | 12 | 1.00 | 0.00 | 0.89410 | 0.00104 | 0.99457 | 0.00181 | 5.00 |
-| Boosting + global | 1.00 | 120 | 1.00 | 0.00 | 0.90850 | 0.00110 | 0.99674 | 0.00250 | 3.00 |
+| Boost-GC | 0.10 | 12 | 1.00 | 0.00 | 0.89410 | 0.00104 | 0.99457 | 0.00181 | 5.00 |
+| Boost-GC | 1.00 | 120 | 1.00 | 0.00 | 0.90850 | 0.00110 | 0.99674 | 0.00250 | 3.00 |
 | VoltGuard | 0.10 | 12 | 8.40 | 7.60 | 0.92903 | 0.00047 | 0.99902 | 0.00110 | 0.90 |
 | VoltGuard | 0.25 | 30 | 13.35 | 2.65 | 0.93528 | 0.00044 | 0.99924 | 0.00091 | 0.70 |
 | VoltGuard | 0.50 | 60 | 15.80 | 0.20 | 0.94022 | 0.00044 | 0.99919 | 0.00089 | 0.75 |
@@ -682,8 +685,8 @@ same split and exchangeability assumptions as the main conformal analysis.
 |---|---|---:|---:|---:|---:|---:|
 | Boost-GC | symmetric | 0.90850 | 0.001096 | 0.99674 | 0.00250 | 3 |
 | Boost-GC | asymmetric | 0.90539 | 0.001162 | 0.99891 | 0.00327 | 1 |
-| VoltGuard global | symmetric | 0.94984 | 0.000527 | 0.99891 | 0.00115 | 1 |
-| VoltGuard global | asymmetric | 0.94624 | 0.000497 | 0.99891 | 0.00058 | 1 |
+| VoltGuard Global | symmetric | 0.94984 | 0.000527 | 0.99891 | 0.00115 | 1 |
+| VoltGuard Global | asymmetric | 0.94624 | 0.000497 | 0.99891 | 0.00058 | 1 |
 | VoltGuard | symmetric | 0.93660 | 0.000433 | 0.99891 | 0.00058 | 1 |
 | VoltGuard | asymmetric | 0.91977 | 0.000411 | 1.00000 | 0.00058 | 0 |
 
@@ -709,13 +712,13 @@ pre-dispatch feature for residual learning, but the conformal calibration key
 is kept at feeder/PV/loading granularity unless a larger EV-calibration set is
 available.
 
-| Conditioning key | Families | Min calib. | Empty test families | Coverage | Width | Recall | FA | Missed |
+| Conditioning key | Families | Min calib. | Empty fam. | Coverage | Width | Recall | FA | Missed |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | T/PV/L | 16 | 198 | 0 | 0.93660 | 0.00043 | 0.99891 | 0.00058 | 1 |
 | T/PV/L+EV | 55 | 33 | 7 | 0.94918 | 0.00048 | 0.99891 | 0.00154 | 1 |
-| topology+PV+EV | 31 | 33 | 1 | 0.94853 | 0.00050 | 0.99891 | 0.00173 | 1 |
-| PV+loading+EV | 32 | 33 | 0 | 0.94003 | 0.00045 | 0.99891 | 0.00077 | 1 |
-| EV-only | 4 | 1359 | 0 | 0.94444 | 0.00053 | 0.99891 | 0.00115 | 1 |
+| T/PV/EV | 31 | 33 | 1 | 0.94853 | 0.00050 | 0.99891 | 0.00173 | 1 |
+| PV/load/EV | 32 | 33 | 0 | 0.94003 | 0.00045 | 0.99891 | 0.00077 | 1 |
+| EV only | 4 | 1359 | 0 | 0.94444 | 0.00053 | 0.99891 | 0.00115 | 1 |
 
 This ablation is therefore a sample-size outlook rather than a claim that EV
 information has no value. At the current calibration scale, EV bins fragment
@@ -734,7 +737,7 @@ worth retesting.
 | 2x | 66 | Still below primary-family support; diagnostic use only |
 | 4x | 132 | Candidate regime for retesting EV-conditioned intervals |
 | 6x | 198 | Comparable weakest-family support to T/PV/L |
-| 8x | 264 | Plausible regime if width and false alarms begin to fall |
+| 8x | 264 | Plausible regime if width and FAs begin to fall |
 
 ## Per-Family Calibration Analysis
 
@@ -774,7 +777,7 @@ reporting identifies where explicit recalibration changes coverage and
 sharpness, and whether the undercovered family is operationally risky or merely
 interval-inefficient.
 
-| Recalibration audit | Families | Undercovered | Missed current | Missed audited | Width current | Width audited | FA current | FA audited |
+| Audit | Families | Under-cov. | Miss cur. | Miss audit | Width cur. | Width audit | FA cur. | FA audit |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Inflate undercovered families only | 16 | 5 | 1 | 1 | 0.000433 | 0.000451 | 0.00058 | 0.00058 |
 
@@ -789,14 +792,14 @@ boundary-safe cases within 0.002 p.u. of either voltage limit, near-safe cases
 within 0.010 p.u., and interior-safe cases. This audit is derived from saved
 raw interval predictions and does not retrain any estimator.
 
-| Method | Stratum | Bus samples | Coverage | Width | Risk-flag rate | Recall / false-alarm | Missed / false alarms |
+| Method | Stratum | Bus samples | Coverage | Width | Risk rate | Recall/FA | Missed / FAs |
 |---|---|---:|---:|---:|---:|---:|---:|
 | Boost-GC | violating | 921 | 0.59501 | 0.00110 | 0.99674 | 0.99674 recall | 3 missed |
 | VoltGuard | violating | 921 | 0.87188 | 0.00052 | 0.99891 | 0.99891 recall | 1 missed |
-| Neural graph ablation | violating | 921 | 0.74159 | 0.00611 | 0.99783 | 0.99783 recall | 2 missed |
-| Boost-GC | boundary-safe | 55 | 0.78182 | 0.00110 | 0.23636 | 0.23636 false alarm | 13 false alarms |
-| VoltGuard | boundary-safe | 55 | 0.92727 | 0.00044 | 0.05455 | 0.05455 false alarm | 3 false alarms |
-| Neural graph ablation | boundary-safe | 55 | 0.90909 | 0.00664 | 0.81818 | 0.81818 false alarm | 45 false alarms |
+| GNN ablation | violating | 921 | 0.74159 | 0.00611 | 0.99783 | 0.99783 recall | 2 missed |
+| Boost-GC | boundary-safe | 55 | 0.78182 | 0.00110 | 0.23636 | 0.23636 FA | 13 FAs |
+| VoltGuard | boundary-safe | 55 | 0.92727 | 0.00044 | 0.05455 | 0.05455 FA | 3 FAs |
+| GNN ablation | boundary-safe | 55 | 0.90909 | 0.00664 | 0.81818 | 0.81818 FA | 45 FAs |
 
 The boundary-safe rows are important for operating value. A conservative
 interval can achieve high recall by flagging many near-limit but safe buses,
@@ -827,7 +830,7 @@ remaining high-PV scenarios are evaluated. This simulates periodic
 AC-audited recalibration after a feeder enters a higher renewable-hosting
 regime; the target calibration labels are not reused for testing.
 
-| PV-shift calibration protocol | Target high-PV calibration scenarios | High-PV test scenarios | Coverage | Width | Recall | FA | Missed |
+| PV protocol | Target calib. | Hi-PV test | Coverage | Width | Recall | FA | Missed |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Src only | 0 | 132 | 0.76915 | 0.00081 | 0.99807 | 0.00147 | 1.00 |
 | Src+10% target | 16 | 116 | 0.89527 | 0.00189 | 1.00000 | 0.00398 | 0.00 |
@@ -851,7 +854,7 @@ energy management: target recalibration improves high-PV risk conservatism,
 but it consumes calibration data and reduces the number of scenarios that can
 be safely bypassed.
 
-| PV-shift screening protocol | Target high-PV calibration scenarios | AC avoided | Risky recall | Post miss | Missed mean | Width mean |
+| PV protocol | Target calib. | AC avoided | Risky recall | Post miss | Missed mean | Width mean |
 |---|---:|---:|---:|---:|---:|---:|
 | Src only | 0 | 57.00 | 1.00000 | 0.00000 | 1.00 | 0.00081 |
 | Src+10% target | 16 | 49.67 | 1.00000 | 0.00000 | 0.00 | 0.00209 |
@@ -876,10 +879,10 @@ and radial distribution-feeder interpretation are not native to this system.
 | Method | Variant | RMSE | Coverage | Width | Recall | FA | Missed |
 |---|---|---:|---:|---:|---:|---:|---:|
 | LDF | none | 0.88711 | n/a | n/a | 0.80723 | 0.87352 | 48 |
-| Random forest | none | 0.00445 | n/a | n/a | 0.58635 | 0.00425 | 103 |
-| Gradient boosting | none | 0.00466 | n/a | n/a | 0.57831 | 0.00586 | 105 |
-| Boost-GC | global | 0.00466 | 0.89237 | 0.01005 | 0.82731 | 0.06236 | 43 |
-| VoltGuard | global | 0.00572 | 0.90254 | 0.01054 | 0.81526 | 0.06851 | 46 |
+| RF | none | 0.00445 | n/a | n/a | 0.58635 | 0.00425 | 103 |
+| GB | none | 0.00466 | n/a | n/a | 0.57831 | 0.00586 | 105 |
+| Boost-GC | Global | 0.00466 | 0.89237 | 0.01005 | 0.82731 | 0.06236 | 43 |
+| VoltGuard | Global | 0.00572 | 0.90254 | 0.01054 | 0.81526 | 0.06851 | 46 |
 | VoltGuard | PV-cond | 0.00572 | 0.91243 | 0.01211 | 0.88755 | 0.07159 | 28 |
 | VoltGuard | T/PV/L | 0.00572 | 0.91328 | 0.01211 | 0.88353 | 0.07100 | 29 |
 
@@ -924,12 +927,12 @@ the residual learner uses 18,360 training rows and takes 1.858 s; the full
 train/calibration/test evaluation takes 4.468 s. The supplementary 118-bus
 stress run takes 2.426 s for model fitting and 2.508 s end-to-end.
 
-| Workflow | Scenarios sent to AC | Seconds | ms/scenario | Speedup vs full AC |
+| Workflow | AC scen. | Seconds | ms/scenario | Speedup |
 |---|---:|---:|---:|---:|
-| VoltGuard online screening only | 120 | 0.03046 | 0.25380 | 6796.17 |
+| VG screen | 120 | 0.03046 | 0.25380 | 6796.17 |
 | Full AC all | 120 | 206.98291 | 1724.86 | 1.00 |
-| Flagged+AC | 93 | 160.44221 | 1725.19 | 1.29 |
-| Top20+AC | 24 | 41.42704 | 1726.13 | 5.00 |
+| VG flag+AC | 93 | 160.44221 | 1725.19 | 1.29 |
+| VG top20+AC | 24 | 41.42704 | 1726.13 | 5.00 |
 
 A rough breakeven calculation is favorable because online screening is cheap.
 Using the 1.858 s fit time and the per-scenario difference between full AC grid

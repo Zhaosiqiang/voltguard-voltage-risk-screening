@@ -434,10 +434,13 @@ scenario-level recall/false alarms, and family-level calibration behavior.
 Downstream operating audits remain project artifacts outside the main method
 submission.
 
-For readability, result tables use compact labels: LDF denotes the
-LinDistFlow physical backbone, Boost-GC denotes boosting with global conformal
-calibration, T/PV/L denotes topology/PV/loading conditioning, and GNN ablation
-denotes the neural graph residual diagnostic.
+For readability, result tables use a fixed compact label set: LDF denotes the
+LinDistFlow physical backbone, RF denotes random forest, GB denotes gradient
+boosting, Boost-GC denotes boosting with global conformal calibration,
+GB-quantile denotes gradient-boosted quantile regression, GP-UQ denotes the
+Gaussian-process uncertainty baseline, T/PV/L denotes topology/PV/loading
+conditioning, full T/E denotes the full topology/electrical feature family,
+and GNN ablation denotes the neural graph residual diagnostic.
 
 ### 5.5 Comparison with State-of-the-Art Screening Baselines
 

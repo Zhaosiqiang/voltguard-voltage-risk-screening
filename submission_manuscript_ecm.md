@@ -5,7 +5,7 @@ documentclass: elsarticle
 classoption: preprint,12pt
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 02:47 UTC"
+date: "Generated 2026-07-03 03:25 UTC"
 geometry: margin=1in
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
@@ -137,7 +137,7 @@ VoltGuard-ECM is positioned at this integration boundary. It does not replace
 the standards or the AC tools; it defines the missing operational envelope that
 allows a calibrated screen to become a traceable DMS object.
 
-| Integration line | Main contribution | Gap for voltage-risk screening | VoltGuard-ECM role |
+| Line | Contribution | Screening gap | ECM role |
 |---|---|---|---|
 | CIM / IEEE 2030.5 / OpenFMB standards | interoperable grid and DER data objects | no queue or fallback policy for screening outputs | maps screen records to auditable fields |
 | AC PF / OPF / MPC in DMS | trusted feasibility and corrective decisions | expensive for high-volume forecast triage | preserves AC audit as backend authority |
@@ -327,7 +327,7 @@ Input: audited outcomes W, calibration quantile q_cal,
 An implementation should expose the following artifacts at every operating
 cycle:
 
-| Artifact | Required fields | Purpose |
+| Artifact | Fields | Purpose |
 |---|---|---|
 | Scenario record | scenario id, horizon, forecast sources, timestamp | Reconstruct the screened operating state |
 | Network record | feeder id, model version, topology id, voltage limits | Bind the screen to a physical model |
@@ -350,7 +350,7 @@ out-of-envelope forecast flag, operator override flag, and rolling residual
 alarm flag. The prototype then executes Algorithm 1 and Algorithm 2 and writes
 an auditable weekly log.
 
-| Queue | Records | Violating records | Stale telemetry | Unseen topology | Out-of-envelope | Operator overrides | Record share |
+| Queue | Records | Viol. rec. | Stale tel. | Unseen topo. | Out-env. | Overrides | Share |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | corrective audit | 846 | 779 | 277 | 24 | 43 | 18 | 0.8393 |
 | release | 136 | 0 | 0 | 0 | 0 | 0 | 0.1349 |

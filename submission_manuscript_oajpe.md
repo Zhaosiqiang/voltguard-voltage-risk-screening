@@ -7,7 +7,7 @@ documentclass: IEEEtran
 classoption: journal
 header-includes:
   - \usepackage{graphicx}
-date: "Generated 2026-07-03 02:47 UTC"
+date: "Generated 2026-07-03 03:25 UTC"
 mainfont: "Times New Roman"
 mathfont: "STIX Two Math"
 ---
@@ -82,11 +82,11 @@ that stronger methods should be able to justify their added complexity.
 Reference option & Feeder physics & Training & Interval & Role \\
 \hline
 Flat nominal voltage + margin & no & no & margin only & trivial lower bound \\
-Historical bus envelope & indirect & no & yes & conservative data-only comparator \\
-Linear sensitivity screen & partial & optional & calibrated only & simple analytic comparator \\
-AC power-flow audit & full AC & no & no & backend truth/audit tool \\
-LinDistFlow + global quantile & radial linearized & calibration only & yes & proposed reference baseline \\
-VoltGuard residual screen & physics + residual & yes & yes & stronger companion method \\
+Hist-env & indirect & no & yes & conservative data-only comparator \\
+Linear-GQ & partial & optional & calibrated only & simple analytic comparator \\
+AC audit & full AC & no & no & backend truth/audit tool \\
+LDF-GQ & radial linearized & calibration only & yes & proposed reference baseline \\
+VoltGuard & physics + residual & yes & yes & stronger companion method \\
 \hline
 \end{tabular}
 \end{table*}
@@ -189,7 +189,7 @@ LinDistFlow + global quantile.
 \label{tab:baseline_design_rationale}
 \begin{tabular}{lrrrrr}
 \hline
-Baseline & RMSE & Coverage & Width & Recall & False alarm \\
+Baseline & RMSE & Coverage & Width & Recall & FA \\
 \hline
 Flat-GQ & 0.03290 & 0.90016 & 0.11745 & 1.00000 & 1.00000 \\
 Hist-env & 0.01258 & 0.95768 & 0.03499 & 1.00000 & 0.31910 \\
@@ -265,7 +265,7 @@ with one missed bus-level violation while reducing the mean interval width to
 \label{tab:baseline_vs_voltguard}
 \begin{tabular}{lrrrrr}
 \hline
-Screen & RMSE & Coverage & Width & Bus recall & False alarm \\
+Screen & RMSE & Coverage & Width & Recall & FA \\
 \hline
 LDF-GQ & 0.00140 & 0.91356 & 0.00474 & 0.99891 & 0.00365 \\
 VoltGuard & 0.00011 & 0.93660 & 0.00043 & 0.99891 & 0.00058 \\
